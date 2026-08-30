@@ -65,4 +65,24 @@ for (const [file] of Object.entries(EXPECTED)) {
 }
 pass('spec 11: modules 1-6 do not lean on parked pre-read slides')
 
+// Slidev silently SKIPS a `src:` whose file does not exist -- verified during
+// execution: the deck built cleanly with six of seven partials missing. A typo
+// in a path would therefore drop an entire module with no error anywhere.
+const deck = readFileSync('slides.md', 'utf8')
+const imported = [...deck.matchAll(/^src:\s*\.\/pages\/(.+)$/gm)].map((m) => m[1].trim())
+for (const file of Object.keys(EXPECTED)) {
+  if (imported.includes(file)) pass(`slides.md imports ${file}`)
+  else fail(`slides.md does not import ${file} -- Slidev would drop it silently`)
+}
+for (const file of imported) {
+  if (!existsSync(join('pages', file))) fail(`slides.md imports ${file}, which does not exist`)
+}
+
+const bridge = readFileSync(join('pages', '00-bridge.md'), 'utf8')
+if (bridge.includes('One question, three jobs')) pass('module 0: through-line table present')
+else fail('module 0: through-line table missing -- modules 4 and 5 depend on it')
+
+if (bridge.includes('lost it twice')) pass('module 0: honest history of prior attempts present')
+else fail('module 0: the MDA/4GL history is missing -- the beat loses credibility without it')
+
 process.exit(failed ? 1 : 0)

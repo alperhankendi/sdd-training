@@ -246,3 +246,179 @@ Close the bridge here. The next four slides change the question from "where do
 I intervene" to "where does the truth live" — and that is the actual subject of
 the day.
 -->
+
+---
+
+# Rebuilding from a definition
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+  <div class="callout-bad">
+    <div class="font-bold text-red-600 dark:text-red-400">Snowflake</div>
+    <div class="text-sm mt-1">Patched in place until nobody dares touch it</div>
+  </div>
+  <div class="callout-good">
+    <div class="font-bold text-green-600 dark:text-green-400">Phoenix</div>
+    <div class="text-sm mt-1">Destroyed and rebuilt from its definition</div>
+  </div>
+</div>
+
+<div class="mt-8 text-sm opacity-90">
+
+Infrastructure settled this a decade ago. **Code has had the argument before — and lost it twice.**
+
+- CASE tools and 4GLs, late 1980s
+- MDA and round-trip UML, 2001–2008 — regeneration was cheap *and* deterministic, and it still lost
+- It quietly **won** wherever the definition covers a narrow slice completely: protobuf, OpenAPI clients, GraphQL types, ORM migrations
+
+</div>
+
+<div class="callout-key mt-6 text-sm">
+What changed is not the price of regeneration. It is the <b>medium of the definition</b> — natural language became executable, which widens the reachable slice from wire formats to behaviour. The price of that width is determinism.
+</div>
+
+<!--
+Two minutes maximum. Someone in the room has lived MDA or 4GLs, and claiming
+the argument never happened costs you the only thing this beat has, which is
+credibility about why today is different. Say "lost it twice" out loud.
+
+Cite Fowler, SnowflakeServer / PhoenixServer, 2012 -- that is the one
+established anchor. Describe the code-side extension in plain words; do not
+present it as a named methodology, because a term that survives no search
+costs you credibility a second time.
+-->
+
+---
+
+# The deletion test
+
+<div class="text-xl mt-6">
+If I deleted this module entirely, could I regenerate it — <b>correctly</b> — from its spec alone?
+</div>
+
+<div class="mt-4 text-sm opacity-75">Not "would the output be identical." Identity is not available and is not the point.</div>
+
+<div class="callout-key mt-8">
+<div class="font-bold">Ask it as an enumeration, not as a feeling:</div>
+<div class="mt-2 text-lg">Name one thing you would have to know to rebuild this that the spec does not say.</div>
+<div class="mt-2 text-sm opacity-75">If you can name one, it fails — and the thing you named is the backlog entry.</div>
+</div>
+
+<div class="mt-6 text-sm">Ask it in two sizes: <b>this module</b>, and <b>this boundary</b>. The knowledge least likely to be written down lives between modules.</div>
+
+<!--
+RUN IT IN THE ROOM. Ninety seconds. Laptops are open.
+
+Ask everyone to pull up a repository they actually work on, pick one module,
+and silently name one thing they would need that is written down nowhere.
+Then: "hands up if you could NOT name one." Almost no hands go up. That is the
+lesson, and it lands on their own code rather than on this slide.
+
+Give anyone without a repo the running example rather than letting them sit out.
+
+Do NOT collect answers publicly. The exercise works because it is
+uncomfortable, and naming a colleague's undocumented module in front of the
+room converts insight into defensiveness. Show of hands only.
+
+Say plainly that the test is literally runnable: delete it, hand a fresh agent
+the spec, diff the behaviour.
+-->
+
+---
+
+# What a failure means
+
+<div class="text-lg mt-6">
+The code holds knowledge that exists <b>nowhere else</b>.
+</div>
+
+<div class="mt-4 text-sm opacity-90">Every piece of it is a single point of failure living in one person's head — or in nobody's.</div>
+
+<div class="callout-bad mt-10 !text-lg">
+You have been maintaining the binary and calling it the source.
+</div>
+
+<div class="mt-10 grid grid-cols-2 gap-4 text-sm">
+  <div class="callout-key">
+    <div class="font-bold">It is a gradient, not a gate</div>
+    <div class="mt-1">Almost nothing passes today. The questions are <i>what fraction</i> and <i>which knowledge</i>.</div>
+  </div>
+  <div class="callout-good">
+    <div class="font-bold">Not every failure is debt</div>
+    <div class="mt-1">Spec debt only when the missing knowledge is <b>intent or constraint</b>. When it is implementation judgment, the spec is right and the test is <i>supposed</i> to fail there.</div>
+  </div>
+</div>
+
+<!--
+The right-hand box is not optional. Without it participants go home and seed
+their backlog with precision-budget residue, which is over-specification -- an
+anti-pattern module 6 names. It is also the earliest possible statement of
+module 4's spec-defect / implementation-defect diagnostic.
+-->
+
+---
+
+# The truth splits. It does not relocate.
+
+<div class="grid grid-cols-2 gap-6 mt-10">
+  <div class="callout-key">
+    <div class="font-bold text-blue-600 dark:text-blue-400">Truth about intent</div>
+    <div class="text-lg mt-2">moved to the spec</div>
+  </div>
+  <div class="callout-good">
+    <div class="font-bold text-green-600 dark:text-green-400">Truth about this artifact</div>
+    <div class="text-lg mt-2">never left the code, and never will</div>
+  </div>
+</div>
+
+<div class="mt-10 text-lg">
+So spec review is a review that was <b>missing</b> — not a review that replaces one.
+</div>
+
+<div class="mt-4 text-sm opacity-75">
+And it is missing in the place where defects are cheapest to catch, which is where the least attention has historically been spent. That asymmetry is the whole shift.
+</div>
+
+<!--
+Phrase this as a split, never as an either/or. Rooms keep climaxes and drop
+caveats: an either/or here is what would make people stop reading diffs, seven
+hours before module 4 has to undo it. Phrased as a split, module 4's review
+beat inherits this vocabulary instead of correcting it.
+
+The bound, stated now and not at 16:35: regeneration is nondeterministic and
+yields a DIFFERENT defect set, not an empty one. The deletion test measures the
+completeness of the spec. It says nothing about the correctness of any
+particular generated artifact.
+-->
+
+---
+
+# One question, three jobs
+
+| Where | The question | What it decides |
+|---|---|---|
+| **Now** | Name one thing you'd need that the spec doesn't say | Is the spec the source, or is the code? |
+| **Module 4** | Would fixing the spec and regenerating remove this defect? | Spec defect, or implementation defect |
+| **Module 5** | Where does the test fail hardest here? | What archaeology must recover first |
+
+<div class="callout-key mt-10 text-sm">
+In infrastructure the definition is the Dockerfile, the Terraform module, the manifest.<br/>
+<b class="text-lg">In code it is the spec.</b><br/>
+Everything else today — anatomy, elicitation, plans, verification, brownfield — is the work of building and maintaining that definition.
+</div>
+
+<!--
+This is the agenda slide, and it arrives here rather than at the start because
+only now does the room know why it needs one.
+
+The objection is coming, and it is the strongest one anyone will raise all day:
+"if the spec is complete enough to regenerate from, it contains everything the
+code contained -- you have rewritten the program in English. We tried this. It
+was called MDA."
+
+Do not improvise the answer. It is in the facilitator notes, and it turns on
+the acceptance set: a spec does not determine the implementation, it determines
+the SET of implementations that would be correct. Where that set has more than
+one member, the spec is strictly smaller than the code. MDA failed because it
+forced the set to a singleton. Then concede the cases where the set genuinely
+IS a singleton -- and name them as module 6's "when not to do SDD".
+-->
