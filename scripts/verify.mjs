@@ -78,6 +78,20 @@ for (const file of imported) {
   if (!existsSync(join('pages', file))) fail(`slides.md imports ${file}, which does not exist`)
 }
 
+// Spec 2.3: a principle must be stated before the tool that instantiates it,
+// or the module degrades into a vendor demo for anyone without access.
+for (const file of ['02-elicitation.md', '03-plans.md', '04-verification.md']) {
+  if (!existsSync(join('pages', file))) continue
+  const text = readFileSync(join('pages', file), 'utf8')
+  const firstTool = Math.min(
+    ...['BMAD', 'Superpowers'].map((t) => { const i = text.indexOf(t); return i < 0 ? Infinity : i })
+  )
+  const firstPrinciple = text.indexOf('Principle')
+  if (firstTool === Infinity) pass(`${file}: names no toolchain`)
+  else if (firstPrinciple >= 0 && firstPrinciple < firstTool) pass(`${file}: principle precedes tool`)
+  else fail(`${file}: a toolchain is named before the principle it instantiates`)
+}
+
 const bridge = readFileSync(join('pages', '00-bridge.md'), 'utf8')
 if (bridge.includes('One question, three jobs')) pass('module 0: through-line table present')
 else fail('module 0: through-line table missing -- modules 4 and 5 depend on it')
