@@ -13,7 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "@slidev/cli": "^52.19.1",
-    "@slidev/theme-default": "^0.25.0"
+    "@slidev/theme-default": "^0.25.0",
+    "playwright-chromium": "^1.62.1"
   },
   "private": true
 }

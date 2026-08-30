@@ -104,6 +104,18 @@ if (existsSync(join('pages', '04-verification.md'))) {
   if (/becomes a spec review/i.test(m4)) fail('module 4: "becomes a spec review" reintroduces the false regeneration premise')
 }
 
+// The facilitator delivers in Turkish from English notes. A slide carrying an
+// argument with no note is a slide that will be improvised.
+for (const [file] of Object.entries(EXPECTED)) {
+  if (!existsSync(join('pages', file))) continue
+  const text = readFileSync(join('pages', file), 'utf8')
+  const slides = countSlides(text)
+  const notes = text.split('<!--').length - 1
+  const floor = Math.ceil(slides * 0.7)
+  if (notes >= floor) pass(`${file}: ${notes} speaker notes for ${slides} slides`)
+  else fail(`${file}: only ${notes} speaker notes for ${slides} slides (need ${floor})`)
+}
+
 const bridge = readFileSync(join('pages', '00-bridge.md'), 'utf8')
 if (bridge.includes('One question, three jobs')) pass('module 0: through-line table present')
 else fail('module 0: through-line table missing -- modules 4 and 5 depend on it')
