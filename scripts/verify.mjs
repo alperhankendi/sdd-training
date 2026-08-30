@@ -92,6 +92,18 @@ for (const file of ['02-elicitation.md', '03-plans.md', '04-verification.md']) {
   else fail(`${file}: a toolchain is named before the principle it instantiates`)
 }
 
+// The two review rounds' most expensive correction. "becomes" would ship the
+// false regeneration premise; "gains" is the corrected teaching. If an edit ever
+// reverts this wording, the deck must fail rather than quietly mis-teach.
+if (existsSync(join('pages', '04-verification.md'))) {
+  const m4 = readFileSync(join('pages', '04-verification.md'), 'utf8')
+  if (/code review \*?gains\*? a spec review/i.test(m4)) pass('module 4: review teaching says "gains", not "becomes"')
+  else fail('module 4: the review slide must say code review GAINS a spec review')
+  if (m4.includes('it is a spec defect')) pass('module 4: PR diagnostic present')
+  else fail('module 4: the spec-defect/implementation-defect diagnostic is missing')
+  if (/becomes a spec review/i.test(m4)) fail('module 4: "becomes a spec review" reintroduces the false regeneration premise')
+}
+
 const bridge = readFileSync(join('pages', '00-bridge.md'), 'utf8')
 if (bridge.includes('One question, three jobs')) pass('module 0: through-line table present')
 else fail('module 0: through-line table missing -- modules 4 and 5 depend on it')
