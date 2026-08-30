@@ -1,0 +1,389 @@
+# "Make the auth module better"
+
+<div class="mt-10 text-xl">A requirement that cannot fail is not a requirement.</div>
+
+<div class="mt-10 text-sm opacity-90">
+Nobody can build it. Nobody can review it. Nobody can tell you it is done — and nobody can tell you it is wrong, which is the part that costs.
+</div>
+
+<!--
+Every person in the room has received this ticket. Ask what they did with it;
+the answer is always "I guessed, and I was mostly right." Mostly is the problem.
+-->
+
+---
+
+# What a spec is
+
+<div class="grid grid-cols-2 gap-6 mt-8">
+  <div class="callout-key">
+    <div class="font-bold">Intent</div>
+    <div class="text-sm mt-1">What we are trying to make true, and for whom</div>
+  </div>
+  <div class="callout-key">
+    <div class="font-bold">Constraints</div>
+    <div class="text-sm mt-1">What must hold regardless of how it is built</div>
+  </div>
+  <div class="callout-good">
+    <div class="font-bold">Acceptance criteria</div>
+    <div class="text-sm mt-1">How we will know. Each one able to fail.</div>
+  </div>
+  <div class="callout-bad">
+    <div class="font-bold">Non-goals</div>
+    <div class="text-sm mt-1">What this deliberately does not do</div>
+  </div>
+</div>
+
+<div class="mt-8 text-sm opacity-75">
+Notice what is absent: <b>how</b>. A spec that says how has stopped being a spec and started being a plan.
+</div>
+
+<!--
+Intent comes first on purpose. Rooms reach for acceptance criteria because
+those feel rigorous, and end up with a testable description of the wrong thing.
+-->
+
+---
+
+# The testability test
+
+<div class="text-xl mt-8">
+If you cannot derive a <b>failing test</b> or a <b>rejection criterion</b> from a requirement, it is not a spec.
+</div>
+
+<div class="grid grid-cols-2 gap-6 mt-10">
+  <div class="callout-bad">
+    <div class="font-bold text-red-600 dark:text-red-400">Not a spec</div>
+    <div class="text-sm mt-1">"Rotation should be reliable"<br/>"Handle errors appropriately"<br/>"Make it fast"</div>
+  </div>
+  <div class="callout-good">
+    <div class="font-bold text-green-600 dark:text-green-400">A spec</div>
+    <div class="text-sm mt-1">"A key revoked during its rotation window must stop authenticating within 30 seconds across all regions."</div>
+  </div>
+</div>
+
+<!--
+Say "requirement", not "line". A spec's prose paragraphs are context; the rule
+applies to what it asks for, not to every sentence.
+
+The second disjunct is load-bearing. "Rejection criterion" exists to reach
+requirements that yield no automated test -- architectural constraints, design
+intent, operational limits. If the rule meant acceptance criteria only, the
+first disjunct alone would carry it. Somebody will ask; that is the answer.
+-->
+
+---
+
+# Specs form a graph, not a document
+
+<div class="text-lg mt-6">The way to keep a spec small is to <b>point at the spec that already says it</b> — not to say less.</div>
+
+```yaml
+# key-rotation.spec.md
+Relates to:   revocation.spec.md
+Inherits:     platform-constraints.spec.md   # rate limits, audit retention
+Supersedes:   key-rotation.v1.spec.md
+```
+
+<div class="mt-6 text-sm">This is where cross-cutting requirements live: rate limits, rotation windows, audit retention, API shape. A flat per-feature <code>Constraints</code> list has nowhere to put them.</div>
+
+<div class="callout-key mt-6 text-sm">
+<b>When two specs contradict:</b> more specific beats more general · newer beats older, with an explicit <code>Supersedes</code> · when neither applies, it escalates to the owner — not to whoever read them last.
+</div>
+
+<!--
+This slide converts the precision budget from a warning into a technique, which
+is why it comes before the template rather than after it.
+
+Without a reference mechanism a team has exactly two moves for shared material:
+restate it, and watch the copies diverge on the first change; or omit it, and
+watch the agent ask. Both are worse than a link.
+-->
+
+---
+
+# The anatomy
+
+<div class="mt-4">
+
+| Section | Answers |
+|---|---|
+| **Relates to / Inherits / Supersedes** | What does this depend on, and what does it replace? |
+| **Context** | Why are we doing this now? |
+| **Goal** | What becomes true? |
+| **Non-goals** | What stays false, deliberately? |
+| **Constraints** | What must hold regardless of approach? |
+| **Acceptance criteria** | How do we know? Each able to fail. |
+| **Open questions** | What do we not know yet, and who decides? |
+
+</div>
+
+<div class="mt-6 text-sm opacity-75">Seven sections. The bar for an eighth is a failure it would have prevented.</div>
+
+<!--
+Hand this out. It is the artifact participants leave with.
+
+Do NOT present these seven as handed down. Four of them are derived from
+failures the room meets later today, and saying so now is what stops the
+template being cargo-culted:
+  - Acceptance criteria: the previous slide.
+  - Non-goals: module 2 -- people agree on goals and differ on boundaries.
+  - Open questions: module 2 -- the alternative is resolving silently with a guess.
+  - Context: module 0's leverage point 12 -- specs are the highest-signal context.
+
+The eighth-section bar matters. Templates decay by accretion: every incident
+adds a section, nothing removes one, and eventually filling it in costs more
+than the work it governs.
+-->
+
+---
+
+# Reference over restatement
+
+<div class="grid grid-cols-2 gap-6 mt-8">
+  <div class="callout-bad">
+    <div class="font-bold text-red-600 dark:text-red-400">Restated</div>
+    <div class="text-xs mt-2 font-mono">rate limit: 1000/hour<br/>audit retention: 7 years<br/>key prefix: ak_live_</div>
+    <div class="text-sm mt-2">In eleven specs. Six of them are now wrong, and nobody knows which six.</div>
+  </div>
+  <div class="callout-good">
+    <div class="font-bold text-green-600 dark:text-green-400">Referenced</div>
+    <div class="text-xs mt-2 font-mono">Inherits: platform-constraints.spec.md</div>
+    <div class="text-sm mt-2">In eleven specs. One place to change, and the change is visible in the diff of the thing that actually changed.</div>
+  </div>
+</div>
+
+<div class="mt-8 text-sm opacity-90">
+The copies do not diverge because someone was careless. They diverge because nothing made divergence visible.
+</div>
+
+<!--
+This is the same argument as DRY, and it is worth saying so -- the room already
+believes it about code. The novelty is only that it applies to prose, which
+most teams have never treated as something that can be factored.
+-->
+
+---
+
+# When two specs disagree
+
+<div class="mt-8 text-lg">The resolution rule has to exist <b>before</b> the disagreement, or it becomes an argument about authority.</div>
+
+<div class="mt-8 grid grid-cols-3 gap-4 text-sm">
+  <div class="callout-key">
+    <div class="font-bold">1 · Specific beats general</div>
+    <div class="mt-1">A feature spec overrides a platform default, if it says so explicitly.</div>
+  </div>
+  <div class="callout-key">
+    <div class="font-bold">2 · Newer beats older</div>
+    <div class="mt-1">Only with an explicit <code>Supersedes</code>. A date is not enough.</div>
+  </div>
+  <div class="callout-bad">
+    <div class="font-bold">3 · Otherwise, escalate</div>
+    <div class="mt-1">To the owner. Never to whoever happened to read both last.</div>
+  </div>
+</div>
+
+<div class="mt-8 text-sm opacity-75">Rule 3 is the important one. Most contradictions are not ambiguity — they are two people who never spoke.</div>
+
+<!--
+Module 4 returns to this as authority: the agent proposes, the human disposes.
+Rule 3 is the same idea one altitude up.
+-->
+
+---
+
+# Four things people call "the spec"
+
+<div class="mt-6">
+
+| | Answers | Lifespan | Owner |
+|---|---|---|---|
+| **PRD** | Why, and for whom | Quarters | Product |
+| **Spec** | What becomes true | Months | Whoever changes it next |
+| **Plan** | How, in order | Days | The implementer |
+| **Task** | One step | Hours | Whoever picks it up |
+
+</div>
+
+<div class="callout-bad mt-8 text-sm">
+<b>The most common beginner error is writing one where another belongs</b> — usually a task where a spec goes, because tasks feel concrete and specs feel vague.
+</div>
+
+<!--
+Altitude confusion is expensive in a specific way: a task written where a spec
+belongs locks in an implementation before anyone has agreed what the thing
+should do, and it is nearly impossible to notice afterwards because the artifact
+looks rigorous.
+-->
+
+---
+
+# Altitude confusion, in the wild
+
+<div class="grid grid-cols-2 gap-6 mt-6 text-sm">
+  <div class="callout-bad">
+    <div class="font-bold text-red-600 dark:text-red-400">A task wearing a spec's clothes</div>
+    <div class="mt-2 font-mono text-xs">"Add a revoked_at column to api_keys and check it in ValidateKey()"</div>
+    <div class="mt-2">Decides the schema and the call site before anyone said what revocation means.</div>
+  </div>
+  <div class="callout-bad">
+    <div class="font-bold text-red-600 dark:text-red-400">A PRD wearing a spec's clothes</div>
+    <div class="mt-2 font-mono text-xs">"Customers need confidence that compromised keys can be dealt with quickly"</div>
+    <div class="mt-2">True, unbuildable, and impossible to reject.</div>
+  </div>
+</div>
+
+<div class="callout-good mt-6 text-sm">
+<b>The spec sits between them:</b> "A revoked key must stop authenticating within 30 seconds. Revocation is irreversible. Keys revoked mid-rotation must not invalidate their replacement."
+</div>
+
+<!--
+Walk all three out loud. The middle one is the hardest to write and the only one
+that can be both agreed and executed.
+-->
+
+---
+
+# The precision budget
+
+<div class="mt-8 text-xl">Over-specification is a failure mode, not diligence.</div>
+
+<div class="mt-8 text-sm opacity-90">
+Specify <b>intent and constraints</b>. Leave implementation judgment to the implementer — human or otherwise.
+</div>
+
+<div class="callout-bad mt-8">
+A spec that is harder to maintain than the code it produces has failed, no matter how complete it is.
+</div>
+
+<div class="mt-8 text-sm">
+This is also a division of labour: the spec owns <i>what must be true</i>, the implementer owns <i>how</i>. Cross the line and you own both, forever.
+</div>
+
+<!--
+Module 4 depends on this slide. If authors leave implementation judgment out of
+the spec -- and they should -- then somebody must still review the region the
+spec deliberately does not cover. That is where security, concurrency and
+error-path defects live, and module 4 assigns it explicitly.
+
+Defend this slide against the obvious wrong repair, which is "then specify
+security in the spec too."
+-->
+
+---
+
+# How over-specification actually happens
+
+<div class="mt-6 text-sm opacity-90">Nobody decides to over-specify. It accretes, one reasonable addition at a time.</div>
+
+<div class="mt-8 space-y-3 text-sm">
+  <div class="callout-key"><b>Week 1</b> — "The spec should say which library, we wasted a day on that."</div>
+  <div class="callout-key"><b>Week 6</b> — "The spec should say the error message text, support complained."</div>
+  <div class="callout-bad"><b>Week 14</b> — "The spec should say the log format." Now every log change is a spec change.</div>
+  <div class="callout-bad"><b>Week 30</b> — Nobody writes specs. They are too expensive, and the ones that exist are wrong.</div>
+</div>
+
+<div class="mt-6 text-sm opacity-75">Each step was locally correct. The trajectory was not.</div>
+
+<!--
+Ask the room where they would have stopped. The honest answer is that you cannot
+tell locally -- which is why the test is the precision budget, not judgment in
+the moment: does this belong to WHAT MUST BE TRUE, or to HOW.
+-->
+
+---
+
+# The ladder · rung one
+
+<div class="callout-bad mt-8 !text-lg">
+"Make key rotation better"
+</div>
+
+<div class="mt-8 text-sm opacity-90">
+No subject, no failure condition, no reader who could reject it. Every reader agrees, and no two agree about the same thing.
+</div>
+
+<div class="mt-8 text-sm">First question: <b>better than what, for whom?</b></div>
+
+<!--
+Do this live, rewriting on screen, one rung per click. The room should watch a
+sentence get sharper four times -- reading four finished rungs off a slide
+teaches nothing.
+
+This is the ladder's only pass before Lab 1.
+-->
+
+---
+
+# The ladder · rungs two and three
+
+<div class="mt-6 space-y-6">
+  <div class="callout-bad">
+    <div class="text-xs font-bold opacity-60">RUNG 2 — has a subject</div>
+    <div class="mt-1">"Customers should be able to rotate a key without downtime."</div>
+    <div class="text-xs mt-2 opacity-75">Better. Still unbuildable: what is downtime, and how long may the old key live?</div>
+  </div>
+  <div class="callout-key">
+    <div class="text-xs font-bold opacity-60">RUNG 3 — has a mechanism</div>
+    <div class="mt-1">"When a key is rotated, the old key keeps working for an overlap period so callers can migrate."</div>
+    <div class="text-xs mt-2 opacity-75">Buildable now — but two people will pick different overlaps and both will be right.</div>
+  </div>
+</div>
+
+<!--
+Rung 3 is where most teams stop, and it is the most dangerous rung: it reads as
+finished. Two implementers will produce different systems and neither will have
+violated it.
+-->
+
+---
+
+# The ladder · rung four
+
+<div class="callout-good mt-8">
+<div class="text-xs font-bold opacity-60">ACCEPTANCE CRITERION</div>
+<div class="mt-2 text-lg">"After rotation, the previous key continues to authenticate for exactly 24 hours, then fails with <code>401 key_expired</code>. A key revoked during that window stops authenticating within 30 seconds and does not affect its replacement."</div>
+</div>
+
+<div class="mt-8 grid grid-cols-3 gap-4 text-sm">
+  <div class="callout-key"><b>Can fail</b><br/>25 hours later it must be dead</div>
+  <div class="callout-key"><b>Names the observable</b><br/><code>401 key_expired</code>, not "an error"</div>
+  <div class="callout-key"><b>Covers interaction</b><br/>revocation × rotation, the case rung 3 hid</div>
+</div>
+
+<!--
+Point out what rung 4 still does NOT say: nothing about tables, caches, or where
+the check lives. That is the precision budget holding. The criterion is
+executable and the implementation is open -- that combination is the target.
+-->
+
+---
+
+# Lab 1 · Rank, find, rewrite
+
+<div class="mt-6 text-lg">Three specs for the same feature. Twenty minutes.</div>
+
+<div class="mt-8 space-y-3 text-sm">
+  <div class="callout-key"><b>1 ·</b> Rank them best to worst. Be ready to say what separates first from second.</div>
+  <div class="callout-key"><b>2 ·</b> Find three ambiguities in the worst one.</div>
+  <div class="callout-key"><b>3 ·</b> Rewrite one acceptance criterion so it can fail.</div>
+</div>
+
+<div class="callout-good mt-8 text-sm">
+<b>If you finish early:</b> find the ambiguity that survives every rewrite — the one that needs a human decision rather than better wording. Name the decision and name who makes it.
+</div>
+
+<!--
+Reading, not writing. Nobody needs a laptop for this beyond the handout.
+
+The senior variant is the real content: some ambiguity is not a wording defect.
+"Should enterprise customers get the 24h overlap or 72h?" cannot be resolved by
+anyone in this room, and recognising that class is what separates someone who
+writes specs from someone who fills in templates.
+
+DEBRIEF -- two forms depending on room size. Under ~15: round the room, one
+ambiguity each, no repeats. Above that: take three from volunteers, then read
+out the two nobody found. Do not run over; the ranking disagreement is more
+interesting than the list and it is what you want them arguing about at the break.
+-->
