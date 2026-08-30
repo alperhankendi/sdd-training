@@ -1,0 +1,6 @@
+.slidev-layout table { font-size: 0.85rem; line-height: 1.35; }
+.slidev-layout table td, .slidev-layout table th { padding: 0.25rem 0.5rem; }
+
+.callout-bad  { @apply p-3 rounded-lg bg-red-50   dark:bg-red-900/20   border-l-4 border-red-400; }
+.callout-good { @apply p-3 rounded-lg bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400; }
+.callout-key  { @apply p-3 rounded-lg bg-blue-50  dark:bg-blue-900/20  border-l-4 border-blue-400; }
