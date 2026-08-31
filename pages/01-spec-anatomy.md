@@ -429,30 +429,38 @@ executable and the implementation is open -- that combination is the target.
 
 ---
 
-# Lab 1 · Rank, find, rewrite
+# Lab 1 · Which one would you rather be handed?
 
-<div class="mt-6 text-lg">Three specs for the same feature. Twenty minutes.</div>
-
-<div class="mt-8 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> Rank them best to worst. Be ready to say what separates first from second.</div>
-  <div class="callout-key"><b>2 ·</b> Find three ambiguities in the worst one.</div>
-  <div class="callout-key"><b>3 ·</b> Rewrite one acceptance criterion so it can fail.</div>
+<div class="mt-4 text-sm opacity-90">
+Three specs. <b>Same feature.</b> Written by three different people, and all three were considered good enough to start work from.
 </div>
 
-<div class="callout-good mt-8 text-sm">
-<b>If you finish early:</b> find the ambiguity that survives every rewrite: the one that needs a human decision rather than better wording. Name the decision and name who makes it.
+<div class="mt-6 space-y-3 text-sm">
+  <div class="callout-key"><b>1 ·</b> Rank them. Which would you rather receive on Monday, and which would cost you the most? Be ready to say in <b>one sentence</b> what separates first from second.</div>
+  <div class="callout-key"><b>2 ·</b> In the worst one, find <b>three places where two competent people would build different things</b> and both could defend it.</div>
+  <div class="callout-key"><b>3 ·</b> Take the weakest acceptance criterion you can find and rewrite it so <b>a test could catch it being wrong.</b></div>
 </div>
+
+<div class="callout-bad mt-6 text-sm">
+One of these three looks the most professional of the group and is <b>not</b> the best one. Working out which, and why, is the exercise.
+</div>
+
+<div class="mt-4 text-xs opacity-60">20 minutes. Paper only, no laptop.</div>
 
 <!--
-Reading, not writing. Nobody needs a laptop for this beyond the handout.
+The old version listed three tasks and never said what the exercise was FOR. It
+read as busywork, and the point only arrived in the debrief.
 
-The senior variant is the real content: some ambiguity is not a wording defect.
-"Should enterprise customers get the 24h overlap or 72h?" cannot be resolved by
-anyone in this room, and recognising that class is what separates someone who
-writes specs from someone who fills in templates.
+The red box is the fix. It does not say WHICH spec is the trap, so nothing is
+spoiled, but it turns a mechanical ranking into a hunt. The skill being taught is
+not "spot the trap blind", it is "know that precision can mislead you", and
+people only exercise that if they know to look.
 
-DEBRIEF -- two forms depending on room size. Under ~15: round the room, one
-ambiguity each, no repeats. Above that: take three from volunteers, then read
-out the two nobody found. Do not run over; the ranking disagreement is more
-interesting than the list and it is what you want them arguing about at the break.
+Roughly half the room ranks B first, and that disagreement IS the lab. Get a
+defence of B out loud before giving the answer; it is usually a good defence,
+because B genuinely is more precise in the places it covers.
+
+The sentence to land at the end: precision at the wrong altitude is not quality.
+
+Senior variant is on the handout, not the slide. Point at it, do not read it.
 -->
