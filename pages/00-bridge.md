@@ -40,7 +40,7 @@ before you have explained anything is what makes the rest land.
 | 4 | Architecture | Is it agentically intuitive? |
 | 3 | **Plans** | Can they complete without more input? |
 | 2 | **Templates** | What does good output look like? |
-| 1 | **ADWs** | How does work flow? |
+| 1 | **ADWs** — AI Developer Workflows | How does work flow? |
 
 <!--
 Do not teach all twelve. Name the six in bold as today's territory and say
@@ -188,11 +188,11 @@ is a failure it would have prevented.
 
 ---
 
-# 1 · ADWs
+# 1 · ADWs — AI Developer Workflows
 
 **How does work flow between agents?**
 
-<span class="text-sm opacity-75">The highest leverage point in the framework.</span>
+<span class="text-sm opacity-75">The highest leverage point in the framework. An ADW is the path a piece of work takes from request to merge — which agent touches it, in what order, and what each one hands the next.</span>
 
 <div class="grid grid-cols-2 gap-4 mt-8">
   <div class="callout-key">
