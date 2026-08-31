@@ -75,7 +75,9 @@ const allPages = Object.keys(EXPECTED)
   .join('\n')
 for (const a of ACRONYMS) {
   if (!allPages.includes(a)) continue
-  const expanded = new RegExp(a.replace('&amp;', '&amp;') + '\\s*\\((?=[^)]*-)', 'i')
+  // Allow intervening markup (a <span>, a <br/>) between the acronym and its
+  // parenthesised expansion -- the convention is about the reader, not the HTML.
+  const expanded = new RegExp(a + '(?:[^()\\n]{0,80}?)\\((?=[^)]*\\s-\\s)', 'i')
   if (expanded.test(allPages)) pass(`acronym ${a.replace('&amp;','&')}: expanded`)
   else fail(`acronym ${a.replace('&amp;','&')}: never expanded as {ACRONYM} (English - Türkçe)`)
 }
