@@ -75,9 +75,11 @@ const allPages = Object.keys(EXPECTED)
   .join('\n')
 for (const a of ACRONYMS) {
   if (!allPages.includes(a)) continue
-  // Allow intervening markup (a <span>, a <br/>) between the acronym and its
-  // parenthesised expansion -- the convention is about the reader, not the HTML.
-  const expanded = new RegExp(a + '(?:[^()\\n]{0,80}?)\\((?=[^)]*\\s-\\s)', 'i')
+  // Word-bounded, or short acronyms match inside ordinary words: an unbounded
+  // /IP/ hits DESCRIPTION and SCRIPT, and the check passes while the deck is
+  // wrong. Verified by deleting a real expansion and watching this go red.
+  // Markup between the acronym and its parens is allowed, but only a little.
+  const expanded = new RegExp('\\b' + a + '\\b(?:[^()\\n]{0,60}?)\\((?=[^)]*\\s-\\s)')
   if (expanded.test(allPages)) pass(`acronym ${a.replace('&amp;','&')}: expanded`)
   else fail(`acronym ${a.replace('&amp;','&')}: never expanded as {ACRONYM} (English - Türkçe)`)
 }
