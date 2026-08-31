@@ -60,7 +60,7 @@ Different questions with different failure modes. A suite can be entirely green 
 </div>
 
 <div class="callout-key mt-6 text-sm">
-<b>If you learned the classical definition:</b> in IEEE V&amp;V terms verification means <i>"are we building the product right"</i> and it <b>includes</b> unit testing. I am using the word more narrowly today — <b>checking the claim of done against reality.</b> Same word, smaller scope.
+<b>If you learned the classical definition:</b> in IEEE V&amp;V (verification and validation) terms verification means <i>"are we building the product right"</i> and it <b>includes</b> unit testing. I am using the word more narrowly today — <b>checking the claim of done against reality.</b> Same word, smaller scope.
 </div>
 
 <!--

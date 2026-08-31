@@ -201,7 +201,7 @@ with access to neither must still leave with the shape.
 
 | Altitude | Toolchain | Artifacts |
 |---|---|---|
-| **Project** | BMAD | Product Brief → PRD → Architecture → Epics |
+| **Project** | BMAD<br/><span class="text-xs opacity-60">a document-first method</span> | Product Brief → PRD → Architecture → Epics |
 | **Feature** | Superpowers | brainstorm → design → plan → verify |
 
 <div class="mt-8 text-sm opacity-90">

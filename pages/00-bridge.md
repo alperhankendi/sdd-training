@@ -267,7 +267,7 @@ the day.
 Infrastructure settled this a decade ago. **Code has had the argument before, and lost it twice.**
 
 - CASE tools and 4GLs, late 1980s
-- **MDA** — Model-Driven Architecture — and round-trip UML, 2001–2008. You drew the model, it generated the code. Regeneration was cheap *and* deterministic, and it still lost
+- **MDA** — Model-Driven Architecture — and round-trip UML (Unified Modeling Language), 2001–2008. You drew the model, it generated the code. Regeneration was cheap *and* deterministic, and it still lost
 - It quietly **won** wherever the definition covers a narrow slice completely: protobuf, OpenAPI clients, GraphQL types, ORM migrations
 
 </div>
@@ -318,7 +318,7 @@ costs you credibility a second time.
 |---|---|---|
 | **The asset is** | Lines of code, authored algorithms | Specifications, tests, system boundaries |
 | **Legacy is created by** | Slow accumulation over years | Entropy reset on every regeneration |
-| **Financial strategy** | Capitalise the codebase as IP | **Compaction** — keep conceptual mass small |
+| **Financial strategy** | Capitalise the codebase as IP (intellectual property) | **Compaction** — keep conceptual mass small |
 | **The developer's job** | Authoring and maintaining syntax | Stewardship, defining evaluation criteria |
 
 <div class="callout-key mt-6 text-sm">

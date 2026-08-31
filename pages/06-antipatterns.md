@@ -256,7 +256,7 @@ The last row is the honest close: nothing today required a vendor.
 
 | Deferred | Where it lives |
 |---|---|
-| CI enforcement of spec-code linkage | The Lab 4 handout has a reference slide |
+| CI (continuous integration) enforcement of spec-code linkage | The Lab 4 handout has a reference slide |
 | Multi-agent orchestration | Named on the landscape slide, not taught |
 | Organisational rollout, mandates | Deliberately out of scope (see the next slide) |
 
