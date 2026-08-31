@@ -429,6 +429,50 @@ executable and the implementation is open -- that combination is the target.
 
 ---
 
+# Three specs. Same feature.
+
+<div class="mt-4 text-sm opacity-75">Key rotation. Three different authors. All three were approved to start work from. Full text is on your handout.</div>
+
+<div class="grid grid-cols-3 gap-3 mt-5 text-xs">
+  <div class="p-3 rounded bg-gray-100 dark:bg-gray-800">
+    <div class="font-bold mb-2">A</div>
+    <div class="font-mono opacity-80">Rotation must be fast.</div>
+    <div class="font-mono opacity-80 mt-1">Existing integrations should keep working.</div>
+    <div class="font-mono opacity-80 mt-1">Handle errors appropriately.</div>
+    <div class="font-mono opacity-80 mt-2">Acceptance: QA confirms rotation works end to end.</div>
+  </div>
+  <div class="p-3 rounded bg-gray-100 dark:bg-gray-800">
+    <div class="font-bold mb-2">B</div>
+    <div class="font-mono opacity-80">Add <code>rotated_from UUID NULL</code> and <code>overlap_expires_at</code> to <code>api_keys</code>.</div>
+    <div class="font-mono opacity-80 mt-1">In <code>ValidateKey()</code>, accept if <code>revoked_at IS NULL</code> and (<code>expires_at &gt; now()</code> or <code>overlap_expires_at &gt; now()</code>).</div>
+    <div class="font-mono opacity-80 mt-1">Add an index on <code>rotated_from</code>.</div>
+  </div>
+  <div class="p-3 rounded bg-gray-100 dark:bg-gray-800">
+    <div class="font-bold mb-2">C</div>
+    <div class="font-mono opacity-80">Non-goals: automatic rotation. Rotating an already revoked key.</div>
+    <div class="font-mono opacity-80 mt-1">A key revoked during the overlap stops authenticating within 30s and does not affect its replacement.</div>
+    <div class="font-mono opacity-80 mt-1">Open question: do enterprise customers get longer than 24h? Needs Product.</div>
+  </div>
+</div>
+
+<div class="callout-bad mt-5 text-sm">
+One of these three looks the most professional of the group and is <b>not</b> the best one.
+</div>
+
+<!--
+Do not read these columns aloud. They are a taste, not the material: the full
+specs are on the handout, and nobody can read three specs off a projector.
+
+What the columns must do in five seconds is show these are three different KINDS
+of document, not three drafts of the same one. A is adjectives. B is schema. C is
+boundaries plus an unresolved question.
+
+Hand the paper out BEFORE this slide. The screen is the framing, the paper is the
+exercise.
+-->
+
+---
+
 # Lab 1 · Which one would you rather be handed?
 
 <div class="mt-4 text-sm opacity-90">
