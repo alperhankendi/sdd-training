@@ -431,7 +431,7 @@ executable and the implementation is open -- that combination is the target.
 
 # Three specs. Same feature.
 
-<div class="mt-4 text-sm opacity-75">Anahtar rotasyonu. Üç farklı yazar. Üçü de işe başlamak için yeterli bulunmuş. Tam metinler elinizdeki kâğıtta.</div>
+<div class="mt-4 text-sm opacity-75">Anahtar rotasyonu. Üç farklı yazar. Üçü de işe başlamak için yeterli bulunmuş.</div>
 
 <div class="grid grid-cols-3 gap-3 mt-5 text-xs">
   <div class="p-3 rounded bg-gray-100 dark:bg-gray-800">
@@ -485,20 +485,20 @@ exercise.
 # Lab 1 · Which one would you rather be handed?
 
 <div class="mt-4 text-sm opacity-90">
-Three specs. <b>Same feature.</b> Written by three different people, and all three were considered good enough to start work from.
+Bu üçünden biri size verilecek ve onunla inşa edeceksiniz.
 </div>
 
 <div class="mt-6 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> Rank them. Which would you rather receive on Monday, and which would cost you the most? Be ready to say in <b>one sentence</b> what separates first from second.</div>
-  <div class="callout-key"><b>2 ·</b> In the worst one, find <b>three places where two competent people would build different things</b> and both could defend it.</div>
-  <div class="callout-key"><b>3 ·</b> Take the weakest acceptance criterion you can find and rewrite it so <b>a test could catch it being wrong.</b></div>
+  <div class="callout-key"><b>1 ·</b> Sıralayın. Hangisini almak istersiniz, hangisi size en pahalıya patlar? Birinciyi ikinciden ayıran şeyi <b>tek cümlede</b> söyleyebilecek durumda olun.</div>
+  <div class="callout-key"><b>2 ·</b> En kötüsünde <b>üç belirsizlik</b> bulun. Belirsizlik: iki yetkin insanın farklı şeyler inşa edeceği ve ikisinin de savunabileceği yer.</div>
+  <div class="callout-key"><b>3 ·</b> Bulabildiğiniz en zayıf kabul kriterini alın ve <b>bir testin yanlış olduğunu yakalayabileceği</b> hâle getirin.</div>
 </div>
 
 <div class="callout-bad mt-6 text-sm">
-One of these three looks the most professional of the group and is <b>not</b> the best one. Working out which, and why, is the exercise.
+Bu üçünden biri <b>en profesyonel görünen ve en iyisi olmayan.</b> Hangisi olduğunu ve nedenini bulmak egzersizin kendisi.
 </div>
 
-<div class="mt-4 text-xs opacity-60">20 minutes. Paper only, no laptop.</div>
+<div class="mt-4 text-xs opacity-60">Kâğıt üzerinde. Laptop gerekmiyor.</div>
 
 <!--
 The old version listed three tasks and never said what the exercise was FOR. It
