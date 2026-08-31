@@ -334,6 +334,10 @@ and it is the one most teams adopt.
 
 <div class="mt-6 text-sm">A <b>fully correct</b> spec routinely yields: an injection-shaped query · an N+1 · a swallowed error path · a race on the rotation window · a key fragment in a log line. None are spec defects. Regeneration does not remove them.</div>
 
+<div class="callout-key mt-6 text-sm">
+<b>Which is why volume is a liability.</b> If generation is cheap and verification is not, every line you keep is a line something must re-verify forever. That is the real argument for keeping systems small — not tidiness, <b>cost of certainty</b>.
+</div>
+
 <!--
 This is the most carefully worded slide in the deck, and it is worded that way
 because the appealing version of it ships bugs.

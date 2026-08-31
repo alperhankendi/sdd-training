@@ -296,6 +296,50 @@ costs you credibility a second time.
 
 ---
 
+# Code was never the asset
+
+<div class="mt-4 text-sm opacity-75">The economic reframe underneath all of this.</div>
+
+| | Traditional — mutation | Phoenix — immutability |
+|---|---|---|
+| **The asset is** | Lines of code, authored algorithms | Specifications, tests, system boundaries |
+| **Legacy is created by** | Slow accumulation over years | Entropy reset on every regeneration |
+| **Financial strategy** | Capitalise the codebase as IP | **Compaction** — keep conceptual mass small |
+| **The developer's job** | Authoring and maintaining syntax | Stewardship, defining evaluation criteria |
+
+<div class="callout-key mt-6 text-sm">
+<b>Compaction is a cost strategy, not tidiness.</b> If a model writes the code but something must still <i>verify</i> it, then sheer volume is a liability. Smaller systems are cheaper to be sure about.
+</div>
+
+<div class="mt-4 text-xs opacity-60">
+Adapted from Fowler's Phoenix Architecture. One row of the original — <i>"evolution method: complete regeneration from updated specs"</i> — overclaims, and module 4 corrects it.
+</div>
+
+<!--
+This is the economics under the phoenix framing, and it is the slide a room of
+senior people will argue with. Let them.
+
+CODE AS A CACHE is the metaphor worth saying out loud: the files are a
+materialised view of the system's current understanding -- useful while current,
+disposable when stale. That is a friendlier framing than "binary" because a cache
+is EXPECTED to go stale, and nobody feels insulted by it.
+
+COMPACTION is the row that is new to this audience and it is the one to spend
+time on. The argument is not aesthetic. If generation is cheap and verification
+is not, then every line you keep is a line something must re-verify forever.
+Volume moved from asset to liability, and most teams' instincts have not.
+
+The bottom line is deliberate. The source prescribes never editing in place and
+always regenerating the whole module. We are not teaching that, module 4 shows
+why it is false, and saying so here -- while still crediting the source -- is
+cheaper than being caught agreeing with something we later contradict.
+
+Do NOT read the table aloud. Give them the two words -- asset, compaction -- and
+let them read it.
+-->
+
+---
+
 # The deletion test
 
 <div class="text-xl mt-6">

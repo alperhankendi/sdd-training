@@ -4,14 +4,36 @@
 Three tests exist. They assert nothing. The last person who understood the billing path left in 2023.
 </div>
 
-<div class="callout-bad mt-10">
+<div class="callout-bad mt-8">
 There is no spec here to drift from. Everything the last four modules taught assumed a starting point that does not exist.
+</div>
+
+<div class="callout-key mt-6 text-sm">
+<b>Legacy is not about age.</b> A system is legacy when understanding it requires historical knowledge that exists nowhere except inside the tangled logic of the code. That is the deletion test failing, stated as a definition.
+</div>
+
+<div class="mt-4 text-sm opacity-75">
+And it used to take years. <b>An agent can now produce a thousand lines and start patching them in a single afternoon</b> — the same failure mode, at a speed that outruns anyone's ability to write down why.
 </div>
 
 <!--
 This is the situation nearly everyone in the room returns to on Monday, and it
 is the question most SDD material refuses to answer. Say that out loud -- it
 buys you the room's attention for the next fifty minutes.
+
+THE LEGACY DEFINITION IS THE SLIDE. "Not about age" reframes the whole module:
+a repository written last month can be legacy, and a twenty-year-old one with
+good specs is not. It is also module 0's deletion test restated as a definition
+rather than a test, so the room should recognise it.
+
+Adapted from Fowler's Phoenix Architecture, which puts it as: a system becomes
+legacy because understanding it requires historical knowledge no longer
+documented anywhere except in the tangled logic of the code.
+
+The afternoon line is the one that lands hardest with this audience. Legacy used
+to be something you inherited. It is now something you can create before lunch,
+and the mechanism is exactly what makes agents feel productive -- mutation is
+frictionless, so nobody stops to write down why.
 -->
 
 ---
