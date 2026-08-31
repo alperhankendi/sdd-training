@@ -257,8 +257,13 @@ Specify <b>intent and constraints</b>. Leave implementation judgment to the impl
 A spec that is harder to maintain than the code it produces has failed, no matter how complete it is.
 </div>
 
-<div class="mt-8 text-sm">
-This is also a division of labour: the spec owns <i>what must be true</i>, the implementer owns <i>how</i>. Cross the line and you own both, forever.
+<div class="mt-6 text-sm">
+A division of labour: the spec owns <i>what must be true</i>, the implementer owns <i>how</i>. Cross the line and you own both, forever.
+</div>
+
+<div class="callout-good mt-6 text-sm">
+<b>But a constraint about anticipated change is in budget, not out.</b><br/>
+"Adding a notification channel must not require editing <code>AssignJobService</code>" is testable, names no pattern, and leaves the design open. <b>"Use the Strategy pattern with an abstract base class"</b> is out — that is the implementer's call.
 </div>
 
 <!--
@@ -269,6 +274,13 @@ error-path defects live, and module 4 assigns it explicitly.
 
 Defend this slide against the obvious wrong repair, which is "then specify
 security in the spec too."
+
+The green box exists because of a real counterexample. Ask an agent to add a
+per-user notification preference and its default output is an if/else branch
+inside the service -- a design that rots on the next channel. Without that box,
+"leave implementation judgment out" reads as licensing the rot, and a sharp
+participant will say so. WITH it, the answer is: name the constraint, not the
+pattern. The constraint is spec altitude; the pattern is not.
 -->
 
 ---

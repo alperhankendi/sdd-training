@@ -17,7 +17,11 @@ Ask who has watched this happen. Then ask what they did: almost everyone says
 
 # Principle · a plan is source code
 
-<div class="mt-8 text-xl">It must be complete enough to run with <b>zero human interaction</b>.</div>
+<div class="mt-8 text-xl">It must be complete enough to run with <b>zero human interpretation</b>.</div>
+
+<div class="mt-4 text-sm opacity-75">
+Not zero human <i>approval</i>. An irreversible action — a production push, a dropped table, a merge — should still stop and ask. That is a permissions policy, and it is orthogonal to whether the plan is any good.
+</div>
 
 <div class="mt-8 text-sm opacity-90">
 Leverage point 3 from this morning, now operational. And the test is not "is it detailed": detail is easy to add and proves nothing. The test is:
@@ -35,6 +39,12 @@ If the answer is "they would probably figure it out", the answer is no.
 Do not name a tool yet. Everything in this module is derived from one fact about
 executors, and that fact comes next. State the conclusion here, earn it on the
 following slide.
+
+INTERPRETATION, not interaction. The distinction is load-bearing and a
+security-minded senior will hold you to it: "zero human interaction" is refuted
+by any irreversible-action policy, and they are right. What the rule actually
+forbids is a step that says "and then decide". Approval gates are a separate
+axis and they do not make a plan worse.
 -->
 
 ---
