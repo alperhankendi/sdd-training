@@ -55,13 +55,23 @@ diagnostic: it names a place where module 3's rules were not followed.
   </div>
 </div>
 
-<div class="mt-10 text-sm opacity-90">
+<div class="mt-8 text-sm opacity-90">
 Different questions with different failure modes. A suite can be entirely green while the claim "this feature is done" is false, because the suite tests what someone thought to test, and the claim covers everything.
+</div>
+
+<div class="callout-key mt-6 text-sm">
+<b>If you learned the classical definition:</b> in IEEE V&amp;V terms verification means <i>"are we building the product right"</i> and it <b>includes</b> unit testing. I am using the word more narrowly today — <b>checking the claim of done against reality.</b> Same word, smaller scope.
 </div>
 
 <!--
 This is the epistemic core of the day and it survives every other revision.
 Verification is about the ASSERTION, not the artifact.
+
+The V&V box is not pedantry. Anyone with a formal software engineering
+education was taught that verification INCLUDES unit testing -- it is the
+standard IEEE split -- and without this line they hear the slide title as
+simply false and stop listening. Ten seconds spent conceding the classical
+sense buys the rest of the module.
 -->
 
 ---
