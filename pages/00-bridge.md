@@ -272,7 +272,11 @@ Infrastructure settled this a decade ago. **Code has had the argument before, an
 
 </div>
 
-<div class="callout-key mt-6 text-sm">
+<div class="callout-bad mt-6 text-sm">
+And there is a reason code never had this argument: rewriting was <b>the most dangerous thing you could do.</b> "The Big Rewrite" entered the vocabulary as a warning, not a plan — producing code was the bottleneck, and a rewrite spent the one thing you could not get back.
+</div>
+
+<div class="callout-key mt-4 text-sm">
 What changed is not the price of regeneration. It is the <b>medium of the definition</b>: natural language became executable, which widens the reachable slice from wire formats to behaviour. The price of that width is determinism.
 </div>
 
@@ -283,6 +287,16 @@ credibility about why today is different. Say "lost it twice" out loud.
 
 Cite Fowler, SnowflakeServer / PhoenixServer, 2012 -- that is the one
 established anchor.
+
+THE BIG REWRITE box is this slide's missing bridge. Without it the slide asks
+"why didn't code do the same?" and never answers. The answer is that a rewrite
+spent the scarce resource. Every senior in the room has either lived one or been
+warned off one, so the phrase does the work -- do not explain it.
+
+It also states the day's premise in one move: if regeneration stops being
+expensive, the rewrite stops being a gamble and becomes an operation. Say it,
+then move. Do NOT let it turn into a debate about rewrites; module 4 shows what
+regeneration does and does not fix.
 
 EXPAND MDA OUT LOUD. Half the room has never heard of it, the other half lived
 through it. For the first half an unexplained acronym makes the strongest
