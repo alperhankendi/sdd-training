@@ -431,27 +431,27 @@ executable and the implementation is open -- that combination is the target.
 
 # Three specs. Same feature.
 
-<div class="mt-4 text-sm opacity-75">Key rotation. Three different authors. All three were approved to start work from. Full text is on your handout.</div>
+<div class="mt-4 text-sm opacity-75">Anahtar rotasyonu. Üç farklı yazar. Üçü de işe başlamak için yeterli bulunmuş. Tam metinler elinizdeki kâğıtta.</div>
 
 <div class="grid grid-cols-3 gap-3 mt-5 text-xs">
   <div class="p-3 rounded bg-gray-100 dark:bg-gray-800">
     <div class="font-bold mb-2">A</div>
-    <div class="font-mono opacity-80">Rotation must be fast.</div>
-    <div class="font-mono opacity-80 mt-1">Existing integrations should keep working.</div>
-    <div class="font-mono opacity-80 mt-1">Handle errors appropriately.</div>
-    <div class="font-mono opacity-80 mt-2">Acceptance: QA confirms rotation works end to end.</div>
+    <div class="opacity-80">Rotasyon hızlı olmalı.</div>
+    <div class="opacity-80 mt-1">Mevcut entegrasyonlar çalışmaya devam etmeli.</div>
+    <div class="opacity-80 mt-1">Hataları uygun şekilde ele al.</div>
+    <div class="opacity-80 mt-2"><b>Kabul:</b> QA rotasyonun uçtan uca çalıştığını doğrular.</div>
   </div>
   <div class="p-3 rounded bg-gray-100 dark:bg-gray-800">
     <div class="font-bold mb-2">B</div>
-    <div class="font-mono opacity-80">Add <code>rotated_from UUID NULL</code> and <code>overlap_expires_at</code> to <code>api_keys</code>.</div>
-    <div class="font-mono opacity-80 mt-1">In <code>ValidateKey()</code>, accept if <code>revoked_at IS NULL</code> and (<code>expires_at &gt; now()</code> or <code>overlap_expires_at &gt; now()</code>).</div>
-    <div class="font-mono opacity-80 mt-1">Add an index on <code>rotated_from</code>.</div>
+    <div class="opacity-80"><code>api_keys</code> tablosuna <code>rotated_from</code> ve <code>overlap_expires_at</code> kolonlarını ekle.</div>
+    <div class="opacity-80 mt-1"><code>ValidateKey()</code> içinde, <code>revoked_at IS NULL</code> ve (<code>expires_at &gt; now()</code> veya <code>overlap_expires_at &gt; now()</code>) ise kabul et.</div>
+    <div class="opacity-80 mt-1"><code>rotated_from</code> üzerine index ekle.</div>
   </div>
   <div class="p-3 rounded bg-gray-100 dark:bg-gray-800">
     <div class="font-bold mb-2">C</div>
-    <div class="font-mono opacity-80">Non-goals: automatic rotation. Rotating an already revoked key.</div>
-    <div class="font-mono opacity-80 mt-1">A key revoked during the overlap stops authenticating within 30s and does not affect its replacement.</div>
-    <div class="font-mono opacity-80 mt-1">Open question: do enterprise customers get longer than 24h? Needs Product.</div>
+    <div class="opacity-80"><b>Non-goals:</b> otomatik rotasyon. Zaten iptal edilmiş anahtarı rotate etmek.</div>
+    <div class="opacity-80 mt-1">Overlap sırasında iptal edilen anahtar <b>30 saniye</b> içinde durur ve yerine geçeni etkilemez.</div>
+    <div class="opacity-80 mt-1"><b>Açık soru:</b> Enterprise müşteriler 24 saatten uzun overlap alır mı? Ürün karar verecek.</div>
   </div>
 </div>
 
@@ -460,6 +460,15 @@ One of these three looks the most professional of the group and is <b>not</b> th
 </div>
 
 <!--
+The three columns are in Turkish on purpose. This lab asks the room to judge
+subtle quality differences under time pressure; doing that in a second language
+measures English comprehension, not spec reading. The chrome stays English like
+the rest of the deck, the material to be judged does not.
+
+The handout must match. If the paper is English while the screen is Turkish, the
+room reads the same three specs twice in two languages, which is worse than
+either choice alone.
+
 Do not read these columns aloud. They are a taste, not the material: the full
 specs are on the handout, and nobody can read three specs off a projector.
 
