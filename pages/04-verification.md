@@ -60,7 +60,7 @@ Different questions with different failure modes. A suite can be entirely green 
 </div>
 
 <div class="callout-key mt-6 text-sm">
-<b>If you learned the classical definition:</b> in IEEE V&amp;V (Verification and Validation - Doğrulama ve geçerleme) terms verification means <i>"are we building the product right"</i> and it <b>includes</b> unit testing. I am using the word more narrowly today — <b>checking the claim of done against reality.</b> Same word, smaller scope.
+<b>If you learned the classical definition:</b> in IEEE V&amp;V (Verification and Validation - Doğrulama ve geçerleme) terms verification means <i>"are we building the product right"</i> and it <b>includes</b> unit testing. I am using the word more narrowly today: <b>checking the claim of done against reality.</b> Same word, smaller scope.
 </div>
 
 <!--
@@ -335,7 +335,7 @@ and it is the one most teams adopt.
 <div class="mt-6 text-sm">A <b>fully correct</b> spec routinely yields: an injection-shaped query · an N+1 · a swallowed error path · a race on the rotation window · a key fragment in a log line. None are spec defects. Regeneration does not remove them.</div>
 
 <div class="callout-key mt-6 text-sm">
-<b>Which is why volume is a liability.</b> If generation is cheap and verification is not, every line you keep is a line something must re-verify forever. That is the real argument for keeping systems small — not tidiness, <b>cost of certainty</b>.
+<b>Which is why volume is a liability.</b> If generation is cheap and verification is not, every line you keep is a line something must re-verify forever. That is the real argument for keeping systems small. Not tidiness: <b>cost of certainty</b>.
 </div>
 
 <!--

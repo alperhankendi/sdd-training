@@ -13,7 +13,7 @@ There is no spec here to drift from. Everything the last four modules taught ass
 </div>
 
 <div class="mt-4 text-sm opacity-75">
-And it used to take years. <b>An agent can now produce a thousand lines and start patching them in a single afternoon</b> — the same failure mode, at a speed that outruns anyone's ability to write down why.
+And it used to take years. <b>An agent can now produce a thousand lines and start patching them in a single afternoon</b>, the same failure mode at a speed that outruns anyone's ability to write down why.
 </div>
 
 <!--

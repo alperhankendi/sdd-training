@@ -65,6 +65,17 @@ for (const [file] of Object.entries(EXPECTED)) {
 }
 pass('spec 11: modules 1-6 do not lean on parked pre-read slides')
 
+// No em-dashes in slide content. Speaker notes are exempt: nobody reads those on
+// a projector. Use a colon, a comma, parentheses, or two sentences instead.
+for (const [file] of Object.entries(EXPECTED)) {
+  const path = join('pages', file)
+  if (!existsSync(path)) continue
+  const body = readFileSync(path, 'utf8').replace(/<!--[\s\S]*?-->/g, '')
+  const hits = body.split('\n').filter((l) => l.includes('\u2014'))
+  if (hits.length === 0) pass(`${file}: no em-dashes`)
+  else fail(`${file}: ${hits.length} em-dash(es) in slide content -- first: ${hits[0].trim().slice(0, 70)}`)
+}
+
 // Acronym convention: {ACRONYM} (English expansion - Türkçe karşılık) at first
 // use. The deck is English but delivered in Turkish, and an unexpanded acronym is
 // the hardest thing to parse in a second language.

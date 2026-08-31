@@ -192,7 +192,7 @@ is a failure it would have prevented.
 
 **How does work flow between agents?**
 
-<span class="text-sm opacity-75">The highest leverage point in the framework. An ADW is the path a piece of work takes from request to merge — which agent touches it, in what order, and what each one hands the next.</span>
+<span class="text-sm opacity-75">The highest leverage point in the framework. An ADW is the path a piece of work takes from request to merge: which agent touches it, in what order, and what each one hands the next.</span>
 
 <div class="grid grid-cols-2 gap-4 mt-8">
   <div class="callout-key">
@@ -273,7 +273,7 @@ Infrastructure settled this a decade ago. **Code has had the argument before, an
 </div>
 
 <div class="callout-bad mt-6 text-sm">
-And there is a reason code never had this argument: rewriting was <b>the most dangerous thing you could do.</b> "The Big Rewrite" entered the vocabulary as a warning, not a plan — producing code was the bottleneck, and a rewrite spent the one thing you could not get back.
+And there is a reason code never had this argument: rewriting was <b>the most dangerous thing you could do.</b> "The Big Rewrite" entered the vocabulary as a warning, not a plan. Producing code was the bottleneck, and a rewrite spent the one thing you could not get back.
 </div>
 
 <div class="callout-key mt-4 text-sm">
@@ -314,11 +314,11 @@ costs you credibility a second time.
 
 <div class="mt-4 text-sm opacity-75">The economic reframe underneath all of this.</div>
 
-| | Traditional — mutation | Phoenix — immutability |
+| | Traditional (mutation) | Phoenix (immutability) |
 |---|---|---|
 | **The asset is** | Lines of code, authored algorithms | Specifications, tests, system boundaries |
 | **Legacy is created by** | Slow accumulation over years | Entropy reset on every regeneration |
-| **Financial strategy** | Capitalise the codebase as IP (Intellectual Property - Fikri mülkiyet) | **Compaction** — keep conceptual mass small |
+| **Financial strategy** | Capitalise the codebase as IP (Intellectual Property - Fikri mülkiyet) | **Compaction**: keep conceptual mass small |
 | **The developer's job** | Authoring and maintaining syntax | Stewardship, defining evaluation criteria |
 
 <div class="callout-key mt-6 text-sm">
@@ -326,7 +326,7 @@ costs you credibility a second time.
 </div>
 
 <div class="mt-4 text-xs opacity-60">
-Adapted from Fowler's Phoenix Architecture. One row of the original — <i>"evolution method: complete regeneration from updated specs"</i> — overclaims, and module 4 corrects it.
+Adapted from Fowler's Phoenix Architecture. One row of the original, <i>"evolution method: complete regeneration from updated specs"</i>, overclaims. Module 4 corrects it.
 </div>
 
 <!--
@@ -468,7 +468,7 @@ particular generated artifact.
 
 | | Answers |
 |---|---|
-| **1 · Spec anatomy** | What is a spec — and what is only pretending to be one? |
+| **1 · Spec anatomy** | What is a spec, and what is only pretending to be one? |
 | **2 · Intent → spec** | Where does a spec come from, when nobody has written one? |
 | **3 · Spec → plan** | How does a spec become work something else can run? |
 | **4 · Verification** | How do you know it was actually done? |

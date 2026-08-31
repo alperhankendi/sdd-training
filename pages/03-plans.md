@@ -20,7 +20,7 @@ Ask who has watched this happen. Then ask what they did: almost everyone says
 <div class="mt-8 text-xl">It must be complete enough to run with <b>zero human interpretation</b>.</div>
 
 <div class="mt-4 text-sm opacity-75">
-Not zero human <i>approval</i>. An irreversible action — a production push, a dropped table, a merge — should still stop and ask. That is a permissions policy, and it is orthogonal to whether the plan is any good.
+Not zero human <i>approval</i>. An irreversible action (a production push, a dropped table, a merge) should still stop and ask. That is a permissions policy, and it is orthogonal to whether the plan is any good.
 </div>
 
 <div class="mt-8 text-sm opacity-90">

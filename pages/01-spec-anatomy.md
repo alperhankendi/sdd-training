@@ -263,7 +263,7 @@ A division of labour: the spec owns <i>what must be true</i>, the implementer ow
 
 <div class="callout-good mt-6 text-sm">
 <b>But a constraint about anticipated change is in budget, not out.</b><br/>
-"Adding a notification channel must not require editing <code>AssignJobService</code>" is testable, names no pattern, and leaves the design open. <b>"Use the Strategy pattern with an abstract base class"</b> is out — that is the implementer's call.
+"Adding a notification channel must not require editing <code>AssignJobService</code>" is testable, names no pattern, and leaves the design open. <b>"Use the Strategy pattern with an abstract base class"</b> is out: that is the implementer's call.
 </div>
 
 <!--
