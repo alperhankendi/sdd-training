@@ -267,7 +267,7 @@ the day.
 Infrastructure settled this a decade ago. **Code has had the argument before, and lost it twice.**
 
 - CASE tools and 4GLs, late 1980s
-- MDA and round-trip UML, 2001–2008: regeneration was cheap *and* deterministic, and it still lost
+- **MDA** — Model-Driven Architecture — and round-trip UML, 2001–2008. You drew the model, it generated the code. Regeneration was cheap *and* deterministic, and it still lost
 - It quietly **won** wherever the definition covers a narrow slice completely: protobuf, OpenAPI clients, GraphQL types, ORM migrations
 
 </div>
@@ -282,7 +282,14 @@ the argument never happened costs you the only thing this beat has, which is
 credibility about why today is different. Say "lost it twice" out loud.
 
 Cite Fowler, SnowflakeServer / PhoenixServer, 2012 -- that is the one
-established anchor. Describe the code-side extension in plain words; do not
+established anchor.
+
+EXPAND MDA OUT LOUD. Half the room has never heard of it, the other half lived
+through it. For the first half an unexplained acronym makes the strongest
+historical claim in the deck land as noise. One clause is enough:
+"Model-Driven Architecture -- you drew the model, it generated the code."
+The same objection returns by name in module 6, so the word has to mean
+something by then. Describe the code-side extension in plain words; do not
 present it as a named methodology, because a term that survives no search
 costs you credibility a second time.
 -->
