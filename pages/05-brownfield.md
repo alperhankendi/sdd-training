@@ -231,10 +231,18 @@ Not a specification. A map: what this system is, which paths matter, what is loa
   </div>
 </div>
 
+<div class="mt-6 text-xs opacity-60">
+There are linters for this file now — <code>npx ecc-agentshield</code> checks <code>CLAUDE.md</code> and <code>.cursorrules</code> against about a hundred security rules.
+</div>
+
 <!--
 The repository they are about to see does not have one. That absence is
 deliberate and it is the first thing to point at in the demo -- before opening a
 single source file, note what is not there.
+
+The linter footnote is worth a sentence: if you are going to tell a room to write
+a CLAUDE.md, telling them something checks it is the difference between advice
+and a practice.
 -->
 
 ---

@@ -227,6 +227,7 @@ to see why "more than one correct implementation" is the branch that matters.
 | **Superpowers** | Feature-level loop inside an editor session | Light — with an architectural dial |
 | **GitHub Spec Kit** | A vendor-neutral `/specify → /plan → /tasks` flow | Medium |
 | **Kiro** | Spec-driven work inside an IDE | Medium |
+| **ECC** | A skills-and-agents harness spread across many editors | Medium — it is a harness, not a spec method |
 | **Plain markdown + git** | Nothing, and it always works | As light as you make it |
 
 </div>
@@ -238,6 +239,11 @@ The last row is not a joke. Every principle today works with two markdown files 
 <!--
 Spec Kit is on this slide despite not being taught, because the room has heard
 the term and omitting it invites a Q&A ambush. One sentence is enough.
+
+ECC is on the slide with a deliberate qualifier. It is a harness that distributes
+skills and agents -- agent INSTRUCTION files, with no goal, no constraints and no
+acceptance criteria. Useful, and not a spec method. If someone offers it as one,
+that is module 1 slide 8's altitude confusion with a new costume.
 
 The last row is the honest close: nothing today required a vendor.
 -->
