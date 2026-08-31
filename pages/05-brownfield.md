@@ -350,15 +350,15 @@ Practical notes from the dry run:
 
 # Lab 5 · Characterize, then delta-spec
 
-<div class="mt-8 text-lg">A legacy function. Ten minutes.</div>
+<div class="mt-8 text-lg">A legacy function. Twenty minutes.</div>
 
 <div class="mt-8 space-y-3 text-sm">
   <div class="callout-key"><b>1 ·</b> List the characterization tests you would write <b>first</b>, before changing anything.</div>
-  <div class="callout-key"><b>2 ·</b> Draft the delta-spec for the stated change.</div>
+  <div class="callout-key"><b>2 ·</b> Write the acceptance criteria for the change — the part that can fail.</div>
 </div>
 
 <div class="callout-bad mt-8 text-sm">
-<b>If you finish early:</b> the function contains a subtle bug. Your characterization test will pin the buggy behaviour. What do you do — and what do you write down?
+<b>If you finish early:</b> turn over the card handed out at the six-minute mark.
 </div>
 
 <!--

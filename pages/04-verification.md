@@ -442,7 +442,7 @@ reference copy.
 
 # Lab 4 · A PR that changes behaviour
 
-<div class="mt-8 text-lg">Fifteen minutes. What is missing, and what would you block on?</div>
+<div class="mt-8 text-lg">Twenty minutes. Find <b>exactly two</b> things — one missing from the change, one wrong inside the diff.</div>
 
 <div class="callout-good mt-8 text-sm">
 <b>The answer key has two sides.</b> One is the missing spec update. The other is a defect in the diff that the spec is <b>silent about by design</b>.
@@ -457,9 +457,14 @@ A participant who finds only the first has learned exactly the half that ships b
 </div>
 
 <!--
-This lab is the module's whole argument compressed into fifteen minutes. If the
-room finds only the spec gap, the review beat did not land and you should say so
-plainly rather than move on.
+This lab is the module's whole argument. It asks for exactly two findings on
+purpose: a solvability run showed that "what is missing, and what would you block
+on?" gave no completion condition, so people produced one finding and stopped --
+and the one they stopped at was always the spec gap, which is the half the
+training obviously teaches.
+
+If the room finds only the spec gap, the review beat did not land and you should
+say so plainly rather than move on.
 
 DEBRIEF -- under ~15: ask for the spec gap first, get it quickly, then ask "what
 else is in that diff" and let the silence sit. Above 15: take the spec gap from

@@ -362,9 +362,9 @@ Module 6's flowchart formalises this. Do not pre-empt it here.
 
 ---
 
-# Lab 3 · Two planted defects
+# Lab 3 · Find the two
 
-<div class="mt-8 text-lg">A supplied plan. Fifteen minutes.</div>
+<div class="mt-8 text-lg">A supplied plan. Ten minutes.</div>
 
 <div class="mt-8 space-y-3 text-sm">
   <div class="callout-key"><b>1 ·</b> Find the step that <b>cannot be verified</b> — its <code>verify</code> would pass whether or not the step worked.</div>
