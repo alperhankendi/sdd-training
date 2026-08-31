@@ -371,18 +371,23 @@ If I deleted this module entirely, could I regenerate it, <b>correctly</b>, from
 <div class="mt-6 text-sm">Ask it in two sizes: <b>this module</b>, and <b>this boundary</b>. The knowledge least likely to be written down lives between modules.</div>
 
 <!--
-RUN IT IN THE ROOM. Ninety seconds. Laptops are open.
+Ask it as an enumeration, not as a feeling. The naive form fails because the
+person answering cannot un-know what they are auditing. Worked example to use:
 
-Ask everyone to pull up a repository they actually work on, pick one module,
-and silently name one thing they would need that is written down nowhere.
-Then: "hands up if you could NOT name one." Almost no hands go up. That is the
-lesson, and it lands on their own code rather than on this slide.
+  You wrote the login module. You know emails are lowercased before comparison,
+  because otherwise Ahmet@company.com and ahmet@company.com become two accounts.
+  The spec says "users log in with email and password." Could you rebuild it from
+  that? Of course. But you are not reading the spec -- you are reading the spec
+  PLUS everything in your head. Hand it to someone who has never seen the code
+  and a month later support gets a ticket: "I cannot log into my account."
 
-Give anyone without a repo the running example rather than letting them sit out.
+The code was right. The spec was right. The lowercasing rule was written down
+nowhere.
 
-Do NOT collect answers publicly. The exercise works because it is
-uncomfortable, and naming a colleague's undocumented module in front of the
-room converts insight into defensiveness. Show of hands only.
+Deliberately no room exercise here. An earlier version asked everyone to open
+their own repository for ninety seconds; it was cut because a clear worked
+example does the same job in less time and does not depend on people having a
+repository they can open.
 
 Say plainly that the test is literally runnable: delete it, hand a fresh agent
 the spec, diff the behaviour.
