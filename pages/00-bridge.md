@@ -462,33 +462,50 @@ particular generated artifact.
 
 ---
 
-# One question, three jobs
+# The day
 
-| Where | The question | What it decides |
-|---|---|---|
-| **Now** | Name one thing you'd need that the spec doesn't say | Is the spec the source, or is the code? |
-| **Module 4** | Would fixing the spec and regenerating remove this defect? | Spec defect, or implementation defect |
-| **Module 5** | Where does the test fail hardest here? | What archaeology must recover first |
+<div class="mt-6">
 
-<div class="callout-key mt-10 text-sm">
+| | Answers |
+|---|---|
+| **1 · Spec anatomy** | What is a spec — and what is only pretending to be one? |
+| **2 · Intent → spec** | Where does a spec come from, when nobody has written one? |
+| **3 · Spec → plan** | How does a spec become work something else can run? |
+| **4 · Verification** | How do you know it was actually done? |
+| **5 · Brownfield** | What if there is no spec and 200,000 lines of code? |
+| **6 · When not to** | When should you do none of this? |
+
+</div>
+
+<div class="callout-key mt-8 text-sm">
 In infrastructure the definition is the Dockerfile, the Terraform module, the manifest.<br/>
 <b class="text-lg">In code it is the spec.</b><br/>
-Everything else today (anatomy, elicitation, plans, verification, brownfield) is the work of building and maintaining that definition.
+Everything above is the work of building and maintaining that definition.
 </div>
 
 <!--
-This is the agenda slide, and it arrives here rather than at the start because
-only now does the room know why it needs one.
+This is the agenda, and it arrives here rather than at 08:45 because only now
+does the room know why it needs one. At the start these six lines are a list; here
+each one is a consequence of the deletion test.
 
-The objection is coming, and it is the strongest one anyone will raise all day:
+An earlier version put the three-jobs through-line table on this slide. It was
+cut for two reasons: two of its three rows reference diagnostics the room has not
+met yet, so it reads as a puzzle rather than a map -- and the identical table
+already closes module 6, where it pays off in the past tense. Showing it twice
+spends the recognition before it is earned.
+
+The Dockerfile line closes the phoenix argument opened four slides ago. Slide 11
+asked why code never had that argument; this answers it. Say the two sentences
+and stop -- the callout does the rest.
+
+Time check: you should be at 40 minutes. If you are over, cut from module 1's
+ladder, never from the mindset switch.
+
+THE OBJECTION USUALLY LANDS HERE, and it is the strongest of the day:
 "if the spec is complete enough to regenerate from, it contains everything the
 code contained -- you have rewritten the program in English. We tried this. It
 was called MDA."
 
-Do not improvise the answer. It is in the facilitator notes, and it turns on
-the acceptance set: a spec does not determine the implementation, it determines
-the SET of implementations that would be correct. Where that set has more than
-one member, the spec is strictly smaller than the code. MDA failed because it
-forced the set to a singleton. Then concede the cases where the set genuinely
-IS a singleton -- and name them as module 6's "when not to do SDD".
+Do not improvise. The scripted answer is in facilitator/objections.md and it
+turns on the acceptance set. Concede the singleton cases out loud.
 -->

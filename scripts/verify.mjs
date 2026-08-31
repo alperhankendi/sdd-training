@@ -136,8 +136,20 @@ for (const [file] of Object.entries(EXPECTED)) {
 }
 
 const bridge = readFileSync(join('pages', '00-bridge.md'), 'utf8')
-if (bridge.includes('One question, three jobs')) pass('module 0: through-line table present')
-else fail('module 0: through-line table missing -- modules 4 and 5 depend on it')
+
+// The three-jobs table lives in module 6's close, not module 0's. In module 0 two
+// of its three rows reference diagnostics the room has not met, so it reads as a
+// puzzle; at the close it pays off in the past tense. Module 0 gets a real agenda.
+if (bridge.includes('# The day')) pass('module 0: closes with an agenda')
+else fail('module 0: no agenda slide -- the day needs a map once the room knows why')
+if (bridge.includes('One question, three jobs'))
+  fail('module 0: the through-line table belongs to module 6, not here')
+
+if (existsSync(join('pages', '06-antipatterns.md'))) {
+  const m6 = readFileSync(join('pages', '06-antipatterns.md'), 'utf8')
+  if (m6.includes('One question, three jobs')) pass('module 6: through-line callback present')
+  else fail('module 6: the through-line callback is missing -- it is the day\'s closing argument')
+}
 
 if (bridge.includes('lost it twice')) pass('module 0: honest history of prior attempts present')
 else fail('module 0: the MDA/4GL history is missing -- the beat loses credibility without it')
