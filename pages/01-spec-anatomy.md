@@ -429,7 +429,7 @@ executable and the implementation is open -- that combination is the target.
 
 ---
 
-# Three specs. Same feature.
+# Üç spec. Aynı feature.
 
 <div class="mt-4 text-sm opacity-75">Anahtar rotasyonu. Üç farklı yazar. Üçü de işe başlamak için yeterli bulunmuş.</div>
 
@@ -482,7 +482,7 @@ exercise.
 
 ---
 
-# Lab 1 · Which one would you rather be handed?
+# Lab 1 · Hangisini almak isterdiniz?
 
 <div class="mt-4 text-sm opacity-90">
 Bu üçünden biri size verilecek ve onunla inşa edeceksiniz.
