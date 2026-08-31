@@ -3,7 +3,7 @@
 <div class="mt-10 text-xl">If anyone leaves believing that, today failed.</div>
 
 <div class="mt-10 text-sm opacity-90">
-Not partially. The person who believes it will try it once, find it slow, and conclude the whole thing is bureaucracy — and they will be harder to convince the second time than they were this morning.
+Not partially. The person who believes it will try it once, find it slow, and conclude the whole thing is bureaucracy, and they will be harder to convince the second time than they were this morning.
 </div>
 
 <!--
@@ -20,15 +20,15 @@ the room that the last forty-five minutes are not a disclaimer.
 
 | Anti-pattern | Looks like | Healthy counterpart |
 |---|---|---|
-| **Spec theater** | A document that cannot be wrong | Module 1 — the testability test |
-| **Over-specification** | The spec costs more than the code | Module 1 — the precision budget |
-| **Altitude confusion** | A task where a spec belongs | Module 2 — the depth dial |
-| **Restatement** | The same constraint in eleven files | Module 1 — reference over restatement |
+| **Spec theater** | A document that cannot be wrong | Module 1: the testability test |
+| **Over-specification** | The spec costs more than the code | Module 1: the precision budget |
+| **Altitude confusion** | A task where a spec belongs | Module 2: the depth dial |
+| **Restatement** | The same constraint in eleven files | Module 1: reference over restatement |
 
 </div>
 
 <div class="mt-8 text-sm opacity-90">
-Each of these has a counterpart you already met. None of them is new material — this is a recognition exercise.
+Each of these has a counterpart you already met. None of them is new material. This is a recognition exercise.
 </div>
 
 <!--
@@ -45,11 +45,11 @@ diagnostic.
 
 | Anti-pattern | Looks like | Healthy counterpart |
 |---|---|---|
-| **Spec drift** | Spec and code diverge, silently | Module 4 — definition of done |
-| **Retro-spec** | Spec patched at PR time to match the build | Module 4 — the spec changes *first* |
-| **Ceremonial gate** | A gate nobody can fail | Module 2 — size the artifact to the change |
-| **Big-bang brownfield spec** | Six months specifying code nobody is changing | Module 5 — spec the delta |
-| **Regeneration as review substitute** | "The spec is right, so skip the diff" | Module 4 — code review *gains* a spec review |
+| **Spec drift** | Spec and code diverge, silently | Module 4: definition of done |
+| **Retro-spec** | Spec patched at PR time to match the build | Module 4: the spec changes *first* |
+| **Ceremonial gate** | A gate nobody can fail | Module 2: size the artifact to the change |
+| **Big-bang brownfield spec** | Six months specifying code nobody is changing | Module 5: spec the delta |
+| **Regeneration as review substitute** | "The spec is right, so skip the diff" | Module 4: code review *gains* a spec review |
 
 </div>
 
@@ -78,7 +78,7 @@ subtlety.
   </div>
   <div class="callout-key">
     <div class="font-bold">3 · Could you delete the spec and lose anything?</div>
-    <div class="mt-1">If nobody would notice, it was documentation of a decision rather than the decision itself — and it will drift, because nothing depends on it.</div>
+    <div class="mt-1">If nobody would notice, it was documentation of a decision rather than the decision itself, and it will drift, because nothing depends on it.</div>
   </div>
 </div>
 
@@ -132,11 +132,11 @@ reads as a contradiction seven hours later, and someone will say so.
 <div class="mt-8 text-lg">The strongest objection of the day, and it is correct in its own domain.</div>
 
 <div class="callout-bad mt-8">
-"If the spec is complete enough to regenerate from, it contains everything the code contained. You have rewritten the program in English — longer, ambiguous, no compiler. We tried this. It was called MDA."
+"If the spec is complete enough to regenerate from, it contains everything the code contained. You have rewritten the program in English: longer, ambiguous, no compiler. We tried this. It was called MDA."
 </div>
 
 <div class="mt-8 text-sm opacity-90">
-The answer turns on one distinction: a spec does not determine <b>the implementation</b>. It determines the <b>acceptance set</b> — the set of implementations that would be correct.
+The answer turns on one distinction: a spec does not determine <b>the implementation</b>. It determines the <b>acceptance set</b>: the set of implementations that would be correct.
 </div>
 
 <div class="mt-6 grid grid-cols-2 gap-6 text-sm">
@@ -146,7 +146,7 @@ The answer turns on one distinction: a spec does not determine <b>the implementa
   </div>
   <div class="callout-bad">
     <div class="font-bold">Set is a singleton</div>
-    <div class="mt-1">A dense algorithmic kernel. A protocol implementation. A hot path where one shape performs. The spec converges on the code — <b>the objector is right.</b></div>
+    <div class="mt-1">A dense algorithmic kernel. A protocol implementation. A hot path where one shape performs. The spec converges on the code, and <b>the objector is right.</b></div>
   </div>
 </div>
 
@@ -195,10 +195,10 @@ slide. If you find yourself explaining an input here, it was under-taught earlie
 <div class="mt-6 text-sm opacity-75">"Add a per-customer rate limit to the API."</div>
 
 <div class="mt-6 space-y-2 text-sm">
-  <div class="callout-key"><b>Maintained in six months?</b> Yes — it is core platform behaviour.</div>
+  <div class="callout-key"><b>Maintained in six months?</b> Yes. It is core platform behaviour.</div>
   <div class="callout-key"><b>Domain new?</b> No. The team has done rate limiting before.</div>
-  <div class="callout-key"><b>More than one correct implementation?</b> Yes — fixed window, sliding window, token bucket all satisfy "reject over the limit", and they behave differently at the edge.</div>
-  <div class="callout-bad"><b>Other teams derive commitments?</b> Yes — the client SDK and the support runbook both encode the behaviour.</div>
+  <div class="callout-key"><b>More than one correct implementation?</b> Yes: fixed window, sliding window, token bucket all satisfy "reject over the limit", and they behave differently at the edge.</div>
+  <div class="callout-bad"><b>Other teams derive commitments?</b> Yes. The client SDK and the support runbook both encode the behaviour.</div>
   <div class="callout-key"><b>Audit trail required?</b> No.</div>
 </div>
 
@@ -223,11 +223,11 @@ to see why "more than one correct implementation" is the branch that matters.
 
 | | Optimises for | Weight |
 |---|---|---|
-| **BMAD** | Traceability, audit trails, multi-team coordination | Heavy — with a Quick Flow dial |
-| **Superpowers** | Feature-level loop inside an editor session | Light — with an architectural dial |
+| **BMAD** | Traceability, audit trails, multi-team coordination | Heavy, with a Quick Flow dial |
+| **Superpowers** | Feature-level loop inside an editor session | Light, with an architectural dial |
 | **GitHub Spec Kit** | A vendor-neutral `/specify → /plan → /tasks` flow | Medium |
 | **Kiro** | Spec-driven work inside an IDE | Medium |
-| **ECC** | A skills-and-agents harness spread across many editors | Medium — it is a harness, not a spec method |
+| **ECC** | A skills-and-agents harness spread across many editors | Medium; it is a harness, not a spec method |
 | **Plain markdown + git** | Nothing, and it always works | As light as you make it |
 
 </div>
@@ -258,7 +258,7 @@ The last row is the honest close: nothing today required a vendor.
 |---|---|
 | CI enforcement of spec-code linkage | The Lab 4 handout has a reference slide |
 | Multi-agent orchestration | Named on the landscape slide, not taught |
-| Organisational rollout, mandates | Deliberately out of scope — see the next slide |
+| Organisational rollout, mandates | Deliberately out of scope (see the next slide) |
 
 </div>
 
@@ -306,15 +306,15 @@ one line rather than a process.
 
 <div class="mt-6 space-y-3 text-sm">
   <div class="callout-good">
-    <div class="font-bold">Self-paying — adopt unilaterally, tomorrow</div>
+    <div class="font-bold">Self-paying: adopt unilaterally, tomorrow</div>
     <div class="mt-1">The five questions · acceptance criteria that can fail · an executable plan · a delta-spec before a legacy change. Each repays you inside the same task.</div>
   </div>
   <div class="callout-key">
-    <div class="font-bold">Team-paying — needs a shared norm</div>
+    <div class="font-bold">Team-paying: needs a shared norm</div>
     <div class="mt-1">Spec as definition of done · spec review alongside code review. Do not adopt these alone; you will pay a visible tax for an invisible benefit.</div>
   </div>
   <div class="callout-bad">
-    <div class="font-bold">Org-paying — needs a mandate and a budget</div>
+    <div class="font-bold">Org-paying: needs a mandate and a budget</div>
     <div class="mt-1">Traceability CI · project-altitude artifacts · audit trails. Never mandate these downward without also moving whatever measures the mandated team.</div>
   </div>
 </div>

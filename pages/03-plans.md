@@ -20,7 +20,7 @@ Ask who has watched this happen. Then ask what they did: almost everyone says
 <div class="mt-8 text-xl">It must be complete enough to run with <b>zero human interaction</b>.</div>
 
 <div class="mt-8 text-sm opacity-90">
-Leverage point 3 from this morning, now operational. And the test is not "is it detailed" — detail is easy to add and proves nothing. The test is:
+Leverage point 3 from this morning, now operational. And the test is not "is it detailed": detail is easy to add and proves nothing. The test is:
 </div>
 
 <div class="callout-key mt-6 !text-lg">
@@ -129,7 +129,7 @@ believes it. What is new is applying it to a document.
   <div class="callout-bad">
     <div class="font-bold text-red-600 dark:text-red-400">Breaks silently</div>
     <div class="mt-2 font-mono text-xs">"Same approach as Task 3, but for revocation"</div>
-    <div class="mt-2">Works in one long session. Fails the first time each task gets a fresh executor — and fails by producing something, not by stopping.</div>
+    <div class="mt-2">Works in one long session. Fails the first time each task gets a fresh executor, and fails by producing something, not by stopping.</div>
   </div>
   <div class="callout-good">
     <div class="font-bold text-green-600 dark:text-green-400">Survives</div>
@@ -153,12 +153,12 @@ optimises for a reader who does not exist.
 ```markdown
 ### Task 7: Revocation propagation
 
-Consumes:  KeyStore.Invalidate(Guid keyId)  — from Task 3
+Consumes:  KeyStore.Invalidate(Guid keyId)  (from Task 3)
 Produces:  RevocationCache.Purge(Guid keyId, DateTime asOf) : Task<int>
 ```
 
 <div class="mt-6 text-sm opacity-90">
-Two lines per task. They exist because the alternative is an executor guessing a signature — and guessing plausibly, which is worse than guessing badly.
+Two lines per task. They exist because the alternative is an executor guessing a signature, and guessing plausibly, which is worse than guessing badly.
 </div>
 
 <div class="callout-bad mt-6 text-sm">
@@ -263,7 +263,7 @@ dangerous, because completed work stays checked off while quietly becoming wrong
   </div>
   <div class="callout-good">
     <div class="font-bold">Its verify step</div>
-    <div class="mt-2 font-mono text-xs">dotnet test --filter RotationOverlap<br/><br/>done: two tests pass — at 23h59m and at 24h01m</div>
+    <div class="mt-2 font-mono text-xs">dotnet test --filter RotationOverlap<br/><br/>done: two tests pass at 23h59m and at 24h01m</div>
   </div>
 </div>
 
@@ -281,7 +281,7 @@ plan is just where that becomes undeniable.
 
 # Decomposition · project altitude
 
-<div class="mt-8 text-lg opacity-75">BMAD — Architecture → Epics → Stories, with gates between</div>
+<div class="mt-8 text-lg opacity-75">BMAD: Architecture → Epics → Stories, with gates between</div>
 
 <div class="mt-6 text-sm opacity-90">
 Coarser units, longer-lived, reviewed by more people. A story is not a task: it states an outcome and leaves the steps open.
@@ -310,7 +310,7 @@ persuasive than the word "auditability".
 
 # Decomposition · feature altitude
 
-<div class="mt-8 text-lg opacity-75">Superpowers <code>writing-plans</code> — one spec, one plan, N tasks, usually an afternoon</div>
+<div class="mt-8 text-lg opacity-75">Superpowers <code>writing-plans</code>: one spec, one plan, N tasks, usually an afternoon</div>
 
 <div class="mt-8 grid grid-cols-2 gap-6 text-sm">
   <div class="callout-good">
@@ -340,10 +340,10 @@ CHANGES. The same team uses both in the same week.
 
 | | Project altitude | Feature altitude |
 |---|---|---|
-| **Unit** | Story — an outcome | Task — a step with a verify |
+| **Unit** | Story: an outcome | Task: a step with a verify |
 | **Reviewed by** | Someone who will not implement it | Whoever picks it up |
 | **Gate** | Between phases, blocking | An approval before work starts |
-| **Traceability** | Explicit, upward, to PRD | Implicit — the spec is one file away |
+| **Traceability** | Explicit, upward, to PRD | Implicit: the spec is one file away |
 | **Cost of being wrong** | Re-derive the epics | Re-run the plan |
 
 </div>
@@ -367,12 +367,12 @@ Module 6's flowchart formalises this. Do not pre-empt it here.
 <div class="mt-8 text-lg">A supplied plan. Ten minutes.</div>
 
 <div class="mt-8 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> Find the step that <b>cannot be verified</b> — its <code>verify</code> would pass whether or not the step worked.</div>
+  <div class="callout-key"><b>1 ·</b> Find the step that <b>cannot be verified</b>: its <code>verify</code> would pass whether or not the step worked.</div>
   <div class="callout-key"><b>2 ·</b> Find the step that <b>silently assumes a human is present</b>.</div>
 </div>
 
 <div class="callout-good mt-8 text-sm">
-<b>If you finish early:</b> for each defect you found, name which of the executor's four properties makes it a defect. Not what to fix — <b>why it breaks.</b>
+<b>If you finish early:</b> for each defect you found, name which of the executor's four properties makes it a defect. Not what to fix. <b>Why it breaks.</b>
 </div>
 
 <!--

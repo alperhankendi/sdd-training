@@ -76,11 +76,11 @@ The mechanism, not the etiquette:
 <div class="mt-4 grid grid-cols-2 gap-6 text-sm">
   <div class="callout-good">
     <div class="font-bold">People agree on goals</div>
-    <div class="mt-1">"Make key rotation safe" — everyone nods. No information transferred.</div>
+    <div class="mt-1">"Make key rotation safe." Everyone nods. No information transferred.</div>
   </div>
   <div class="callout-bad">
     <div class="font-bold">People differ on boundaries</div>
-    <div class="mt-1">"Does this cover keys already leaked?" — now two people discover they disagreed all along.</div>
+    <div class="mt-1">"Does this cover keys already leaked?" Now two people discover they disagreed all along.</div>
   </div>
 </div>
 
@@ -134,7 +134,7 @@ requirements than any other single sentence in this deck.
 </div>
 
 <div class="callout-good mt-8 text-sm">
-An agent cannot distinguish "we decided this and did not write it down" from "we never decided this" — because from inside the document, those look identical.
+An agent cannot distinguish "we decided this and did not write it down" from "we never decided this", because from inside the document, those look identical.
 </div>
 
 <!--
@@ -205,7 +205,7 @@ with access to neither must still leave with the shape.
 | **Feature** | Superpowers | brainstorm → design → plan → verify |
 
 <div class="mt-8 text-sm opacity-90">
-Two toolchains, one shape. If you have access to neither, the previous slide is still the whole lesson — these are instances of it, not the source of it.
+Two toolchains, one shape. If you have access to neither, the previous slide is still the whole lesson. These are instances of it, not the source of it.
 </div>
 
 <div class="mt-6 text-sm opacity-75">
@@ -228,7 +228,7 @@ something they can apply on Monday.
 | **Superpowers** | spike ↔ bounded ↔ architectural |
 
 <div class="callout-key mt-8">
-The question is not <s>"which one?"</s> — it is <b>"at what depth?"</b>
+The question is not <s>"which one?"</s> It is <b>"at what depth?"</b>
 </div>
 
 <div class="mt-8 text-sm opacity-75">
@@ -252,7 +252,7 @@ reach the photographed slide with nothing behind them.
 <div class="mt-8 text-lg opacity-75">Product Brief → PRD, walked by diff</div>
 
 <div class="mt-8 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> The brief. Read its non-goals aloud — that section is the whole reason the PRD can be reviewed at all.</div>
+  <div class="callout-key"><b>1 ·</b> The brief. Read its non-goals aloud. That section is the whole reason the PRD can be reviewed at all.</div>
   <div class="callout-bad"><b>2 ·</b> The draft PRD, and the gate <b>rejecting it</b>. Four findings, one fatal.</div>
   <div class="callout-good"><b>3 ·</b> The PRD that passes. Diff it against the draft.</div>
 </div>
@@ -338,7 +338,7 @@ placeholder documents saying "not applicable" -- nothing at all is the output.
 </div>
 
 <div class="mt-8 text-sm">
-Write the <b>five questions</b> you would ask before writing any spec. Not clarifications — questions whose answers would change what you build.
+Write the <b>five questions</b> you would ask before writing any spec. Not clarifications: questions whose answers would change what you build.
 </div>
 
 <div class="callout-good mt-6 text-sm">

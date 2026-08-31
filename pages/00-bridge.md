@@ -93,7 +93,7 @@ can put in front of a decision.
   </div>
   <div class="callout-bad">
     <div class="font-bold text-red-600 dark:text-red-400">Silently stale</div>
-    <div class="text-sm mt-1">Found, read, trusted — and wrong. Worse than absent, because it is believed.</div>
+    <div class="text-sm mt-1">Found, read, trusted, and wrong. Worse than absent, because it is believed.</div>
   </div>
 </div>
 
@@ -125,7 +125,7 @@ docs make it confident.
 </div>
 
 <div class="mt-8 text-sm opacity-75">
-You will meet a real one this afternoon — a test named after the method it does not test.
+You will meet a real one this afternoon: a test named after the method it does not test.
 </div>
 
 <!--
@@ -143,7 +143,7 @@ tautology. Its name mentions the buggiest function in the codebase.
 **Can a plan complete with zero further input?**
 
 <div class="mt-6 text-lg">
-That is the whole test. Not "is it detailed" — <b>can it run without you in the room.</b>
+That is the whole test. Not "is it detailed": <b>can it run without you in the room.</b>
 </div>
 
 <div class="grid grid-cols-2 gap-4 mt-8">
@@ -157,7 +157,7 @@ That is the whole test. Not "is it detailed" — <b>can it run without you in th
   </div>
 </div>
 
-<div class="mt-6 text-sm opacity-75">The highest leverage point today's material actually operates. Module 3 spends seventy minutes here.</div>
+<div class="mt-6 text-sm opacity-75">The highest leverage point today's material actually operates. Module 3 spends over an hour here.</div>
 
 <!--
 Resist explaining why now. Module 3 derives every rule in this area from a
@@ -177,7 +177,7 @@ A template is a worked example with the variable parts removed. It answers a que
 
 <div class="callout-key mt-8">
 <div class="font-bold">The failure mode is bloat.</div>
-<div class="text-sm mt-1">Every incident adds a section. Nothing ever removes one. Eventually filling in the template costs more than the work it governs — and that is over-specification, which module 6 names as an anti-pattern.</div>
+<div class="text-sm mt-1">Every incident adds a section. Nothing ever removes one. Eventually filling in the template costs more than the work it governs, and that is over-specification, which module 6 names as an anti-pattern.</div>
 </div>
 
 <!--
@@ -214,7 +214,7 @@ That last sentence is the seed for module 3's declared-interfaces beat. It is
 also literally true of this training's own construction: the plan that built
 today's legacy repository failed to compile because it assumed a function
 signature the generating step had not been told to produce. Tell that story if
-the room needs a concrete one — it happened while making the material you will
+the room needs a concrete one: it happened while making the material you will
 use this afternoon.
 -->
 
@@ -243,7 +243,7 @@ use this afternoon.
 
 <!--
 Close the bridge here. The next four slides change the question from "where do
-I intervene" to "where does the truth live" — and that is the actual subject of
+I intervene" to "where does the truth live". That is the actual subject of
 the day.
 -->
 
@@ -264,16 +264,16 @@ the day.
 
 <div class="mt-8 text-sm opacity-90">
 
-Infrastructure settled this a decade ago. **Code has had the argument before — and lost it twice.**
+Infrastructure settled this a decade ago. **Code has had the argument before, and lost it twice.**
 
 - CASE tools and 4GLs, late 1980s
-- MDA and round-trip UML, 2001–2008 — regeneration was cheap *and* deterministic, and it still lost
+- MDA and round-trip UML, 2001–2008: regeneration was cheap *and* deterministic, and it still lost
 - It quietly **won** wherever the definition covers a narrow slice completely: protobuf, OpenAPI clients, GraphQL types, ORM migrations
 
 </div>
 
 <div class="callout-key mt-6 text-sm">
-What changed is not the price of regeneration. It is the <b>medium of the definition</b> — natural language became executable, which widens the reachable slice from wire formats to behaviour. The price of that width is determinism.
+What changed is not the price of regeneration. It is the <b>medium of the definition</b>: natural language became executable, which widens the reachable slice from wire formats to behaviour. The price of that width is determinism.
 </div>
 
 <!--
@@ -292,7 +292,7 @@ costs you credibility a second time.
 # The deletion test
 
 <div class="text-xl mt-6">
-If I deleted this module entirely, could I regenerate it — <b>correctly</b> — from its spec alone?
+If I deleted this module entirely, could I regenerate it, <b>correctly</b>, from its spec alone?
 </div>
 
 <div class="mt-4 text-sm opacity-75">Not "would the output be identical." Identity is not available and is not the point.</div>
@@ -300,7 +300,7 @@ If I deleted this module entirely, could I regenerate it — <b>correctly</b> �
 <div class="callout-key mt-8">
 <div class="font-bold">Ask it as an enumeration, not as a feeling:</div>
 <div class="mt-2 text-lg">Name one thing you would have to know to rebuild this that the spec does not say.</div>
-<div class="mt-2 text-sm opacity-75">If you can name one, it fails — and the thing you named is the backlog entry.</div>
+<div class="mt-2 text-sm opacity-75">If you can name one, it fails, and the thing you named is the backlog entry.</div>
 </div>
 
 <div class="mt-6 text-sm">Ask it in two sizes: <b>this module</b>, and <b>this boundary</b>. The knowledge least likely to be written down lives between modules.</div>
@@ -331,7 +331,7 @@ the spec, diff the behaviour.
 The code holds knowledge that exists <b>nowhere else</b>.
 </div>
 
-<div class="mt-4 text-sm opacity-90">Every piece of it is a single point of failure living in one person's head — or in nobody's.</div>
+<div class="mt-4 text-sm opacity-90">Every piece of it is a single point of failure living in one person's head, or in nobody's.</div>
 
 <div class="callout-bad mt-10 !text-lg">
 You have been maintaining the binary and calling it the source.
@@ -371,7 +371,7 @@ module 4's spec-defect / implementation-defect diagnostic.
 </div>
 
 <div class="mt-10 text-lg">
-So spec review is a review that was <b>missing</b> — not a review that replaces one.
+So spec review is a review that was <b>missing</b>, not a review that replaces one.
 </div>
 
 <div class="mt-4 text-sm opacity-75">
@@ -403,7 +403,7 @@ particular generated artifact.
 <div class="callout-key mt-10 text-sm">
 In infrastructure the definition is the Dockerfile, the Terraform module, the manifest.<br/>
 <b class="text-lg">In code it is the spec.</b><br/>
-Everything else today — anatomy, elicitation, plans, verification, brownfield — is the work of building and maintaining that definition.
+Everything else today (anatomy, elicitation, plans, verification, brownfield) is the work of building and maintaining that definition.
 </div>
 
 <!--

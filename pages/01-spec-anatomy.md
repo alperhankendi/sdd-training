@@ -3,7 +3,7 @@
 <div class="mt-10 text-xl">A requirement that cannot fail is not a requirement.</div>
 
 <div class="mt-10 text-sm opacity-90">
-Nobody can build it. Nobody can review it. Nobody can tell you it is done — and nobody can tell you it is wrong, which is the part that costs.
+Nobody can build it. Nobody can review it. Nobody can tell you it is done, and nobody can tell you it is wrong, which is the part that costs.
 </div>
 
 <!--
@@ -76,7 +76,7 @@ first disjunct alone would carry it. Somebody will ask; that is the answer.
 
 # Specs form a graph, not a document
 
-<div class="text-lg mt-6">The way to keep a spec small is to <b>point at the spec that already says it</b> — not to say less.</div>
+<div class="text-lg mt-6">The way to keep a spec small is to <b>point at the spec that already says it</b>, not to say less.</div>
 
 ```yaml
 # key-rotation.spec.md
@@ -88,7 +88,7 @@ Supersedes:   key-rotation.v1.spec.md
 <div class="mt-6 text-sm">This is where cross-cutting requirements live: rate limits, rotation windows, audit retention, API shape. A flat per-feature <code>Constraints</code> list has nowhere to put them.</div>
 
 <div class="callout-key mt-6 text-sm">
-<b>When two specs contradict:</b> more specific beats more general · newer beats older, with an explicit <code>Supersedes</code> · when neither applies, it escalates to the owner — not to whoever read them last.
+<b>When two specs contradict:</b> more specific beats more general · newer beats older, with an explicit <code>Supersedes</code> · when neither applies, it escalates to the owner, not to whoever read them last.
 </div>
 
 <!--
@@ -184,7 +184,7 @@ most teams have never treated as something that can be factored.
   </div>
 </div>
 
-<div class="mt-8 text-sm opacity-75">Rule 3 is the important one. Most contradictions are not ambiguity — they are two people who never spoke.</div>
+<div class="mt-8 text-sm opacity-75">Rule 3 is the important one. Most contradictions are not ambiguity. They are two people who never spoke.</div>
 
 <!--
 Module 4 returns to this as authority: the agent proposes, the human disposes.
@@ -207,7 +207,7 @@ Rule 3 is the same idea one altitude up.
 </div>
 
 <div class="callout-bad mt-8 text-sm">
-<b>The most common beginner error is writing one where another belongs</b> — usually a task where a spec goes, because tasks feel concrete and specs feel vague.
+<b>The most common beginner error is writing one where another belongs</b>, usually a task where a spec goes, because tasks feel concrete and specs feel vague.
 </div>
 
 <!--
@@ -250,7 +250,7 @@ that can be both agreed and executed.
 <div class="mt-8 text-xl">Over-specification is a failure mode, not diligence.</div>
 
 <div class="mt-8 text-sm opacity-90">
-Specify <b>intent and constraints</b>. Leave implementation judgment to the implementer — human or otherwise.
+Specify <b>intent and constraints</b>. Leave implementation judgment to the implementer, human or otherwise.
 </div>
 
 <div class="callout-bad mt-8">
@@ -278,10 +278,10 @@ security in the spec too."
 <div class="mt-6 text-sm opacity-90">Nobody decides to over-specify. It accretes, one reasonable addition at a time.</div>
 
 <div class="mt-8 space-y-3 text-sm">
-  <div class="callout-key"><b>Week 1</b> — "The spec should say which library, we wasted a day on that."</div>
-  <div class="callout-key"><b>Week 6</b> — "The spec should say the error message text, support complained."</div>
-  <div class="callout-bad"><b>Week 14</b> — "The spec should say the log format." Now every log change is a spec change.</div>
-  <div class="callout-bad"><b>Week 30</b> — Nobody writes specs. They are too expensive, and the ones that exist are wrong.</div>
+  <div class="callout-key"><b>Week 1:</b> "The spec should say which library, we wasted a day on that."</div>
+  <div class="callout-key"><b>Week 6:</b> "The spec should say the error message text, support complained."</div>
+  <div class="callout-bad"><b>Week 14:</b> "The spec should say the log format." Now every log change is a spec change.</div>
+  <div class="callout-bad"><b>Week 30:</b> Nobody writes specs. They are too expensive, and the ones that exist are wrong.</div>
 </div>
 
 <div class="mt-6 text-sm opacity-75">Each step was locally correct. The trajectory was not.</div>
@@ -320,14 +320,14 @@ This is the ladder's only pass before Lab 1.
 
 <div class="mt-6 space-y-6">
   <div class="callout-bad">
-    <div class="text-xs font-bold opacity-60">RUNG 2 — has a subject</div>
+    <div class="text-xs font-bold opacity-60">RUNG 2 · has a subject</div>
     <div class="mt-1">"Customers should be able to rotate a key without downtime."</div>
     <div class="text-xs mt-2 opacity-75">Better. Still unbuildable: what is downtime, and how long may the old key live?</div>
   </div>
   <div class="callout-key">
-    <div class="text-xs font-bold opacity-60">RUNG 3 — has a mechanism</div>
+    <div class="text-xs font-bold opacity-60">RUNG 3 · has a mechanism</div>
     <div class="mt-1">"When a key is rotated, the old key keeps working for an overlap period so callers can migrate."</div>
-    <div class="text-xs mt-2 opacity-75">Buildable now — but two people will pick different overlaps and both will be right.</div>
+    <div class="text-xs mt-2 opacity-75">Buildable now, but two people will pick different overlaps and both will be right.</div>
   </div>
 </div>
 
@@ -371,7 +371,7 @@ executable and the implementation is open -- that combination is the target.
 </div>
 
 <div class="callout-good mt-8 text-sm">
-<b>If you finish early:</b> find the ambiguity that survives every rewrite — the one that needs a human decision rather than better wording. Name the decision and name who makes it.
+<b>If you finish early:</b> find the ambiguity that survives every rewrite: the one that needs a human decision rather than better wording. Name the decision and name who makes it.
 </div>
 
 <!--

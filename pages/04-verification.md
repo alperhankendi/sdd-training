@@ -32,7 +32,7 @@ second, and almost nobody calls it a defect.
 </div>
 
 <div class="mt-8 text-sm opacity-75">
-All three are plan defects, found at execution time. That is late — but far earlier than production.
+All three are plan defects, found at execution time. That is late, but far earlier than production.
 </div>
 
 <!--
@@ -56,7 +56,7 @@ diagnostic: it names a place where module 3's rules were not followed.
 </div>
 
 <div class="mt-10 text-sm opacity-90">
-Different questions with different failure modes. A suite can be entirely green while the claim "this feature is done" is false — because the suite tests what someone thought to test, and the claim covers everything.
+Different questions with different failure modes. A suite can be entirely green while the claim "this feature is done" is false, because the suite tests what someone thought to test, and the claim covers everything.
 </div>
 
 <!--
@@ -111,7 +111,7 @@ An adversarial check placed <b>before</b> the point where other work starts depe
   </div>
 </div>
 
-<div class="mt-6 text-sm opacity-90">Same shape — an adversarial check on a claim before it goes downstream — at two costs.</div>
+<div class="mt-6 text-sm opacity-90">Same shape (an adversarial check on a claim before it goes downstream) at two costs.</div>
 
 <!--
 Principle first, as ever: the shape is "check the claim before anything derives
@@ -189,7 +189,7 @@ cannot fail, and it hides exactly the failure it was written to catch.
   </div>
   <div class="callout-bad">
     <div class="font-bold text-red-600 dark:text-red-400">When you find out</div>
-    <div class="mt-1">When someone trusts it. An onboarding engineer, an auditor, or an agent — and by then it has been wrong for months.</div>
+    <div class="mt-1">When someone trusts it. An onboarding engineer, an auditor, or an agent. By then it has been wrong for months.</div>
   </div>
 </div>
 
@@ -206,7 +206,7 @@ The fix is not diligence. It is creating the moment.
 
 # The spec is wrong. You are 40% in.
 
-<div class="mt-2 text-sm opacity-75">The most common real event in spec-driven work — and the edge that makes this not waterfall.</div>
+<div class="mt-2 text-sm opacity-75">The most common real event in spec-driven work, and the edge that makes this not waterfall.</div>
 
 <div class="grid grid-cols-3 gap-4 mt-8">
   <div class="callout-key">
@@ -262,7 +262,7 @@ contradiction is resolved by the owner, never by whoever happened to hit it.
 
 ---
 
-# Definition of done — and its order
+# Definition of done, and its order
 
 <div class="mt-6 text-lg">A change that alters behaviour without a spec update is an <b>incomplete change</b>.</div>
 
@@ -346,7 +346,7 @@ caused the regression it exists to prevent.
   </div>
   <div class="callout-good">
     <div class="font-bold">Code review asks</div>
-    <div class="text-lg mt-2">Did this artifact do it — and what else did it do?</div>
+    <div class="text-lg mt-2">Did this artifact do it, and what else did it do?</div>
     <div class="text-sm mt-2 opacity-75">The residue module 1 deliberately left unspecified.</div>
   </div>
 </div>
@@ -373,7 +373,7 @@ nobody's job.
 
 <div class="mt-8 space-y-3 text-sm">
   <div class="callout-key"><b>1 ·</b> Run module 3's plan live against the running example.</div>
-  <div class="callout-bad"><b>2 ·</b> It stops. The spec assumed revocation propagates <b>synchronously</b>. The architecture document — written days earlier — says asynchronously, bounded at 30 seconds.</div>
+  <div class="callout-bad"><b>2 ·</b> It stops. The spec assumed revocation propagates <b>synchronously</b>. The architecture document, written days earlier, says asynchronously, bounded at 30 seconds.</div>
   <div class="callout-good"><b>3 ·</b> Triage it on screen: this is column two. Amend the spec first, re-derive the affected steps, mark built work suspect, resume.</div>
 </div>
 
@@ -396,7 +396,7 @@ nothing here is an error in the code.
 <div class="mt-8 text-lg opacity-75">Behaviour changed. Tests green. Spec untouched.</div>
 
 <div class="mt-8 text-sm opacity-90">
-Rate limiting moved from a fixed window to a sliding one. Every existing test passes — they assert only that requests over the limit are rejected, and both implementations do that. Burst behaviour at the window edge changed materially, and no spec says which is correct.
+Rate limiting moved from a fixed window to a sliding one. Every existing test passes: they assert only that requests over the limit are rejected, and both implementations do that. Burst behaviour at the window edge changed materially, and no spec says which is correct.
 </div>
 
 <div class="callout-bad mt-8 text-sm">
@@ -442,7 +442,7 @@ reference copy.
 
 # Lab 4 · A PR that changes behaviour
 
-<div class="mt-8 text-lg">Twenty minutes. Find <b>exactly two</b> things — one missing from the change, one wrong inside the diff.</div>
+<div class="mt-8 text-lg">Twenty minutes. Find <b>exactly two</b> things: one missing from the change, one wrong inside the diff.</div>
 
 <div class="callout-good mt-8 text-sm">
 <b>The answer key has two sides.</b> One is the missing spec update. The other is a defect in the diff that the spec is <b>silent about by design</b>.

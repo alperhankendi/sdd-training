@@ -47,14 +47,14 @@ an anti-pattern.
 
 # Spec the delta, not the system
 
-<div class="mt-10 text-xl">The unit of specification is <b>the change</b> — not the codebase.</div>
+<div class="mt-10 text-xl">The unit of specification is <b>the change</b>, not the codebase.</div>
 
 <div class="callout-bad mt-10">
 <b>The project that always dies:</b> six months to specify the whole legacy system. Nobody reads it. It is stale on delivery.
 </div>
 
 <div class="callout-good mt-6">
-<b>The ratchet that works:</b> every module you touch leaves a spec behind. Coverage grows along the paths that get traffic — not by project plan.
+<b>The ratchet that works:</b> every module you touch leaves a spec behind. Coverage grows along the paths that get traffic, not by project plan.
 </div>
 
 <!--
@@ -77,7 +77,7 @@ If this module runs long, cut anything else. Not this slide.
 </div>
 
 <div class="mt-8 text-sm opacity-90">
-The output matters less than step 2. You are not getting a document — you are getting a list of the things you knew and never wrote down.
+The output matters less than step 2. You are not getting a document. You are getting a list of the things you knew and never wrote down.
 </div>
 
 <!--
@@ -99,7 +99,7 @@ which case you did not need archaeology.
   </div>
   <div class="callout-good">
     <div class="font-bold text-green-600 dark:text-green-400">Excellent as a ranking</div>
-    <div class="mt-1">Where it fails <b>hardest</b> — code whose behaviour nobody could reconstruct from anything written down — is where archaeology pays first.</div>
+    <div class="mt-1">Where it fails <b>hardest</b> (code whose behaviour nobody could reconstruct from anything written down) is where archaeology pays first.</div>
   </div>
 </div>
 
@@ -149,7 +149,7 @@ lands better here than as an assertion in module 0.
 
 # Characterization tests
 
-<div class="mt-8 text-lg">Pin current behaviour — <b>bugs included</b> — before changing anything.</div>
+<div class="mt-8 text-lg">Pin current behaviour, <b>bugs included</b>, before changing anything.</div>
 
 <div class="mt-8 grid grid-cols-2 gap-6 text-sm">
   <div class="callout-good">
@@ -232,7 +232,7 @@ Not a specification. A map: what this system is, which paths matter, what is loa
 </div>
 
 <div class="mt-6 text-xs opacity-60">
-There are linters for this file now — <code>npx ecc-agentshield</code> checks <code>CLAUDE.md</code> and <code>.cursorrules</code> against about a hundred security rules.
+There are linters for this file now: <code>npx ecc-agentshield</code> checks <code>CLAUDE.md</code> and <code>.cursorrules</code> against about a hundred security rules.
 </div>
 
 <!--
@@ -330,7 +330,7 @@ here".
 <div class="mt-8 space-y-3 text-sm">
   <div class="callout-key"><b>1 ·</b> Note what is <b>absent</b>. No <code>CLAUDE.md</code>. A README with two commands in it.</div>
   <div class="callout-key"><b>2 ·</b> Archaeology on the billing path. Read the draft. Correct it out loud.</div>
-  <div class="callout-good"><b>3 ·</b> Characterization test for the period boundary. It passes — pinning the bug.</div>
+  <div class="callout-good"><b>3 ·</b> Characterization test for the period boundary. It passes, pinning the bug.</div>
   <div class="callout-good"><b>4 ·</b> Delta-spec for one change: <i>bill each line in exactly one period.</i></div>
   <div class="callout-key"><b>5 ·</b> Implement. The characterization test now fails, and that failure is the <b>evidence</b>.</div>
 </div>
@@ -354,7 +354,7 @@ Practical notes from the dry run:
 
 <div class="mt-8 space-y-3 text-sm">
   <div class="callout-key"><b>1 ·</b> List the characterization tests you would write <b>first</b>, before changing anything.</div>
-  <div class="callout-key"><b>2 ·</b> Write the acceptance criteria for the change — the part that can fail.</div>
+  <div class="callout-key"><b>2 ·</b> Write the acceptance criteria for the change: the part that can fail.</div>
 </div>
 
 <div class="callout-bad mt-8 text-sm">

@@ -1,6 +1,6 @@
 ---
 theme: default
-title: "Agentic Coding — Optional Background"
+title: "Agentic Coding: Optional Background"
 info: |
   Optional pre-read for the Spec-Driven Development training.
   The training does not assume any of this.
@@ -17,7 +17,7 @@ mdc: true
 
 **This is optional.** The Spec-Driven Development day is self-contained and assumes none of it.
 
-The training operates leverage points 1, 2, 3, 5, 6 and 12, and delivers what it needs of them in its first thirty minutes. These six are the rest of the framework — useful, and not prerequisites.
+The training operates leverage points 1, 2, 3, 5, 6 and 12, and delivers what it needs of them in its first thirty minutes. These six are the rest of the framework: useful, and not prerequisites.
 
 </div>
 
@@ -60,7 +60,7 @@ resented by the people who did not do it and skimmed by the people who did.
 <div class="grid grid-cols-2 gap-4 mt-8">
   <div class="p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border-l-4 border-red-400">
     <div class="font-bold text-red-600 dark:text-red-400">Bad</div>
-    <div class="text-sm">A frontier model for simple text extraction — ten times the cost for no gain</div>
+    <div class="text-sm">A frontier model for simple text extraction, at ten times the cost for no gain</div>
   </div>
   <div class="p-3 rounded-lg bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400">
     <div class="font-bold text-green-600 dark:text-green-400">Good</div>
@@ -152,7 +152,7 @@ resented by the people who did not do it and skimmed by the people who did.
 
 <div class="mt-8 text-sm">
 
-The training picks up at leverage points **3, 2 and 1** — Plans, Templates and workflows — and spends the day on the artifact that drives all three: **the specification.**
+The training picks up at leverage points **3, 2 and 1** (Plans, Templates and workflows) and spends the day on the artifact that drives all three: **the specification.**
 
 </div>
 
