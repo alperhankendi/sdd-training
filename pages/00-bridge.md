@@ -462,6 +462,42 @@ particular generated artifact.
 
 ---
 
+# Before we start
+
+<div class="mt-8 space-y-5 text-lg">
+
+<div>1 · The failure is not bad code. It is <b>correct code built from an instruction nobody reviewed.</b></div>
+
+<div>2 · The test: <b>name one thing you would need to rebuild this that the spec does not say.</b></div>
+
+<div>3 · If you can name one, that knowledge lives <b>only in the code</b>, and in one person's head or nobody's.</div>
+
+<div>4 · Not every miss is debt. <b>Intent and constraints</b> belong in the spec. <b>Implementation judgment</b> does not.</div>
+
+<div>5 · The truth <b>split</b>. Intent moved to the spec. This artifact never left the code.</div>
+
+<div>6 · So spec review is a review that was <b>missing</b>, not one that replaces reading the diff.</div>
+
+</div>
+
+<!--
+Ninety seconds. Read the six lines, do not expand them. Every one of them has
+already been argued; this is retrieval, not teaching.
+
+Time comes from the agenda slide, which got shorter when the three-jobs table
+moved to module 6. Module 0 stays at 40 minutes.
+
+If you only have time for two: line 2 is the instrument the room uses three more
+times today, and line 4 is what stops them going home and over-specifying
+everything. Lines 5 and 6 are the ones module 4 depends on being remembered
+correctly.
+
+Ask if anything is unclear BEFORE the agenda, not after. Once the agenda is up
+the room has moved on and will not go back.
+-->
+
+---
+
 # The day
 
 <div class="mt-6">
