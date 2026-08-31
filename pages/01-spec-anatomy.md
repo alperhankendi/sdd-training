@@ -169,28 +169,24 @@ most teams have never treated as something that can be factored.
 
 # When two specs disagree
 
-<div class="mt-8 text-lg">The resolution rule has to exist <b>before</b> the disagreement, or it becomes an argument about authority.</div>
+<div class="mt-6 text-lg">Decide the rule <b>before</b> the disagreement. After it, the rule is an argument about authority.</div>
 
-<div class="mt-8 grid grid-cols-3 gap-4 text-sm">
-  <div class="callout-key">
-    <div class="font-bold">1 · Specific beats general</div>
-    <div class="mt-1">A feature spec overrides a platform default, if it says so explicitly.</div>
-  </div>
-  <div class="callout-key">
-    <div class="font-bold">2 · Newer beats older</div>
-    <div class="mt-1">Only with an explicit <code>Supersedes</code>. A date is not enough.</div>
-  </div>
-  <div class="callout-bad">
-    <div class="font-bold">3 · Otherwise, escalate</div>
-    <div class="mt-1">To the owner. Never to whoever happened to read both last.</div>
-  </div>
+<div class="mt-10 space-y-4 text-xl">
+  <div><b>1 ·</b> Specific beats general.</div>
+  <div><b>2 ·</b> Newer beats older.</div>
+  <div><b>3 ·</b> Otherwise, escalate to the owner.</div>
 </div>
 
-<div class="mt-8 text-sm opacity-75">Rule 3 is the important one. Most contradictions are not ambiguity. They are two people who never spoke.</div>
+<div class="mt-10 text-sm opacity-75">Rule 3 is the important one. Most contradictions are not ambiguity. They are two people who never spoke.</div>
 
 <!--
-Module 4 returns to this as authority: the agent proposes, the human disposes.
-Rule 3 is the same idea one altitude up.
+Three lines, stated plainly. Do NOT explain the caveats here: rules 1 and 2 both
+have one, and both are shown working on the next slide. Saying them twice spends
+the next slide before it arrives.
+
+Rule 3 is the one to dwell on, and the only one that is about people rather than
+documents. A later module returns to it one altitude up: the agent proposes, the
+human disposes. Same idea.
 -->
 
 ---
