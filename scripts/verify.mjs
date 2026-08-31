@@ -65,6 +65,21 @@ for (const [file] of Object.entries(EXPECTED)) {
 }
 pass('spec 11: modules 1-6 do not lean on parked pre-read slides')
 
+// Acronym convention: {ACRONYM} (English expansion - Türkçe karşılık) at first
+// use. The deck is English but delivered in Turkish, and an unexpanded acronym is
+// the hardest thing to parse in a second language.
+const ACRONYMS = ['IP', 'PRD', 'CI', 'UML', 'MDA', 'ADWs', 'V&amp;V']
+const allPages = Object.keys(EXPECTED)
+  .filter((f) => existsSync(join('pages', f)))
+  .map((f) => readFileSync(join('pages', f), 'utf8'))
+  .join('\n')
+for (const a of ACRONYMS) {
+  if (!allPages.includes(a)) continue
+  const expanded = new RegExp(a.replace('&amp;', '&amp;') + '\\s*\\((?=[^)]*-)', 'i')
+  if (expanded.test(allPages)) pass(`acronym ${a.replace('&amp;','&')}: expanded`)
+  else fail(`acronym ${a.replace('&amp;','&')}: never expanded as {ACRONYM} (English - Türkçe)`)
+}
+
 // Slidev silently SKIPS a `src:` whose file does not exist -- verified during
 // execution: the deck built cleanly with six of seven partials missing. A typo
 // in a path would therefore drop an entire module with no error anywhere.

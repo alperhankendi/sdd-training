@@ -132,7 +132,7 @@ reads as a contradiction seven hours later, and someone will say so.
 <div class="mt-8 text-lg">The strongest objection of the day, and it is correct in its own domain.</div>
 
 <div class="callout-bad mt-8">
-"If the spec is complete enough to regenerate from, it contains everything the code contained. You have rewritten the program in English: longer, ambiguous, no compiler. We tried this. It was called MDA — Model-Driven Architecture."
+"If the spec is complete enough to regenerate from, it contains everything the code contained. You have rewritten the program in English: longer, ambiguous, no compiler. We tried this. It was called MDA (Model-Driven Architecture - Model güdümlü mimari)."
 </div>
 
 <div class="mt-8 text-sm opacity-90">
@@ -256,7 +256,7 @@ The last row is the honest close: nothing today required a vendor.
 
 | Deferred | Where it lives |
 |---|---|
-| CI (continuous integration) enforcement of spec-code linkage | The Lab 4 handout has a reference slide |
+| CI (Continuous Integration - Sürekli entegrasyon) enforcement of spec-code linkage | The Lab 4 handout has a reference slide |
 | Multi-agent orchestration | Named on the landscape slide, not taught |
 | Organisational rollout, mandates | Deliberately out of scope (see the next slide) |
 

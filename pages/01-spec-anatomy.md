@@ -199,7 +199,7 @@ Rule 3 is the same idea one altitude up.
 
 | | Answers | Lifespan | Owner |
 |---|---|---|---|
-| **PRD**<br/><span class="text-xs opacity-60">product requirements document</span> | Why, and for whom | Quarters | Product |
+| **PRD** <span class="text-xs opacity-60">(Product Requirements Document - Ürün gereksinim dokümanı)</span> | Why, and for whom | Quarters | Product |
 | **Spec** | What becomes true | Months | Whoever changes it next |
 | **Plan** | How, in order | Days | The implementer |
 | **Task** | One step | Hours | Whoever picks it up |

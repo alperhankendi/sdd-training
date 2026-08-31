@@ -40,7 +40,7 @@ before you have explained anything is what makes the rest land.
 | 4 | Architecture | Is it agentically intuitive? |
 | 3 | **Plans** | Can they complete without more input? |
 | 2 | **Templates** | What does good output look like? |
-| 1 | **ADWs** — AI Developer Workflows | How does work flow? |
+| 1 | **ADWs** (AI Developer Workflows - Yapay zekâ geliştirici iş akışları) | How does work flow? |
 
 <!--
 Do not teach all twelve. Name the six in bold as today's territory and say
@@ -188,7 +188,7 @@ is a failure it would have prevented.
 
 ---
 
-# 1 · ADWs — AI Developer Workflows
+# 1 · ADWs (AI Developer Workflows - Yapay zekâ geliştirici iş akışları)
 
 **How does work flow between agents?**
 
@@ -267,7 +267,7 @@ the day.
 Infrastructure settled this a decade ago. **Code has had the argument before, and lost it twice.**
 
 - CASE tools and 4GLs, late 1980s
-- **MDA** — Model-Driven Architecture — and round-trip UML (Unified Modeling Language), 2001–2008. You drew the model, it generated the code. Regeneration was cheap *and* deterministic, and it still lost
+- **MDA** (Model-Driven Architecture - Model güdümlü mimari) and round-trip UML (Unified Modeling Language - Birleşik modelleme dili), 2001–2008. You drew the model, it generated the code. Regeneration was cheap *and* deterministic, and it still lost
 - It quietly **won** wherever the definition covers a narrow slice completely: protobuf, OpenAPI clients, GraphQL types, ORM migrations
 
 </div>
@@ -318,7 +318,7 @@ costs you credibility a second time.
 |---|---|---|
 | **The asset is** | Lines of code, authored algorithms | Specifications, tests, system boundaries |
 | **Legacy is created by** | Slow accumulation over years | Entropy reset on every regeneration |
-| **Financial strategy** | Capitalise the codebase as IP (intellectual property) | **Compaction** — keep conceptual mass small |
+| **Financial strategy** | Capitalise the codebase as IP (Intellectual Property - Fikri mülkiyet) | **Compaction** — keep conceptual mass small |
 | **The developer's job** | Authoring and maintaining syntax | Stewardship, defining evaluation criteria |
 
 <div class="callout-key mt-6 text-sm">
