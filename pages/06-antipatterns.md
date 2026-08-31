@@ -132,7 +132,7 @@ reads as a contradiction seven hours later, and someone will say so.
 <div class="mt-8 text-lg">The strongest objection of the day, and it is correct in its own domain.</div>
 
 <div class="callout-bad mt-8">
-"If the spec is complete enough to regenerate from, it contains everything the code contained. You have rewritten the program in English: longer, ambiguous, no compiler. We tried this. It was called MDA."
+"If the spec is complete enough to regenerate from, it contains everything the code contained. You have rewritten the program in English: longer, ambiguous, no compiler. We tried this. It was called MDA — Model-Driven Architecture."
 </div>
 
 <div class="mt-8 text-sm opacity-90">
