@@ -78,6 +78,8 @@ first disjunct alone would carry it. Somebody will ask; that is the answer.
 
 <div class="text-lg mt-6">The way to keep a spec small is to <b>point at the spec that already says it</b>, not to say less.</div>
 
+<div class="mt-3 text-sm opacity-75">You already believe this about code. It is <b>DRY</b> (Don't Repeat Yourself), applied to prose.</div>
+
 ```yaml
 # key-rotation.spec.md
 Relates to:   revocation.spec.md
