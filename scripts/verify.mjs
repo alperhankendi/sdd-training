@@ -3,7 +3,7 @@ import { join } from 'node:path'
 
 const EXPECTED = {
   '00-bridge.md': 16,
-  '01-spec-anatomy.md': 15,
+  '01-spec-anatomy.md': 16,
   '02-elicitation.md': 14,
   '03-plans.md': 15,
   '04-verification.md': 18,
@@ -47,8 +47,8 @@ for (const [file, expected] of Object.entries(EXPECTED)) {
   else fail(`${file}: ${n} slides, expected ${expected}`)
 }
 
-if (total === 105) pass(`total: ${total} slides`)
-else fail(`total: ${total} slides, expected 105`)
+if (total === 106) pass(`total: ${total} slides`)
+else fail(`total: ${total} slides, expected 106`)
 
 // Module 0's hierarchy table legitimately NAMES all twelve leverage points --
 // that is the map. The invariant is that modules 1-6 must not LEAN on the six

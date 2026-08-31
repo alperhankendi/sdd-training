@@ -195,6 +195,65 @@ Rule 3 is the same idea one altitude up.
 
 ---
 
+# Same number. Different outcome.
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-xs font-mono">
+  <div class="p-3 rounded bg-gray-100 dark:bg-gray-800">
+    <div class="opacity-50 mb-1">platform-constraints.spec.md</div>
+    <div>rate limit: <b>1000</b>/hour</div>
+  </div>
+  <div class="p-3 rounded bg-green-50 dark:bg-green-900/20 border-l-4 border-green-400">
+    <div class="opacity-50 mb-1">bulk-export.spec.md</div>
+    <div>Inherits: platform-constraints</div>
+    <div>rate limit: <b>5000</b>/hour</div>
+    <div class="text-green-700 dark:text-green-400 mt-1"># overrides platform default:</div>
+    <div class="text-green-700 dark:text-green-400"># batch, not interactive</div>
+  </div>
+</div>
+
+<div class="callout-good mt-2 text-sm"><b>5000 wins.</b> Rule 1: specific beats general, because it <i>says</i> so.</div>
+
+<div class="grid grid-cols-2 gap-4 mt-6 text-xs font-mono">
+  <div class="p-3 rounded bg-gray-100 dark:bg-gray-800">
+    <div class="opacity-50 mb-1">platform-constraints.spec.md</div>
+    <div>rate limit: <b>1000</b>/hour</div>
+  </div>
+  <div class="p-3 rounded bg-red-50 dark:bg-red-900/20 border-l-4 border-red-400">
+    <div class="opacity-50 mb-1">reporting.spec.md</div>
+    <div>Inherits: platform-constraints</div>
+    <div>rate limit: <b>5000</b>/hour</div>
+    <div class="opacity-40 mt-1">&nbsp;</div>
+    <div class="opacity-40">&nbsp;</div>
+  </div>
+</div>
+
+<div class="callout-bad mt-2 text-sm"><b>Neither wins.</b> Rule 3: escalate. This is not an override, it is a contradiction that nobody noticed.</div>
+
+<div class="mt-6 text-center text-lg">
+The difference is <b>two comment lines</b>. Those lines are the decision.
+</div>
+
+<!--
+This is the slide that makes rule 1's "explicitly" caveat land. Prose cannot do
+it: the two cases are IDENTICAL except for a comment, and only seeing them side
+by side makes that visible.
+
+Walk it in this order. Read the left column once, it is the same in both. Then
+the top right, then the verdict. Then the bottom right, and pause BEFORE the
+verdict so the room can spot the difference themselves. Somebody usually does.
+
+The point to land: the second file is not wrong because 5000 is wrong. It may be
+exactly the right number. It is wrong because nobody can tell whether it is a
+decision or a mistake, and a spec that cannot distinguish those two is not doing
+its job.
+
+Practical consequence worth saying out loud: this is why an override needs a
+reason, not just a value. "5000" is a number. "5000, because batch is not
+interactive" is a decision someone can disagree with.
+-->
+
+---
+
 # Four things people call "the spec"
 
 <div class="mt-6">
