@@ -47,8 +47,9 @@ for (const [file, expected] of Object.entries(EXPECTED)) {
   else fail(`${file}: ${n} slides, expected ${expected}`)
 }
 
-if (total === 98) pass(`total: ${total} slides`)
-else fail(`total: ${total} slides, expected 98`)
+const TOTAL = 98
+if (total === TOTAL) pass(`total: ${total} slides`)
+else fail(`total: ${total} slides, expected ${TOTAL}`)
 
 // Module 0's hierarchy table legitimately NAMES all twelve leverage points --
 // that is the map. The invariant is that modules 1-6 must not LEAN on the six
@@ -164,5 +165,27 @@ if (existsSync(join('pages', '06-antipatterns.md'))) {
 
 if (bridge.includes('lost it twice')) pass('module 0: honest history of prior attempts present')
 else fail('module 0: the MDA/4GL history is missing -- the beat loses credibility without it')
+
+// The authority on what the deck actually contains is Slidev's own parser, not
+// the separator counting above. They disagreed once and it cost two slides: a
+// `---` with no blank line after it made Slidev swallow the whole slide body as
+// YAML frontmatter, so `Anatomy of an executable plan` and `Declared interfaces`
+// silently vanished while every hand-rolled check above stayed green.
+const { load } = await import('@slidev/parser/fs')
+const parsed = await load(process.cwd(), './slides.md')
+const pages = parsed.slides.length
+const EXPECTED_PAGES = TOTAL + 1 // the title slide in slides.md
+
+if (pages === EXPECTED_PAGES) pass(`slidev parses ${pages} pages`)
+else fail(`slidev parses ${pages} pages, expected ${EXPECTED_PAGES} -- a slide is being swallowed or invented`)
+
+const ALLOWED_FRONTMATTER = new Set(['src', 'layout', 'class', 'clicks', 'transition', 'theme', 'title', 'info', 'drawings', 'fonts', 'mdc'])
+for (const [i, sl] of parsed.slides.entries()) {
+  const body = (sl.content || '').trim()
+  if (!body) { fail(`slide ${i + 1}: renders empty`); continue }
+  const junk = Object.keys(sl.frontmatter || {}).filter((k) => !ALLOWED_FRONTMATTER.has(k))
+  if (junk.length) fail(`slide ${i + 1} (${body.split('\n')[0].slice(0, 40)}): markup parsed as frontmatter -- the separator above it needs a blank line after it`)
+}
+if (!failed) pass('every slide has a body and clean frontmatter')
 
 process.exit(failed ? 1 : 0)

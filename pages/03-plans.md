@@ -60,6 +60,7 @@ completeness is not ceremony -- it is the interface." Those are different claims
 -->
 
 ---
+
 # Anatomy of an executable plan
 
 <div class="mt-8 text-xl">Every step carries its own proof.</div>
@@ -141,6 +142,7 @@ optimises for a reader who does not exist.
 -->
 
 ---
+
 # Declared interfaces
 
 <div class="mt-8 text-xl">All task 7 knows about task 3 is <b>what task 3 wrote down</b>.</div>
