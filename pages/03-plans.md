@@ -255,7 +255,7 @@ dangerous, because completed work stays checked off while quietly becoming wrong
 # Lab 3 · İki kusuru bulun
 
 <div class="mt-4 text-sm opacity-90">
-Elinizdeki kâğıtta <b>sekiz adımlık gerçek bir plan</b> var. API key servisine revocation ekliyor, ve bu modülün kurallarına göre yazılmış <b>görünüyor</b>.
+<b>Paylaştığım planda sekiz adım var.</b> API key servisine revocation ekliyor, ve bu modülün kurallarına göre yazılmış <b>görünüyor</b>.
 </div>
 
 <div class="mt-6 space-y-3 text-sm">

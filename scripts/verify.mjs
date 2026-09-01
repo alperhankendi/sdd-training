@@ -183,7 +183,7 @@ for (const [file, lab] of LAB_SLIDES) {
   if (at < 0) { fail(`${lab}: no brief slide found in ${file}`); continue }
   const end = text.indexOf('\n---\n', at)
   const body = text.slice(at, end < 0 ? text.length : end).split('<!--')[0]
-  if (/elinizdeki|size verilecek/i.test(body)) pass(`${lab}: names where the material is`)
+  if (/elinizdeki|payla[şs]t[ıi][ğg][ıi]m|size verilecek|da[ğg][ıi]tt[ıi][ğg][ıi]m/i.test(body)) pass(`${lab}: names where the material is`)
   else fail(`${lab}: the brief never says where the material is -- the room cannot start`)
 }
 
