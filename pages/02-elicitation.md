@@ -176,94 +176,96 @@ something they can apply on Monday.
 
 ---
 
-# Agentic Coding Framework nedir?
+# What is an agentic coding framework?
 
-<div class="mt-8 text-lg">Bir agent'a <b>nasıl çalışacağını</b> söyleyen yapı.</div>
+<div class="mt-8 text-lg">A structure that tells an agent <b>how to work</b>, not what to build.</div>
 
 <div class="mt-8 grid grid-cols-3 gap-4 text-sm">
   <div class="callout-key">
     <div class="font-bold">Skill</div>
-    <div class="mt-1">Ne zaman devreye gireceğini ve o an ne yapacağını tarif eden bir dosya.</div>
+    <div class="mt-1">A file describing when it activates and what it does at that moment.</div>
   </div>
   <div class="callout-key">
-    <div class="font-bold">Artefakt</div>
-    <div class="mt-1">Her skill'in ürettiği şey. Bir sonraki skill'in girdisi oluyor.</div>
+    <div class="font-bold">Artifact</div>
+    <div class="mt-1">What each skill produces. It becomes the next skill's input.</div>
   </div>
   <div class="callout-key">
-    <div class="font-bold">Akış</div>
-    <div class="mt-1">Hangi skill'den hangisine geçileceği. Sıra rastgele değil.</div>
+    <div class="font-bold">Flow</div>
+    <div class="mt-1">Which skill hands to which. The order is not arbitrary.</div>
   </div>
 </div>
 
 <div class="mt-8 text-sm opacity-75">
-Framework, prompt yazmayı bırakıp <b>iş akışı tasarlamaya</b> geçtiğiniz yer.
+A framework is where you stop writing prompts and start <b>designing a workflow</b>.
 </div>
 
 <!--
-Bu slayt bir köprü. Anlatımın büyük kısmı dış sayfada:
+This slide is a bridge. Most of the explanation lives on the external page:
 claude-code-mastery/15-Agentic-Coding-Frameworks
 
-Slaytı aç, üç kutuyu bir cümleyle geç, sonra tarayıcıya geç ve kavramı orada anlat.
-Geri döndüğünde slayt 42 seni bekliyor olacak.
+Show the slide, cover the three boxes in one sentence each, then switch to the
+browser and teach the concept there. Slide 42 is waiting when you come back.
 
-Anahtar cümle: framework, prompt yazmaktan is akisi tasarlamaya gecis. Salon bu
-ana kadar hep "nasil soru sorulur" duydu; buradan itibaren "kim ne uretir, kime
-verir" konusuyoruz.
+The line that matters: a framework is the move from writing prompts to designing
+a workflow. Until now the room has heard "how do I ask better questions". From
+here it is "who produces what, and hands it to whom".
 -->
 
 ---
 
-# Pratikte nasıl kullanıyorum
+# How I actually use them
 
 <div class="mt-6 grid grid-cols-2 gap-5">
   <div class="callout-key">
-    <div class="font-bold text-blue-600 dark:text-blue-400">BMAD ile</div>
-    <div class="text-sm mt-2">Market research, brief, PRD, mimari, FR, story, plan.</div>
-    <div class="text-sm mt-2 opacity-75">Projenin tamamı. Bir kez.</div>
+    <div class="font-bold text-blue-600 dark:text-blue-400">With BMAD</div>
+    <div class="text-sm mt-2">Market research, brief, PRD, architecture, functional requirements, stories, plan.</div>
+    <div class="text-sm mt-2 opacity-75">The whole project. Once.</div>
   </div>
   <div class="callout-good">
-    <div class="font-bold text-green-600 dark:text-green-400">Superpowers ile</div>
-    <div class="text-sm mt-2">Her story için: spec, plan, implementasyon. Baştan sona TDD.</div>
-    <div class="text-sm mt-2 opacity-75">Story başına bir kez.</div>
+    <div class="font-bold text-green-600 dark:text-green-400">With Superpowers</div>
+    <div class="text-sm mt-2">For every story: spec, plan, implementation. Test-driven throughout.</div>
+    <div class="text-sm mt-2 opacity-75">Once per story.</div>
   </div>
 </div>
 
 <div class="callout-key mt-8">
-Devredilen şey <b>bir story.</b> Ve Superpowers onu almakla kalmıyor: <b>o story için kendi spec'ini ve kendi planını yazıyor.</b>
+What gets handed over is <b>one story.</b> And Superpowers does not just receive it: <b>it writes its own spec and its own plan for that story.</b>
 </div>
 
 <div class="mt-6 text-sm opacity-90">
-Yani aynı döngü iki ölçekte koşuyor. Proje irtifasında bir kez, feature irtifasında her story için bir kez. <b>Ağırlık farklı, şekil aynı.</b>
+So the same loop runs at two scales. Once at project altitude, once per story at feature altitude. <b>Different weight, same shape.</b>
 </div>
 
 <!--
-Bu slayt hem hibrit pratigi anlatiyor hem de depth dial'in isini goruyor.
+This slide carries the hybrid practice and does the depth dial's job at the same
+time.
 
-Onemli olan sag kutu: Superpowers sadece implementasyon yapmiyor, her story icin
-DONGUYU BASTAN KOSUYOR. Bu, gunun fraktal iddiasinin kaniti ve iddia degil
-gozlem olarak veriliyor.
+The right-hand box is the important one: Superpowers does not merely implement,
+it RUNS THE LOOP AGAIN for every story. That is the day's fractal claim, and here
+it arrives as an observation rather than an assertion.
 
-Ve buradan cikan sizing dersi: irtifa aracin ozelligi degil, ISIN ozelligi. Ayni
-gun iki araci da kullaniyorsunuz, secim proje mi story mi oldugu.
+The sizing lesson falls out of it: altitude is a property of the WORK, not of the
+toolchain. You use both on the same day; the choice is whether this is a project
+or a story.
 -->
 
 ---
 
-# İki framework, yan yana
+# Two frameworks, side by side
 
 <div class="grid grid-cols-2 gap-5 mt-5 text-xs">
   <div>
-    <div class="font-bold text-blue-600 dark:text-blue-400 mb-2">BMAD · 11 skill</div>
-    <div class="opacity-60 mb-1">Analysis, opsiyonel</div>
+    <div class="font-bold text-blue-600 dark:text-blue-400 mb-2">BMAD · 11 skills</div>
+    <div class="opacity-60 mb-1">Analysis, optional</div>
     <div class="font-mono opacity-85">bmad-brainstorming · bmad-forge-idea · bmad-deep-recon · bmad-product-brief · bmad-prfaq</div>
-    <div class="opacity-60 mt-3 mb-1">Planning, ne inşa edilecek</div>
+    <div class="opacity-60 mt-3 mb-1">Planning, what to build</div>
     <div class="font-mono opacity-85">bmad-prd · bmad-ux · <b class="text-blue-600 dark:text-blue-400">bmad-spec</b></div>
-    <div class="opacity-60 mt-3 mb-1">Solutioning, nasıl ve iş bölümü</div>
+    <div class="opacity-60 mt-3 mb-1">Solutioning, how and who does what</div>
     <div class="font-mono opacity-85">bmad-architecture · bmad-create-epics-and-stories · bmad-sprint-planning</div>
-    <div class="mt-3 opacity-75">Her yol <b>bmad-spec</b>'ten geçiyor, sonra <b>bmad-build</b>.</div>
+    <div class="mt-3 opacity-75">Every path runs through <b>bmad-spec</b>, then <b>bmad-build</b>.</div>
   </div>
   <div>
-    <div class="font-bold text-green-600 dark:text-green-400 mb-2">Superpowers · 7 adım</div>
+    <div class="font-bold text-green-600 dark:text-green-400 mb-2">Superpowers · 7 steps</div>
     <div class="font-mono opacity-85 leading-relaxed">
       1 brainstorming<br/>
       2 using-git-worktrees<br/>
@@ -273,83 +275,85 @@ gun iki araci da kullaniyorsunuz, secim proje mi story mi oldugu.
       6 requesting-code-review<br/>
       7 finishing-a-development-branch
     </div>
-    <div class="mt-3 opacity-75">Sıra sabit. Her story bu yedi adımdan geçiyor.</div>
+    <div class="mt-3 opacity-75">Fixed order. Every story goes through all seven.</div>
   </div>
 </div>
 
 <div class="mt-6 text-sm opacity-90">
-Soldaki <b>bir kez</b> koşuyor. Sağdaki <b>her story için</b> koşuyor.
+The left one runs <b>once</b>. The right one runs <b>for every story</b>.
 </div>
 
 <!--
-Listeleri okuma. Iki sey gorsunler:
+Do not read the lists. Two things have to land:
 
-1. BMAD genis ve dallanan, Superpowers dar ve sirali. Cunku biri KARAR aliyor,
-   digeri KARARI UYGULUYOR.
-2. Soldaki bir kez, sagdaki her story icin. Frekans farki, irtifa farkinin
-   gorunur hali.
+1. BMAD is wide and branching, Superpowers is narrow and sequential. Because one
+   is MAKING decisions and the other is EXECUTING them.
+2. Left runs once, right runs per story. The frequency difference is the altitude
+   difference made visible.
 
-bmad-spec vurgulu cunku her yol oradan geciyor. Isaret et, acma.
+bmad-spec is highlighted because every path goes through it. Point, do not explain.
 -->
 
 ---
 
-# Hadi demo
+# Demo
 
-<div class="mt-6 text-xl">Etkinlik bileti satışı.</div>
+<div class="mt-6 text-xl">Event ticket sales.</div>
 
-<div class="mt-3 text-sm opacity-75">Herkesin bildiği bir iş. Ve içinde mühendisin karar veremeyeceği sorular var.</div>
+<div class="mt-3 text-sm opacity-75">A business everyone understands. And it contains questions an engineer cannot answer.</div>
 
 <div class="mt-7 grid grid-cols-3 gap-4 text-sm">
   <div class="callout-key">
-    <div class="font-bold">Bilet alındı, ne demek?</div>
-    <div class="mt-1">Sepete eklendi mi, ödendi mi? Ödeme beklerken o koltuk kimin?</div>
+    <div class="font-bold">What does "ticket bought" mean?</div>
+    <div class="mt-1">Added to the cart, or paid for? While payment is pending, whose seat is it?</div>
   </div>
   <div class="callout-key">
-    <div class="font-bold">Koltuk kaç dakika tutulur?</div>
-    <div class="mt-1">Ve o sürenin <b>bir saniye fazlasında</b> ne oluyor?</div>
+    <div class="font-bold">How long is a seat held?</div>
+    <div class="mt-1">And what happens <b>one second past</b> that?</div>
   </div>
   <div class="callout-key">
-    <div class="font-bold">Başarı ne?</div>
-    <div class="mt-1">Kapasiteyi aşmamak mı, yoksa boş koltukla başlamamak mı?</div>
+    <div class="font-bold">What counts as success?</div>
+    <div class="mt-1">Never exceeding capacity, or never starting with an empty seat?</div>
   </div>
 </div>
 
 <div class="callout-bad mt-7 text-sm">
-Ve şunların hiçbiri mühendislik kararı değil: <b>iade var mı? Etkinlik iptal olursa ile müşteri vazgeçerse aynı mı? Bilet devredilebilir mi?</b>
+None of these is an engineering decision: <b>are refunds allowed? Is the event being cancelled the same as a customer changing their mind? Can a ticket be transferred?</b>
 </div>
 
 <div class="mt-6 grid grid-cols-2 gap-5 text-sm">
   <div class="callout-key">
-    <div class="font-bold text-blue-600 dark:text-blue-400">Önce BMAD</div>
-    <div class="mt-1">Brief, PRD, mimari, story'ler.</div>
+    <div class="font-bold text-blue-600 dark:text-blue-400">BMAD first</div>
+    <div class="mt-1">Brief, PRD, architecture, stories.</div>
   </div>
   <div class="callout-good">
-    <div class="font-bold text-green-600 dark:text-green-400">Sonra Superpowers</div>
-    <div class="mt-1">Tek bir story: <b>koltuk seçilir ve ödemeye kadar geçici tutulur.</b></div>
+    <div class="font-bold text-green-600 dark:text-green-400">Then Superpowers</div>
+    <div class="mt-1">One story: <b>a seat is selected and held until payment.</b></div>
   </div>
 </div>
 
 <!--
-DOMAIN: etkinlik bileti satisi. Secildi cunku herkes bilet almistir, ve
-modul 2'nin ogrettigi UC SINIF belirsizligi dogal olarak tasiyor. Ekrandaki uc
-kutu tam olarak o uc sinif; isaret et.
+DOMAIN: event ticket sales. Chosen because everyone has bought a ticket, and it
+carries all THREE CLASSES of hidden assumption naturally. The three boxes on
+screen are exactly those three classes; point at that.
 
-Kisit sorusu en iyisi: "koltuk kac dakika tutulur" kolay cevaplanir, "bir saniye
-fazlasinda ne olur" cevaplanmaz. Sinir davranisi orada.
+The constraint question is the best of them: "how long is a seat held" is easy to
+answer, "what happens one second past that" is not. The boundary behaviour lives
+there.
 
-Basari sorusu tuzak gibi gorunuyor ama gercek: havayollari bilerek fazla satiyor.
-Yani "kapasiteyi asma" bir muhendislik kurali degil, bir IS karari. Bunu soyle.
+The success question looks like a trick and is not: airlines oversell on purpose.
+So "do not exceed capacity" is a BUSINESS decision, not an engineering rule. Say
+that out loud.
 
-DEVREDILEN STORY: "Kullanici bir koltuk secer ve odemeye kadar gecici olarak
-tutulur." Kucuk, ama icinde bir zamanlayici ve bir yaris kosulu var, yani TDD
-demosu icin gercek malzeme.
+THE STORY BEING HANDED OVER: "A user selects a seat and it is held until payment."
+Small, but it contains a timer and a race condition, so there is real material for
+the test-driven demo.
 
-DEMO SIRASI ~20 dakika:
-  BMAD tarafi, onceden pisirilmis artefaktlarla yurunur, ~8 dakika
-  Superpowers tarafi, ilk uc adim canli, kalan dordu anlatim, ~12 dakika
+RUNNING ORDER, about 20 minutes:
+  BMAD side, walked through pre-baked artifacts, about 8 minutes
+  Superpowers side, first three steps live, remaining four narrated, about 12
 
-EN GUCLU AN: BMAD'in urettigi STORY ile Superpowers'in o story icin yazdigi
-SPEC'i yan yana koymak. Ayni is, iki irtifa, iki belge. Fraktal iddiasi burada
-kanitlaniyor.
+THE STRONGEST MOMENT: put BMAD's STORY next to the SPEC Superpowers writes for
+that story. Same work, two altitudes, two documents. The fractal claim is proven
+right there.
 -->
