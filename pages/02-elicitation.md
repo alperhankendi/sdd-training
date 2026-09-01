@@ -176,142 +176,180 @@ something they can apply on Monday.
 
 ---
 
-# Altitude is a property of the work
+# Agentic Coding Framework nedir?
 
-| Toolchain | Depth dial |
-|---|---|
-| **BMAD** | Quick Flow ↔ Full Planning |
-| **Superpowers** | spike ↔ bounded ↔ architectural |
+<div class="mt-8 text-lg">Bir agent'a <b>nasıl çalışacağını</b> söyleyen yapı.</div>
 
-<div class="callout-key mt-8">
-The question is not <s>"which one?"</s> It is <b>"at what depth?"</b>
+<div class="mt-8 grid grid-cols-3 gap-4 text-sm">
+  <div class="callout-key">
+    <div class="font-bold">Skill</div>
+    <div class="mt-1">Ne zaman devreye gireceğini ve o an ne yapacağını tarif eden bir dosya.</div>
+  </div>
+  <div class="callout-key">
+    <div class="font-bold">Artefakt</div>
+    <div class="mt-1">Her skill'in ürettiği şey. Bir sonraki skill'in girdisi oluyor.</div>
+  </div>
+  <div class="callout-key">
+    <div class="font-bold">Akış</div>
+    <div class="mt-1">Hangi skill'den hangisine geçileceği. Sıra rastgele değil.</div>
+  </div>
 </div>
 
 <div class="mt-8 text-sm opacity-75">
-And the dial has a reason. The loop is fractal; the <b>reversibility</b> is not. A wrong feature plan is re-run in an hour. A wrong PRD found in week six is amended under change control, because epics, stories and other teams' commitments were already derived from it.
+Framework, prompt yazmayı bırakıp <b>iş akışı tasarlamaya</b> geçtiğiniz yer.
 </div>
 
 <!--
-This slide is the module's payload and the reason the previous one is not enough.
-A participant who leaves believing "BMAD means heavy" has learned a procurement
-rule, not a sizing skill -- and every tool here has its own dial.
+Bu slayt bir köprü. Anlatımın büyük kısmı dış sayfada:
+claude-code-mastery/15-Agentic-Coding-Frameworks
 
-The reversibility asymmetry is also the justification for two inputs on module
-6's decision flowchart -- expected lifespan and compliance -- which otherwise
-reach the photographed slide with nothing behind them.
+Slaytı aç, üç kutuyu bir cümleyle geç, sonra tarayıcıya geç ve kavramı orada anlat.
+Geri döndüğünde slayt 42 seni bekliyor olacak.
+
+Anahtar cümle: framework, prompt yazmaktan is akisi tasarlamaya gecis. Salon bu
+ana kadar hep "nasil soru sorulur" duydu; buradan itibaren "kim ne uretir, kime
+verir" konusuyoruz.
 -->
 
 ---
 
-# Demo · project altitude
+# Pratikte nasıl kullanıyorum
 
-<div class="mt-8 text-lg opacity-75">Product Brief → PRD, walked by diff</div>
-
-<div class="mt-8 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> The brief. Read its non-goals aloud. That section is the whole reason the PRD can be reviewed at all.</div>
-  <div class="callout-bad"><b>2 ·</b> The draft PRD, and the gate <b>rejecting it</b>. Four findings, one fatal.</div>
-  <div class="callout-good"><b>3 ·</b> The PRD that passes. Diff it against the draft.</div>
-</div>
-
-<div class="mt-8 text-sm opacity-90">
-The fatal finding: an architect cannot design a rotation mechanism from a PRD that never says <b>what happens to the old key</b>.
-</div>
-
-<!--
-Artifacts are pre-baked; you are walking git history, not generating. This is
-deliberate -- generating a PRD live means the room watches a spinner for four
-minutes and learns nothing that the diff does not show better.
-
-Run ONE thing live if you run anything: the gate rejecting the draft. That is
-the moment the method justifies itself.
--->
-
----
-
-# Demo · feature altitude
-
-<div class="mt-8 text-lg opacity-75">The same stage, in a conversation</div>
-
-<div class="mt-8 text-sm opacity-90">
-Live. Hand it a one-line request and watch it refuse to start: classify the work, ask what would make you reject it, ask for the non-goals, surface an assumption you had not noticed you were making, and stop at an approval gate before writing anything.
-</div>
-
-<div class="callout-key mt-8 text-sm">
-Watch for the moment it asks a question you did not have an answer to. That is not the tool failing. That is the tool doing the only thing that matters at this stage.
-</div>
-
-<!--
-This half runs live because a live elicitation dialogue is genuinely more
-persuasive than any artifact, and because it is cheap -- it is a conversation,
-not a generation.
-
-If it asks something you cannot answer, DO NOT invent an answer to keep the demo
-moving. Say "I don't know, and that is an open question" and put it in the
-Open questions section on screen. That is the most valuable thirty seconds
-available in this module.
--->
-
----
-
-# The depth dial, on screen
-
-<div class="mt-6 text-lg">The same one-file bug fix, down both toolchains, at their lightest setting.</div>
-
-<div class="mt-8 grid grid-cols-2 gap-6 text-sm">
+<div class="mt-6 grid grid-cols-2 gap-5">
   <div class="callout-key">
-    <div class="font-bold">Project altitude, light</div>
-    <div class="mt-1 font-mono text-xs">/quick-spec → /dev-story</div>
-    <div class="mt-2">No Product Brief. No PRD. No Architecture document. Fifteen lines total.</div>
+    <div class="font-bold text-blue-600 dark:text-blue-400">BMAD ile</div>
+    <div class="text-sm mt-2">Market research, brief, PRD, mimari, FR, story, plan.</div>
+    <div class="text-sm mt-2 opacity-75">Projenin tamamı. Bir kez.</div>
   </div>
   <div class="callout-good">
-    <div class="font-bold">Feature altitude, light</div>
-    <div class="mt-1 font-mono text-xs">brainstorming</div>
-    <div class="mt-2">"This looks bounded." Three sentences in chat, an approval gate, and <b>no spec file at all</b>.</div>
+    <div class="font-bold text-green-600 dark:text-green-400">Superpowers ile</div>
+    <div class="text-sm mt-2">Her story için: spec, plan, implementasyon. Baştan sona TDD.</div>
+    <div class="text-sm mt-2 opacity-75">Story başına bir kez.</div>
   </div>
 </div>
 
-<div class="mt-8 text-sm opacity-90">
-Sixty seconds. This is the only moment today when a depth dial turns on screen.
+<div class="callout-key mt-8">
+Devredilen şey <b>bir story.</b> Ve Superpowers onu almakla kalmıyor: <b>o story için kendi spec'ini ve kendi planını yazıyor.</b>
+</div>
+
+<div class="mt-6 text-sm opacity-90">
+Yani aynı döngü iki ölçekte koşuyor. Proje irtifasında bir kez, feature irtifasında her story için bir kez. <b>Ağırlık farklı, şekil aynı.</b>
 </div>
 
 <!--
-This coda is the honest answer to the senior in the room who has spent forty
-minutes thinking "this is enormous overhead". Do not skip it to save time; if
-you must cut something in this module, cut a question from the ladder.
+Bu slayt hem hibrit pratigi anlatiyor hem de depth dial'in isini goruyor.
 
-The absence of artifacts on the light path is the demonstration. Do not create
-placeholder documents saying "not applicable" -- nothing at all is the output.
+Onemli olan sag kutu: Superpowers sadece implementasyon yapmiyor, her story icin
+DONGUYU BASTAN KOSUYOR. Bu, gunun fraktal iddiasinin kaniti ve iddia degil
+gozlem olarak veriliyor.
+
+Ve buradan cikan sizing dersi: irtifa aracin ozelligi degil, ISIN ozelligi. Ayni
+gun iki araci da kullaniyorsunuz, secim proje mi story mi oldugu.
 -->
 
 ---
 
-# Lab 2 · Five questions
+# İki framework, yan yana
 
-<div class="mt-8 text-lg">A one-line feature request. Fifteen minutes.</div>
-
-<div class="callout-bad mt-8 !text-lg font-mono">
-"We need to let customers see who used which API key."
+<div class="grid grid-cols-2 gap-5 mt-5 text-xs">
+  <div>
+    <div class="font-bold text-blue-600 dark:text-blue-400 mb-2">BMAD · 11 skill</div>
+    <div class="opacity-60 mb-1">Analysis, opsiyonel</div>
+    <div class="font-mono opacity-85">bmad-brainstorming · bmad-forge-idea · bmad-deep-recon · bmad-product-brief · bmad-prfaq</div>
+    <div class="opacity-60 mt-3 mb-1">Planning, ne inşa edilecek</div>
+    <div class="font-mono opacity-85">bmad-prd · bmad-ux · <b class="text-blue-600 dark:text-blue-400">bmad-spec</b></div>
+    <div class="opacity-60 mt-3 mb-1">Solutioning, nasıl ve iş bölümü</div>
+    <div class="font-mono opacity-85">bmad-architecture · bmad-create-epics-and-stories · bmad-sprint-planning</div>
+    <div class="mt-3 opacity-75">Her yol <b>bmad-spec</b>'ten geçiyor, sonra <b>bmad-build</b>.</div>
+  </div>
+  <div>
+    <div class="font-bold text-green-600 dark:text-green-400 mb-2">Superpowers · 7 adım</div>
+    <div class="font-mono opacity-85 leading-relaxed">
+      1 brainstorming<br/>
+      2 using-git-worktrees<br/>
+      3 writing-plans<br/>
+      4 subagent-driven-development<br/>
+      5 test-driven-development<br/>
+      6 requesting-code-review<br/>
+      7 finishing-a-development-branch
+    </div>
+    <div class="mt-3 opacity-75">Sıra sabit. Her story bu yedi adımdan geçiyor.</div>
+  </div>
 </div>
 
-<div class="mt-8 text-sm">
-Write the <b>five questions</b> you would ask before writing any spec. Not clarifications: questions whose answers would change what you build.
-</div>
-
-<div class="callout-good mt-6 text-sm">
-<b>If you finish early:</b> which of your five could an agent answer itself from the codebase, and which genuinely require a human? Explain what makes the difference.
+<div class="mt-6 text-sm opacity-90">
+Soldaki <b>bir kez</b> koşuyor. Sağdaki <b>her story için</b> koşuyor.
 </div>
 
 <!--
-The senior variant is the actual lesson. "What is the current audit retention?"
-is answerable from the code. "Should a revoked key's usage still be visible?" is
-not answerable by anyone but a person with authority.
+Listeleri okuma. Iki sey gorsunler:
 
-Conflating those two is why teams either interrogate agents pointlessly or let
-them guess at decisions that were never theirs to make.
+1. BMAD genis ve dallanan, Superpowers dar ve sirali. Cunku biri KARAR aliyor,
+   digeri KARARI UYGULUYOR.
+2. Soldaki bir kez, sagdaki her story icin. Frekans farki, irtifa farkinin
+   gorunur hali.
 
-DEBRIEF -- under ~15 people: round the room, one question each, no repeats, and
-you will run out of distinct questions around person nine, which is itself worth
-pointing at. Above 15: take four from volunteers and read out the two that
-matter most, which are almost always "what must NOT change" and "who is allowed
-to see this".
+bmad-spec vurgulu cunku her yol oradan geciyor. Isaret et, acma.
+-->
+
+---
+
+# Hadi demo
+
+<div class="mt-6 text-xl">Etkinlik bileti satışı.</div>
+
+<div class="mt-3 text-sm opacity-75">Herkesin bildiği bir iş. Ve içinde mühendisin karar veremeyeceği sorular var.</div>
+
+<div class="mt-7 grid grid-cols-3 gap-4 text-sm">
+  <div class="callout-key">
+    <div class="font-bold">Bilet alındı, ne demek?</div>
+    <div class="mt-1">Sepete eklendi mi, ödendi mi? Ödeme beklerken o koltuk kimin?</div>
+  </div>
+  <div class="callout-key">
+    <div class="font-bold">Koltuk kaç dakika tutulur?</div>
+    <div class="mt-1">Ve o sürenin <b>bir saniye fazlasında</b> ne oluyor?</div>
+  </div>
+  <div class="callout-key">
+    <div class="font-bold">Başarı ne?</div>
+    <div class="mt-1">Kapasiteyi aşmamak mı, yoksa boş koltukla başlamamak mı?</div>
+  </div>
+</div>
+
+<div class="callout-bad mt-7 text-sm">
+Ve şunların hiçbiri mühendislik kararı değil: <b>iade var mı? Etkinlik iptal olursa ile müşteri vazgeçerse aynı mı? Bilet devredilebilir mi?</b>
+</div>
+
+<div class="mt-6 grid grid-cols-2 gap-5 text-sm">
+  <div class="callout-key">
+    <div class="font-bold text-blue-600 dark:text-blue-400">Önce BMAD</div>
+    <div class="mt-1">Brief, PRD, mimari, story'ler.</div>
+  </div>
+  <div class="callout-good">
+    <div class="font-bold text-green-600 dark:text-green-400">Sonra Superpowers</div>
+    <div class="mt-1">Tek bir story: <b>koltuk seçilir ve ödemeye kadar geçici tutulur.</b></div>
+  </div>
+</div>
+
+<!--
+DOMAIN: etkinlik bileti satisi. Secildi cunku herkes bilet almistir, ve
+modul 2'nin ogrettigi UC SINIF belirsizligi dogal olarak tasiyor. Ekrandaki uc
+kutu tam olarak o uc sinif; isaret et.
+
+Kisit sorusu en iyisi: "koltuk kac dakika tutulur" kolay cevaplanir, "bir saniye
+fazlasinda ne olur" cevaplanmaz. Sinir davranisi orada.
+
+Basari sorusu tuzak gibi gorunuyor ama gercek: havayollari bilerek fazla satiyor.
+Yani "kapasiteyi asma" bir muhendislik kurali degil, bir IS karari. Bunu soyle.
+
+DEVREDILEN STORY: "Kullanici bir koltuk secer ve odemeye kadar gecici olarak
+tutulur." Kucuk, ama icinde bir zamanlayici ve bir yaris kosulu var, yani TDD
+demosu icin gercek malzeme.
+
+DEMO SIRASI ~20 dakika:
+  BMAD tarafi, onceden pisirilmis artefaktlarla yurunur, ~8 dakika
+  Superpowers tarafi, ilk uc adim canli, kalan dordu anlatim, ~12 dakika
+
+EN GUCLU AN: BMAD'in urettigi STORY ile Superpowers'in o story icin yazdigi
+SPEC'i yan yana koymak. Ayni is, iki irtifa, iki belge. Fraktal iddiasi burada
+kanitlaniyor.
 -->
