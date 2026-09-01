@@ -1,21 +1,3 @@
-# Four weeks in, nobody agrees what "user" means
-
-<div class="mt-10 text-sm opacity-90">
-Two services encode different answers. Both are correct against the ticket they were built from. Neither team did anything wrong.
-</div>
-
-<div class="callout-bad mt-10">
-The assumption was never wrong. It was never <b>stated</b>, so it was never <b>checked</b>.
-</div>
-
-<!--
-This is the most expensive failure in the day, because everything downstream
-inherits it and nothing downstream can detect it. A perfect plan built on a
-drifted assumption executes flawlessly into the wrong system.
--->
-
----
-
 # Intent is incomplete at the source
 
 <div class="mt-8 text-xl">The requester's head does not contain a finished spec either.</div>
@@ -34,6 +16,19 @@ drifted assumption executes flawlessly into the wrong system.
 <div class="mt-8 text-sm opacity-75">This reframe does most of the work in this module. Everything after it is technique.</div>
 
 <!--
+THIS MODULE OPENS VERBALLY, not with a damage slide. The one that used to be here
+("four weeks in, nobody agrees what 'user' means") was cut because the failure is
+obvious enough to state in two sentences and a slide added nothing.
+
+Say it before this slide goes up, roughly:
+
+  "Four weeks into a project, two services encode different answers to what a
+  user is. Both teams are correct against the ticket they were given. Nobody
+  made a mistake. The assumption was never wrong, it was just never stated, so
+  it was never checked."
+
+Then this slide.
+
 Test it against the room: ask who has been given a requirement that turned out
 wrong, and whether the person who gave it knew it was wrong at the time. They
 did not. They had not been asked the question that would have revealed it.
