@@ -1,65 +1,3 @@
-# Intent is incomplete at the source
-
-<div class="mt-8 text-xl">The requester's head does not contain a finished spec either.</div>
-
-<div class="mt-8 grid grid-cols-2 gap-6 text-sm">
-  <div class="callout-bad">
-    <div class="font-bold text-red-600 dark:text-red-400">Extraction</div>
-    <div class="mt-1">"They know what they want; my job is to get it out of them."<br/><br/>Leads to transcription, and to blaming the requester when it turns out wrong.</div>
-  </div>
-  <div class="callout-good">
-    <div class="font-bold text-green-600 dark:text-green-400">Construction</div>
-    <div class="mt-1">"Neither of us knows yet; my job is to build it with them."<br/><br/>Leads to questions that create the answer rather than retrieve it.</div>
-  </div>
-</div>
-
-<div class="mt-8 text-sm opacity-75">This reframe does most of the work in this module. Everything after it is technique.</div>
-
-<!--
-THIS MODULE OPENS VERBALLY, not with a damage slide. The one that used to be here
-("four weeks in, nobody agrees what 'user' means") was cut because the failure is
-obvious enough to state in two sentences and a slide added nothing.
-
-Say it before this slide goes up, roughly:
-
-  "Four weeks into a project, two services encode different answers to what a
-  user is. Both teams are correct against the ticket they were given. Nobody
-  made a mistake. The assumption was never wrong, it was just never stated, so
-  it was never checked."
-
-Then this slide.
-
-Test it against the room: ask who has been given a requirement that turned out
-wrong, and whether the person who gave it knew it was wrong at the time. They
-did not. They had not been asked the question that would have revealed it.
--->
-
----
-
-# The question ladder
-
-<div class="mt-6 text-sm opacity-75">Five questions, ordered by how much they surface per minute.</div>
-
-<div class="mt-6 space-y-2 text-sm">
-  <div class="callout-key"><b>1 ·</b> What would make you <b>reject</b> this?</div>
-  <div class="callout-key"><b>2 ·</b> What must it <b>not</b> do?</div>
-  <div class="callout-key"><b>3 ·</b> What happens on the <b>unhappy path</b>?</div>
-  <div class="callout-key"><b>4 ·</b> Who <b>else</b> is affected?</div>
-  <div class="callout-key"><b>5 ·</b> What is <b>already true</b> that I should not break?</div>
-</div>
-
-<div class="mt-6 text-sm opacity-90">
-Question 1 first, deliberately. "What do you want" produces agreement. "What would make you reject this" produces information.
-</div>
-
-<!--
-Question 5 is the one people skip and the one that catches the most in existing
-systems. It is also the bridge to module 5: in a legacy codebase, "what is
-already true" has no written answer at all.
--->
-
----
-
 # Non-goals first
 
 <div class="mt-8 text-xl">Ask what is <b>out</b> of scope before asking what is in it.</div>
@@ -82,8 +20,31 @@ The mechanism, not the etiquette:
 <div class="mt-8 text-sm">Disagreement is the product. Surfacing it early is the entire point of this stage.</div>
 
 <!--
-This is why the template has a Non-goals section, and it is worth saying so
-explicitly -- module 1 handed them the section, this slide is where it is earned.
+THIS MODULE OPENS WITH THREE THINGS SAID OUT LOUD, no slides. They were cut
+because each lands in a couple of sentences and a screen added nothing. Deliver
+them in this order before this slide goes up:
+
+1. THE DAMAGE.
+   "Four weeks into a project, two services encode different answers to what a
+   user is. Both teams are correct against the ticket they were given. Nobody
+   made a mistake. The assumption was never wrong, it was just never stated, so
+   it was never checked."
+
+2. THE REFRAME. This one matters most; without it the rest is a checklist.
+   "The person who gave you the requirement does not have a finished spec in
+   their head either. So this is not extraction, it is construction. Your
+   questions are not retrieving an answer, they are creating one."
+   Then ask: have you been given a requirement that turned out wrong? (hands)
+   And did the person who gave it know it was wrong at the time? (no)
+
+3. THE FIVE QUESTIONS. Say them once; they are also on the Lab 2 handout.
+   What would make you reject this? What must it not do? What happens on the
+   unhappy path? Who else is affected? What is already true that I must not break?
+   Note that the first is first on purpose: "what do you want" produces
+   agreement, "what would make you reject this" produces information.
+
+Then this slide. This is why the template has a Non-goals section: module 1
+handed them the section, here it is earned.
 -->
 
 ---
