@@ -157,7 +157,7 @@ That is the whole test. Not "is it detailed": <b>can it run without you in the r
   </div>
 </div>
 
-<div class="mt-6 text-sm opacity-75">The highest leverage point today's material actually operates. Module 3 spends over an hour here.</div>
+<div class="mt-6 text-sm opacity-75">The highest leverage point today's material actually operates. An entire module is built on it, and the long demo produces one live.</div>
 
 <!--
 Resist explaining why now. Module 3 derives every rule in this area from a

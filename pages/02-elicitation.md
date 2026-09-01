@@ -418,7 +418,7 @@ Watch step <b>5</b> and step <b>7</b>: a spec and a plan, written again, for <b>
 <!--
 This is the map. Show it before the demo starts, and leave it up for a beat.
 
-Its real job is expectation setting: the room is about to watch about 20 minutes
+Its real job is expectation setting: the room is about to watch about 40 minutes
 of tooling, and without a map that reads as a product tour. With the map, every
 step has a known place in a sequence.
 
