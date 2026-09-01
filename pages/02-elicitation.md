@@ -398,12 +398,12 @@ right there.
 <div class="mt-4">
   <div class="flex items-baseline gap-3">
     <div class="text-xs font-bold uppercase tracking-wider text-green-600 dark:text-green-400">Superpowers · feature altitude · per story</div>
-    <div class="text-xs opacity-55">5 to 7 live, 8 to 11 narrated · about 12 minutes</div>
+    <div class="text-xs opacity-55">all seven live · about 30 minutes</div>
   </div>
   <div class="mt-2 grid grid-cols-7 gap-2 text-xs">
-    <div class="callout-good"><div class="opacity-50">5 <span class="text-green-600 dark:text-green-400 font-bold">live</span></div><div class="font-mono mt-1">brainstorming</div><div class="mt-1 opacity-75">its own <b>spec</b></div></div>
-    <div class="callout-good"><div class="opacity-50">6 <span class="text-green-600 dark:text-green-400 font-bold">live</span></div><div class="font-mono mt-1">worktrees</div><div class="mt-1 opacity-75">isolated branch</div></div>
-    <div class="callout-good"><div class="opacity-50">7 <span class="text-green-600 dark:text-green-400 font-bold">live</span></div><div class="font-mono mt-1">writing-plans</div><div class="mt-1 opacity-75">its own <b>plan</b></div></div>
+    <div class="callout-good"><div class="opacity-50">5</div><div class="font-mono mt-1">brainstorming</div><div class="mt-1 opacity-75">its own <b>spec</b></div></div>
+    <div class="callout-good"><div class="opacity-50">6</div><div class="font-mono mt-1">worktrees</div><div class="mt-1 opacity-75">isolated branch</div></div>
+    <div class="callout-good"><div class="opacity-50">7</div><div class="font-mono mt-1">writing-plans</div><div class="mt-1 opacity-75">its own <b>plan</b></div></div>
     <div class="callout-good"><div class="opacity-50">8</div><div class="font-mono mt-1">subagent-driven</div><div class="mt-1 opacity-75">step by step</div></div>
     <div class="callout-good"><div class="opacity-50">9</div><div class="font-mono mt-1">test-driven</div><div class="mt-1 opacity-75">red, green</div></div>
     <div class="callout-good"><div class="opacity-50">10</div><div class="font-mono mt-1">code-review</div><div class="mt-1 opacity-75">reads the spec</div></div>
@@ -430,10 +430,14 @@ Three things to point at, and nothing else:
   STEPS 5 AND 7. A spec and a plan, for a single story. Whoever missed the fractal
   claim two slides ago gets a second chance here, in concrete form.
 
-  WHAT IS LIVE. Say it out loud before starting: BMAD is pre-baked, 5 to 7 run
-  live, 8 to 11 are narrated. A room that knows what is recorded stops wondering
-  and starts watching.
+  WHAT IS LIVE. Say it out loud before starting: BMAD is pre-baked and walked by
+  diff, all seven Superpowers steps run live. A room that knows what is recorded
+  stops wondering and starts watching.
 
-If you fall behind, 8 to 11 compress into one sentence. 5 to 7 do not compress,
-they are the demo.
+This is the day's long demo, about 40 minutes including this map, and it is the
+only place all seven steps run. Module 3 then teaches from the plan step 7 leaves
+behind, so do not close that file.
+
+If you fall behind, 10 and 11 compress to a sentence each and 8 and 9 can drop to
+a single task. 5, 6 and 7 do not compress, they are the demo.
 -->
