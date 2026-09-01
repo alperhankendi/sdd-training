@@ -370,17 +370,19 @@ Practical notes from the dry run:
 
 ---
 
-# Lab 5 · Characterize, then delta-spec
+# Lab 5 · Önce karakterize edin, sonra delta-spec
 
-<div class="mt-8 text-lg">A legacy function. Twenty minutes.</div>
-
-<div class="mt-8 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> List the characterization tests you would write <b>first</b>, before changing anything.</div>
-  <div class="callout-key"><b>2 ·</b> Write the acceptance criteria for the change: the part that can fail.</div>
+<div class="mt-4 text-sm opacity-90">
+Elinizdeki kâğıtta, az önce baktığımız billing sisteminden <b>gerçek bir fonksiyon</b> var. Spec'i yok. Dokümantasyonu yok. Adını anan <b>tek bir test</b> var.
 </div>
 
-<div class="callout-bad mt-8 text-sm">
-<b>If you finish early:</b> turn over the card handed out at the six-minute mark.
+<div class="mt-6 space-y-3 text-sm">
+  <div class="callout-key"><b>1 ·</b> Hiçbir şeyi değiştirmeden <b>önce</b> yazacağınız characterization testlerini listeleyin.</div>
+  <div class="callout-key"><b>2 ·</b> Değişiklik için kabul kriterlerini yazın: <b>fail edebilecek</b> olan kısmı.</div>
+</div>
+
+<div class="callout-bad mt-6 text-sm">
+<b>Erken bitirirseniz:</b> altıncı dakikada dağıtılan kartı çevirin.
 </div>
 
 <!--
@@ -391,6 +393,9 @@ what happens to historical data.
 
 The answer people give first -- "just fix it" -- is exactly what silently
 rewrites years of invoices.
+
+The card at six minutes carries the bug hint. Do not hand it out early and do not
+hint at it verbally; the sheet has to stay solvable on its own until then.
 
 DEBRIEF -- under ~15: ask for the test list first, then ask the bug question and
 let two people disagree. Above 15: take the test list from volunteers and pose

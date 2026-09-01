@@ -252,26 +252,35 @@ dangerous, because completed work stays checked off while quietly becoming wrong
 
 ---
 
-# Lab 3 · Find the two
+# Lab 3 · İki kusuru bulun
 
-<div class="mt-8 text-lg">A supplied plan. Ten minutes.</div>
-
-<div class="mt-8 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> Find the step that <b>cannot be verified</b>: its <code>verify</code> would pass whether or not the step worked.</div>
-  <div class="callout-key"><b>2 ·</b> Find the step that <b>silently assumes a human is present</b>.</div>
+<div class="mt-4 text-sm opacity-90">
+Elinizdeki kâğıtta <b>sekiz adımlık gerçek bir plan</b> var. API key servisine revocation ekliyor, ve bu modülün kurallarına göre yazılmış <b>görünüyor</b>.
 </div>
 
-<div class="callout-good mt-8 text-sm">
-<b>If you finish early:</b> for each defect you found, name which of the executor's four properties makes it a defect. Not what to fix. <b>Why it breaks.</b>
+<div class="mt-6 space-y-3 text-sm">
+  <div class="callout-key"><b>1 ·</b> <b>Verify'ı fail edemeyen</b> adımı bulun. Yani işi yapılmış da olsa yapılmamış da olsa <b>geçecek</b> olan adım.</div>
+  <div class="callout-key"><b>2 ·</b> Sessizce <b>bir insanın orada olduğunu varsayan</b> adımı bulun.</div>
+</div>
+
+<div class="callout-bad mt-6 text-sm">
+Birkaç adımda daha doğrulama sorunu var. Aradığımız <b>bu iki tanesi</b>, ama başkasını bulursanız haksız değilsiniz: toparlarken getirin.
+</div>
+
+<div class="callout-good mt-6 text-sm">
+<b>Erken bitirirseniz:</b> bulduğunuz her kusur için, executor'ın <b>dört özelliğinden hangisi</b> onu kusur yapıyor? Nasıl düzeltileceğini değil. <b>Neden bozuk olduğunu.</b>
 </div>
 
 <!--
+Hand the sheet out, say the two tasks, start the clock. Do not talk over it.
+
 The senior variant tests the mechanism rather than the repair, which is the whole
 point of having stated the failure model at the start of the module. Someone who
 can only say "add a verify step" has learned the rule; someone who can say
 "because a fresh executor cannot see the previous output" has learned the reason.
 
-DEBRIEF -- under ~15: ask two people for the human-assumption step first, since
-it is the one people miss. Above 15: read out both, then ask for a show of hands
-on who found the second one. It is usually about a third.
+The sheet warns that other steps have problems too. That is honest and it stops
+the pedantic participant from derailing the debrief with a third finding.
+
+DEBRIEF: take both defects from the room, never supply them yourself.
 -->

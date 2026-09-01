@@ -452,20 +452,26 @@ reference copy.
 
 ---
 
-# Lab 4 · A PR that changes behaviour
+# Lab 4 · Davranışı değiştiren bir PR
 
-<div class="mt-8 text-lg">Twenty minutes. Find <b>exactly two</b> things: one missing from the change, one wrong inside the diff.</div>
-
-<div class="callout-good mt-8 text-sm">
-<b>The answer key has two sides.</b> One is the missing spec update. The other is a defect in the diff that the spec is <b>silent about by design</b>.
+<div class="mt-4 text-sm opacity-90">
+Elinizdeki kâğıtta API key servisine açılmış bir <b>pull request</b> var. <b>Mevcut testlerin hepsi geçiyor.</b> Spec'e dokunulmamış.
 </div>
 
-<div class="mt-6 text-sm opacity-90">
-A participant who finds only the first has learned exactly the half that ships bugs.
+<div class="mt-6 text-lg">
+<b>Tam iki şey bulun:</b> biri değişiklikten <b>eksik</b>, biri diff'in <b>içinde yanlış</b>.
 </div>
 
-<div class="callout-key mt-8 text-sm">
-<b>If you finish early:</b> for each defect, which side of the diagnostic does it fall on? Would fixing the spec and regenerating remove it?
+<div class="callout-bad mt-6 text-sm">
+Cevap anahtarının <b>iki tarafı var.</b> Biri eksik spec güncellemesi. Diğeri, spec'in <b>bilerek sessiz kaldığı</b> bir implementasyon kusuru.
+</div>
+
+<div class="mt-4 text-sm opacity-90">
+Sadece birincisini bulan, tam olarak <b>bug üreten yarısını</b> öğrenmiş olur.
+</div>
+
+<div class="callout-good mt-6 text-sm">
+<b>Erken bitirirseniz:</b> her kusur teşhisin hangi tarafına düşüyor? Spec'i düzeltip yeniden üretmek onu <b>kaldırır mıydı?</b>
 </div>
 
 <!--

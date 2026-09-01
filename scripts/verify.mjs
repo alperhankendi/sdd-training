@@ -166,6 +166,27 @@ if (existsSync(join('pages', '06-antipatterns.md'))) {
 if (bridge.includes('lost it twice')) pass('module 0: honest history of prior attempts present')
 else fail('module 0: the MDA/4GL history is missing -- the beat loses credibility without it')
 
+// Every lab slide must say WHERE its material is. Lab 1 shipped as three tasks
+// with nothing on screen and nothing named, and the room could not tell what it
+// was being asked to do; the same defect was still sitting in labs 3, 4 and 5
+// afterwards. A lab brief that does not point at the sheet is not a brief.
+const LAB_SLIDES = [
+  ['01-spec-anatomy.md', 'Lab 1'],
+  ['03-plans.md', 'Lab 3'],
+  ['04-verification.md', 'Lab 4'],
+  ['05-brownfield.md', 'Lab 5'],
+]
+for (const [file, lab] of LAB_SLIDES) {
+  if (!existsSync(join('pages', file))) continue
+  const text = readFileSync(join('pages', file), 'utf8')
+  const at = text.indexOf(`# ${lab} ·`)
+  if (at < 0) { fail(`${lab}: no brief slide found in ${file}`); continue }
+  const end = text.indexOf('\n---\n', at)
+  const body = text.slice(at, end < 0 ? text.length : end).split('<!--')[0]
+  if (/elinizdeki|size verilecek/i.test(body)) pass(`${lab}: names where the material is`)
+  else fail(`${lab}: the brief never says where the material is -- the room cannot start`)
+}
+
 // The authority on what the deck actually contains is Slidev's own parser, not
 // the separator counting above. They disagreed once and it cost two slides: a
 // `---` with no blank line after it made Slidev swallow the whole slide body as
