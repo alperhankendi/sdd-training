@@ -229,7 +229,7 @@ use this afternoon.
   </div>
   <div class="callout-key">
     <div class="font-bold text-purple-600 dark:text-purple-400 mb-2">Tests</div>
-    <div class="text-sm">The executable half of a spec. Module 1's acceptance criteria become module 3's test list.</div>
+    <div class="text-sm">The executable half of a spec. Module 1's acceptance criteria become module 3's verify steps.</div>
   </div>
   <div class="callout-good">
     <div class="font-bold text-green-600 dark:text-green-400 mb-2">Plans, Templates, ADWs</div>
