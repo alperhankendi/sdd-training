@@ -272,39 +272,14 @@ contradiction is resolved by the owner, never by whoever happened to hit it.
 
 ---
 
-# Definition of done, and its order
+# Correction, or drift with better paperwork
 
-<div class="mt-6 text-lg">A change that alters behaviour without a spec update is an <b>incomplete change</b>.</div>
+<div class="mt-5 text-lg">A change that alters behaviour without a spec update is an <b>incomplete change</b>. A process change, not a guideline. But state it <b>order-sensitively</b> or it is worthless.</div>
 
-<div class="mt-6 text-sm opacity-90">A process change, not a guideline. But state it order-sensitively or it is worthless:</div>
-
-<div class="callout-good mt-6 !text-lg">
-The spec changes <b>first</b>, and the owner decides.
-</div>
-
-<div class="callout-bad mt-6">
-A spec patched at PR time to describe whatever happened to get built is <b>drift with better paperwork</b>.
-</div>
-
-<!--
-Expect resistance here, and expect it to be reasonable. "We do not know what the
-spec should say until we have built it" is often true for genuinely exploratory
-work -- and module 6 gives explicit permission to skip SDD for exactly that.
-
-What is not acceptable is doing exploratory work by default and calling the
-retro-spec a process.
--->
-
----
-
-# Correction and drift produce the same diff
-
-<div class="mt-10 text-xl">Two commits. Identical content. One is the process working, one is the process being laundered.</div>
-
-<div class="mt-10 grid grid-cols-2 gap-6 text-sm">
+<div class="mt-7 grid grid-cols-2 gap-6 text-sm">
   <div class="callout-good">
     <div class="font-bold text-green-600 dark:text-green-400">Correction</div>
-    <div class="mt-1">Spec changed first. Owner decided. Implementation followed.</div>
+    <div class="mt-1">Spec changed <b>first</b>. Owner decided. Implementation followed.</div>
   </div>
   <div class="callout-bad">
     <div class="font-bold text-red-600 dark:text-red-400">Drift laundering</div>
@@ -312,14 +287,28 @@ retro-spec a process.
   </div>
 </div>
 
-<div class="mt-10 text-sm opacity-90">
-You cannot tell them apart from the artifact. Only from <b>the order</b>, and <b>who decided</b>.
+<div class="mt-7 text-lg opacity-90">
+Two commits, <b>identical content</b>. You cannot tell them apart from the artifact. Only from <b>the order</b>, and <b>who decided</b>.
+</div>
+
+<div class="callout-key mt-6 text-sm">
+Which is why <i>"did the spec get updated"</i> is the wrong question. <b>Both columns satisfy it</b>, and it is the question most teams adopt.
 </div>
 
 <!--
-This is why the definition-of-done change is about order rather than presence.
-"Did the spec get updated" is satisfied by both columns. It is the wrong question
-and it is the one most teams adopt.
+This slide used to be two: a definition-of-done rule, then the same argument again
+as a comparison. One telling is stronger.
+
+Expect resistance, and expect it to be reasonable. "We do not know what the spec
+should say until we have built it" is often true for genuinely exploratory work,
+and module 6 gives explicit permission to skip SDD for exactly that.
+
+What is not acceptable is doing exploratory work by default and calling the
+retro-spec a process.
+
+The closing callout is the operational half. A team that adopts "the spec must be
+updated" and stops there has adopted the laundering column along with the
+correction one.
 -->
 
 ---
