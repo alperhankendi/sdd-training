@@ -349,11 +349,91 @@ THE STORY BEING HANDED OVER: "A user selects a seat and it is held until payment
 Small, but it contains a timer and a race condition, so there is real material for
 the test-driven demo.
 
-RUNNING ORDER, about 20 minutes:
-  BMAD side, walked through pre-baked artifacts, about 8 minutes
-  Superpowers side, first three steps live, remaining four narrated, about 12
+THE RUNNING ORDER IS THE NEXT SLIDE. Do not narrate it here, and do not start
+the demo from this slide.
 
 THE STRONGEST MOMENT: put BMAD's STORY next to the SPEC Superpowers writes for
 that story. Same work, two altitudes, two documents. The fractal claim is proven
 right there.
+-->
+
+---
+
+# Demo · the order we run it in
+
+<div class="mt-5">
+  <div class="flex items-baseline gap-3">
+    <div class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">BMAD · project altitude · once</div>
+    <div class="text-xs opacity-55">pre-baked, walked by diff · about 8 minutes</div>
+  </div>
+  <div class="mt-2 grid grid-cols-4 gap-3">
+    <div class="callout-key">
+      <div class="text-xs opacity-50">1</div>
+      <div class="font-mono text-sm">product-brief</div>
+      <div class="text-xs mt-1 opacity-75">Who buys a ticket, and what we will <b>not</b> build</div>
+    </div>
+    <div class="callout-key">
+      <div class="text-xs opacity-50">2</div>
+      <div class="font-mono text-sm">prd</div>
+      <div class="text-xs mt-1 opacity-75">Browse, select, hold, pay</div>
+    </div>
+    <div class="callout-key">
+      <div class="text-xs opacity-50">3</div>
+      <div class="font-mono text-sm">architecture</div>
+      <div class="text-xs mt-1 opacity-75">Where seat state lives, who owns the timer</div>
+    </div>
+    <div class="callout-key">
+      <div class="text-xs opacity-50">4</div>
+      <div class="font-mono text-sm">epics-and-stories</div>
+      <div class="text-xs mt-1 opacity-75">The story list</div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 p-2 rounded-lg border-2 border-dashed border-amber-400 bg-amber-50 dark:bg-amber-900/20 text-center text-sm">
+  <span class="text-xs uppercase tracking-wider opacity-60 mr-2">handoff</span>
+  <b>one story:</b> <i>a user selects a seat and it is held until payment</i>
+</div>
+
+<div class="mt-4">
+  <div class="flex items-baseline gap-3">
+    <div class="text-xs font-bold uppercase tracking-wider text-green-600 dark:text-green-400">Superpowers · feature altitude · per story</div>
+    <div class="text-xs opacity-55">5 to 7 live, 8 to 11 narrated · about 12 minutes</div>
+  </div>
+  <div class="mt-2 grid grid-cols-7 gap-2 text-xs">
+    <div class="callout-good"><div class="opacity-50">5 <span class="text-green-600 dark:text-green-400 font-bold">live</span></div><div class="font-mono mt-1">brainstorming</div><div class="mt-1 opacity-75">its own <b>spec</b></div></div>
+    <div class="callout-good"><div class="opacity-50">6 <span class="text-green-600 dark:text-green-400 font-bold">live</span></div><div class="font-mono mt-1">worktrees</div><div class="mt-1 opacity-75">isolated branch</div></div>
+    <div class="callout-good"><div class="opacity-50">7 <span class="text-green-600 dark:text-green-400 font-bold">live</span></div><div class="font-mono mt-1">writing-plans</div><div class="mt-1 opacity-75">its own <b>plan</b></div></div>
+    <div class="callout-good"><div class="opacity-50">8</div><div class="font-mono mt-1">subagent-driven</div><div class="mt-1 opacity-75">step by step</div></div>
+    <div class="callout-good"><div class="opacity-50">9</div><div class="font-mono mt-1">test-driven</div><div class="mt-1 opacity-75">red, green</div></div>
+    <div class="callout-good"><div class="opacity-50">10</div><div class="font-mono mt-1">code-review</div><div class="mt-1 opacity-75">reads the spec</div></div>
+    <div class="callout-good"><div class="opacity-50">11</div><div class="font-mono mt-1">finish-branch</div><div class="mt-1 opacity-75">close it out</div></div>
+  </div>
+</div>
+
+<div class="mt-5 text-sm opacity-90">
+Watch step <b>5</b> and step <b>7</b>: a spec and a plan, written again, for <b>one story.</b> That is the loop from the top of this slide, running a second time at a smaller size.
+</div>
+
+<!--
+This is the map. Show it before the demo starts, and leave it up for a beat.
+
+Its real job is expectation setting: the room is about to watch about 20 minutes
+of tooling, and without a map that reads as a product tour. With the map, every
+step has a known place in a sequence.
+
+Three things to point at, and nothing else:
+
+  THE HANDOFF BAR. Everything above it decides WHAT to build. Everything below it
+  builds ONE item from that decision. The bar is the altitude change.
+
+  STEPS 5 AND 7. A spec and a plan, for a single story. Whoever missed the fractal
+  claim two slides ago gets a second chance here, in concrete form.
+
+  WHAT IS LIVE. Say it out loud before starting: BMAD is pre-baked, 5 to 7 run
+  live, 8 to 11 are narrated. A room that knows what is recorded stops wondering
+  and starts watching.
+
+If you fall behind, 8 to 11 compress into one sentence. 5 to 7 do not compress,
+they are the demo.
 -->
