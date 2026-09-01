@@ -1,21 +1,3 @@
-# Green tests. Wrong behaviour.
-
-<div class="mt-10 text-sm opacity-90">
-And the other one: the spec says X, the code does Y, both are on main, and both were approved.
-</div>
-
-<div class="callout-bad mt-10">
-Everything that was supposed to catch this ran, and passed.
-</div>
-
-<!--
-Two damages in one slide because this module holds two ideas and they reinforce
-each other. Ask which of the two the room has seen more often; it is always the
-second, and almost nobody calls it a defect.
--->
-
----
-
 # Execution
 
 <div class="mt-8 text-lg">Running a plan end to end. What the executor actually needs, and what makes it stall.</div>
@@ -403,28 +385,6 @@ nothing here is an error in the code.
 
 ---
 
-# Demo · the PR that passes
-
-<div class="mt-8 text-lg opacity-75">Behaviour changed. Tests green. Spec untouched.</div>
-
-<div class="mt-8 text-sm opacity-90">
-Rate limiting moved from a fixed window to a sliding one. Every existing test passes: they assert only that requests over the limit are rejected, and both implementations do that. Burst behaviour at the window edge changed materially, and no spec says which is correct.
-</div>
-
-<div class="callout-bad mt-8 text-sm">
-There is also something else in that diff, and it is not a spec defect. Watch for it in the lab.
-</div>
-
-<!--
-Do not point at the second defect. Lab 4's answer key is two-sided and the whole
-value is in participants finding the second half themselves.
-
-For your reference: an unbounded per-customer counter with no eviction. No spec
-would ever mention it, because it is implementation judgment. Fixing the spec
-and regenerating would not remove it.
--->
-
----
 
 # CI · options, with costs
 
