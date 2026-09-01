@@ -498,8 +498,6 @@ Bu üçünden biri size verilecek ve onunla inşa edeceksiniz.
 Bu üçünden biri <b>en profesyonel görünen ve en iyisi olmayan.</b> Hangisi olduğunu ve nedenini bulmak egzersizin kendisi.
 </div>
 
-<div class="mt-4 text-xs opacity-60">Kâğıt üzerinde. Laptop gerekmiyor.</div>
-
 <!--
 The old version listed three tasks and never said what the exercise was FOR. It
 read as busywork, and the point only arrived in the debrief.
