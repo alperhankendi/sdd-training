@@ -386,7 +386,7 @@ nobody's job.
 # Demo · execution meets a wrong spec
 
 <div class="mt-8 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> Run module 3's plan live against the running example.</div>
+  <div class="callout-key"><b>1 ·</b> Run a plan we prepared earlier. <b>Different codebase:</b> an API key service, not this morning's ticket system.</div>
   <div class="callout-bad"><b>2 ·</b> It stops. The spec assumed revocation propagates <b>synchronously</b>. The architecture document, written days earlier, says asynchronously, bounded at 30 seconds.</div>
   <div class="callout-good"><b>3 ·</b> Triage it on screen: this is column two. Amend the spec first, re-derive the affected steps, mark built work suspect, resume.</div>
 </div>
@@ -395,7 +395,16 @@ nobody's job.
 Both documents are in the repository. Only one can be right. That is what the backward edge is <b>for</b>.
 </div>
 
+<div class="mt-4 text-sm opacity-60">
+A second codebase on purpose. If the move only worked on the system we built this morning, it would not be a method.
+</div>
+
 <!--
+SAY THE DOMAIN CHANGE OUT LOUD, in one sentence, before running anything. A room
+that notices the codebase changed and was not told assumes you lost your place.
+Framed as deliberate it is an argument: a method that only works on the example
+you rehearsed is not a method.
+
 The premise is planted deliberately and the failure is real, not staged: the
 step's verify command fails because the cache still serves the revoked key.
 
