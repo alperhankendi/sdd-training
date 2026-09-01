@@ -112,30 +112,6 @@ from it". These two are instances.
 
 ---
 
-# What each cannot catch
-
-<div class="mt-8 grid grid-cols-2 gap-6 text-sm">
-  <div class="callout-bad">
-    <div class="font-bold text-red-600 dark:text-red-400">A phase gate cannot catch</div>
-    <div class="mt-1">Anything about the artifact that gets <b>built later</b>. It reviews a document, and documents cannot contain an N+1 query.</div>
-  </div>
-  <div class="callout-bad">
-    <div class="font-bold text-red-600 dark:text-red-400">A completion check cannot catch</div>
-    <div class="mt-1">That the whole unit of work was <b>the wrong thing</b>. It verifies the claim it was given, not the claim it should have been given.</div>
-  </div>
-</div>
-
-<div class="mt-10 text-sm opacity-90">
-Neither is a substitute for the other, and the gap between them is exactly where "correct implementation of the wrong requirement" lives.
-</div>
-
-<!--
-Ask the room where this morning's opening damage sits on this slide. It sits in
-the gap -- which is why elicitation exists and why neither gate would have saved
-it.
--->
-
----
 
 # Testing theatre
 
