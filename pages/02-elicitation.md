@@ -435,8 +435,9 @@ Three things to point at, and nothing else:
   stops wondering and starts watching.
 
 This is the day's long demo, about 40 minutes including this map, and it is the
-only place all seven steps run. Module 3 then teaches from the plan step 7 leaves
-behind, so do not close that file.
+only place all seven steps run. Show the plan step 7 produces as the payoff, then
+move on: module 3 teaches from a plan that already exists in the example
+repository, so nothing after lunch depends on this demo having gone well.
 
 If you fall behind, 10 and 11 compress to a sentence each and 8 and 9 can drop to
 a single task. 5, 6 and 7 do not compress, they are the demo.

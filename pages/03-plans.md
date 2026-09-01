@@ -80,9 +80,13 @@ The <b>verify</b> line is where this morning comes back: an acceptance criterion
 </div>
 
 <!--
-The example is not on the slide any more, on purpose. Open the real plan from the
-demo instead and read one step off it. A plan the room watched being written beats
-a plan invented for a slide.
+The example is not on the slide any more, on purpose. Open the real plan instead,
+`sdd-training-example/specs/plans/S1.2-plan.md`, and read STEP 1 off it whole. Say
+the codebase change as you open it: this is not the morning's ticket system, and a
+method that only works on the example you rehearsed is not a method.
+
+Step 1 is the simplest of the eight. Note out loud that its `done` says more than
+its `verify`: the build passing is not enough, the field has to be there.
 
 Two things have to survive that: action/verify/done is an ENCODING, not the
 concept, and the verify line is the join back to module 1's acceptance criteria.
@@ -163,9 +167,10 @@ A signature the plan does not pin is a signature the plan <b>cannot call</b>.
 Tell that story, it is from this training's own construction and it is the cheapest
 possible demonstration that the rule is not theoretical.
 
-The declaration block itself is no longer on the slide. Show it from the demo's
-real plan, where the consumes and produces lines are already sitting in a file the
-room watched get written.
+The declaration block itself is no longer on the slide. Show it from the file
+header of `S1.2-plan.md`, which carries three lines with full signatures: one
+consumes from the previous story, two produces with parameter and return types.
+Point at the types. "A purge method" is what this rule exists to prevent.
 -->
 
 ---
