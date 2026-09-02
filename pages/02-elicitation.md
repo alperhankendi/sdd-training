@@ -296,65 +296,63 @@ bmad-spec is highlighted because every path goes through it. Point, do not expla
 
 ---
 
-# Demo
+# Demo · a library loan service
 
-<div class="mt-6 text-xl">Event ticket sales.</div>
-
-<div class="mt-3 text-sm opacity-75">A business everyone understands. And it contains questions an engineer cannot answer.</div>
-
-<div class="mt-7 grid grid-cols-3 gap-4 text-sm">
+<div class="mt-4 grid grid-cols-2 gap-5 text-sm">
   <div class="callout-key">
-    <div class="font-bold">What does "ticket bought" mean?</div>
-    <div class="mt-1">Added to the cart, or paid for? While payment is pending, whose seat is it?</div>
+    <div class="font-bold">The brief</div>
+    <div class="mt-1 opacity-90">Members borrow and return books, and <b>each book has limited copies</b>. A member may hold <b>at most 5 loans</b>; loans have a <b>due date</b>. Returning frees the copy and the next member can borrow it right away.</div>
+  </div>
+  <div class="callout-good">
+    <div class="font-bold">Already in the box</div>
+    <div class="mt-1 opacity-90"><code>Book</code>, <code>Loan</code>, a <code>LoanService</code> with borrow and return, a repository port, named exceptions, five green tests.</div>
+    <div class="mt-2 font-bold">Not in the box</div>
+    <div class="mt-1 opacity-90">Members, <b>reservations</b>, <b>fines</b>, notifications, any swappable policy.</div>
+  </div>
+</div>
+
+<div class="mt-5 grid grid-cols-3 gap-4 text-sm">
+  <div class="callout-key">
+    <div class="font-bold">What does "borrowed" mean?</div>
+    <div class="mt-1">Returning frees the copy <i>right away</i>. From which moment: the return being recorded, or the book being back on the shelf?</div>
   </div>
   <div class="callout-key">
-    <div class="font-bold">How long is a seat held?</div>
-    <div class="mt-1">And what happens <b>one second past</b> that?</div>
+    <div class="font-bold">Five loans, and a due date</div>
+    <div class="mt-1">Does an <b>overdue</b> loan still count toward the five? And what happens <b>the day it turns overdue</b>?</div>
   </div>
   <div class="callout-key">
     <div class="font-bold">What counts as success?</div>
-    <div class="mt-1">Never exceeding capacity, or never starting with an empty seat?</div>
+    <div class="mt-1">No copy is ever lent twice, or no copy ever <b>sits unlent</b> while somebody wants it?</div>
   </div>
 </div>
 
-<div class="callout-bad mt-7 text-sm">
-None of these is an engineering decision: <b>are refunds allowed? Is the event being cancelled the same as a customer changing their mind? Can a ticket be transferred?</b>
-</div>
-
-<div class="mt-6 grid grid-cols-2 gap-5 text-sm">
-  <div class="callout-key">
-    <div class="font-bold text-blue-600 dark:text-blue-400">BMAD first</div>
-    <div class="mt-1">Brief, PRD, architecture, stories.</div>
-  </div>
-  <div class="callout-good">
-    <div class="font-bold text-green-600 dark:text-green-400">Then Superpowers</div>
-    <div class="mt-1">One story: <b>a seat is selected and held until payment.</b></div>
-  </div>
+<div class="callout-bad mt-5 text-sm">
+None of these is an engineering decision: <b>are fines charged at all? Is a lost book the same as an overdue one? Does renewing reset the due date or extend it?</b>
 </div>
 
 <!--
-DOMAIN: event ticket sales. Chosen because everyone has bought a ticket, and it
-carries all THREE CLASSES of hidden assumption naturally. The three boxes on
-screen are exactly those three classes; point at that.
+DOMAIN: a library loan service, from Akin Kaldiroglu's bootcamp deck 10. Chosen
+because everyone has borrowed a book, so no domain teaching is needed, and because
+the brief carries all THREE CLASSES of hidden assumption on its own. The three boxes
+along the bottom are exactly those three classes; point at that.
 
-The constraint question is the best of them: "how long is a seat held" is easy to
-answer, "what happens one second past that" is not. The boundary behaviour lives
-there.
+NOT IN THE BOX is where the work is: reservations, fines, notifications, swappable
+policy. Every gap is a place the code is silent and somebody has to decide.
 
-The success question looks like a trick and is not: airlines oversell on purpose.
-So "do not exceed capacity" is a BUSINESS decision, not an engineering rule. Say
-that out loud.
+THE CONSTRAINT QUESTION IS THE BEST OF THEM. "At most five loans" and "loans have a
+due date" are both in the brief, and neither says whether an overdue loan still
+counts toward the five. Nobody notices until the fifth loan goes overdue in
+production.
 
-THE STORY BEING HANDED OVER: "A user selects a seat and it is held until payment."
-Small, but it contains a timer and a race condition, so there is real material for
-the test-driven demo.
+THE SUCCESS QUESTION looks like a trick and is not. A library that never lends a copy
+twice can also be one where returned copies sit on a trolley for a day. Which failure
+is worse is a BUSINESS decision, not an engineering rule. Say that out loud.
 
-THE RUNNING ORDER IS THE NEXT SLIDE. Do not narrate it here, and do not start
-the demo from this slide.
+FINES ARE THE SHARPEST ITEM IN THE RED CALLOUT. The given code has no notion of them
+at all, so the question is not "how do fines work", it is "do fines exist". No amount
+of code reading answers it.
 
-THE STRONGEST MOMENT: put BMAD's STORY next to the SPEC Superpowers writes for
-that story. Same work, two altitudes, two documents. The fractal claim is proven
-right there.
+Brief, inventory, preparation and running order: facilitator/DEMO-REQUIREMENTS.md
 -->
 
 ---
@@ -370,17 +368,17 @@ right there.
     <div class="callout-key">
       <div class="text-xs opacity-50">1</div>
       <div class="font-mono text-sm">product-brief</div>
-      <div class="text-xs mt-1 opacity-75">Who buys a ticket, and what we will <b>not</b> build</div>
+      <div class="text-xs mt-1 opacity-75">Who borrows, and what we will <b>not</b> build</div>
     </div>
     <div class="callout-key">
       <div class="text-xs opacity-50">2</div>
       <div class="font-mono text-sm">prd</div>
-      <div class="text-xs mt-1 opacity-75">Browse, select, hold, pay</div>
+      <div class="text-xs mt-1 opacity-75">Borrow, return, hold, limits</div>
     </div>
     <div class="callout-key">
       <div class="text-xs opacity-50">3</div>
       <div class="font-mono text-sm">architecture</div>
-      <div class="text-xs mt-1 opacity-75">Where seat state lives, who owns the timer</div>
+      <div class="text-xs mt-1 opacity-75">Where copy state lives, who owns the queue</div>
     </div>
     <div class="callout-key">
       <div class="text-xs opacity-50">4</div>
@@ -392,7 +390,7 @@ right there.
 
 <div class="mt-4 p-2 rounded-lg border-2 border-dashed border-amber-400 bg-amber-50 dark:bg-amber-900/20 text-center text-sm">
   <span class="text-xs uppercase tracking-wider opacity-60 mr-2">handoff</span>
-  <b>one story:</b> <i>a user selects a seat and it is held until payment</i>
+  <b>one story:</b> <i>a member places a hold on a title whose copies are all out, and the next copy returned goes to them</i>
 </div>
 
 <div class="mt-4">

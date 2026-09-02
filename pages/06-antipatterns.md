@@ -181,8 +181,8 @@ repo/
 │   │   ├── 10-prd.md
 │   │   └── 20-architecture.md
 │   ├── specs/             feature altitude
-│   │   ├── S-014-seat-hold.md
-│   │   └── S-015-refund-window.md
+│   │   ├── S-014-hold-queue.md
+│   │   └── S-015-overdue-policy.md
 │   └── plans/             one change each
 │       └── S-014-plan.md
 ├── src/

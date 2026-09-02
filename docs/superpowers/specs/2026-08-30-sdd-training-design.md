@@ -460,21 +460,37 @@ Content beats:
    `brainstorming` is the same move at feature scale, in a conversation. Same
    stage, different depth, different owner, different cost.
 
-**Demo (~40 min) — event ticket sales, revised 2026-09-01.** The module now ends
-with the two frameworks named, compared side by side, and then run in sequence on
-a domain the room already understands. Event ticket sales was chosen because it
-carries all three classes of hidden assumption without any domain teaching: *what
-does "ticket bought" mean* (domain), *how long is a seat held and what happens one
-second past that* (constraint), *never exceed capacity or never start with an empty
-seat* (success criteria). It also contains decisions that are visibly not
-engineering decisions: refunds, cancellation versus a change of mind,
-transferability.
+**Demo (~40 min) — a library loan service, revised 2026-09-02.** The domain is taken
+from *Module 10, SW Design Project with AI* in Akın Kaldıroğlu's Agentic Software
+Design & Architecture Bootcamp, at the client's request. It replaces event ticket
+sales, which was our own invention.
+
+The brief: members borrow and return books, each book has limited copies, a member
+may hold at most five loans, loans have a due date, and returning frees the copy so
+the next member can borrow it right away. A runnable core already exists (`Book`,
+`Loan`, `LoanService`, a repository port, named exceptions, five green tests) and
+four things are explicitly absent: members and tiers, **reservations**, **fines**,
+and notifications.
+
+It carries all three classes of hidden assumption without any domain teaching.
+*Domain:* returning frees the copy "right away", from which moment. *Constraint:*
+five loans and a due date are both stated, and neither says whether an overdue loan
+still counts toward the five. *Success criteria:* never lend a copy twice, or never
+let a copy sit unlent. And the decisions that are visibly not engineering decisions
+land harder here than in the ticket version, because the given code has no notion of
+fines at all: the question is not how fines work but **whether they exist**.
+
+Full brief, inventory, preparation steps and running order live in
+`sdd-training-materials/facilitator/DEMO-REQUIREMENTS.md`.
 
 A **running-order slide** precedes the demo and costs about 2 minutes of it,
 replacing the verbal running order previously narrated over the demo intro. It carries eleven numbered steps in two lanes with a handoff bar between them. BMAD's lane runs once, pre-baked and
 walked by diff, about 8 minutes: `product-brief`, `prd`, `architecture`,
-`epics-and-stories`. The handoff is a single story, *a user selects a seat and it
-is held until payment*. Superpowers' lane runs per story, about 30 minutes, and
+`epics-and-stories`. The handoff is a single story, *a member places a hold on a title
+whose copies are all out, and the next copy returned goes to them*. Reservations are
+explicitly not in the box, so the story is a real extension rather than a
+restatement, and it carries a queue, a timer and a race. Superpowers' lane runs per
+story, about 30 minutes, and
 **all seven steps run live**: `brainstorming`, `using-git-worktrees`,
 `writing-plans`, `subagent-driven-development`, `test-driven-development`,
 `requesting-code-review`, `finishing-a-development-branch`.
@@ -535,7 +551,7 @@ Content beats:
 
 *Beat 6, tests as the executable half,* was a full slide. Its mechanics are now
 shown live in module 2's demo, where `test-driven-development` runs red then green
-on the seat-hold story. The one part a demo cannot show is the join back to module
+on the hold story. The one part a demo cannot show is the join back to module
 1: an acceptance criterion that cannot become a verify step failed the testability
 test. That sentence moved onto the anatomy slide, which is where the verify line is
 already on screen. Module 0's leverage-point slide, which promises this join, was
@@ -683,11 +699,11 @@ Lunch moves from 11:45 to 12:05.
 > review pair, module 5's characterization cluster, and the tool landscape.
 
 > **Domain continuity, decided 2026-09-01.** With module 2's demo moved to event
-> ticket sales, the day runs on three codebases: tickets for modules 2 and 3, the
+> a library loan service, the day runs on three codebases: the library for module 2, the
 > API key service for module 4, the legacy billing system for module 5. Module 4
 > stays where it is. Its wrong-spec scenario, its planted revocation defect and
 > Lab 4's PR are all built into `sdd-training-example` and rebuilding them in the
-> ticket domain buys continuity at the price of a second seeded repository.
+> library domain buys continuity at the price of a second seeded repository.
 >
 > The switch is therefore **declared on the slide and out loud**, and turned into
 > an argument rather than an apology: a method that only works on the example the
