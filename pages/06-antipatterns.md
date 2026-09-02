@@ -165,37 +165,10 @@ instructor who names the limit is believed about everything else.
 
 ---
 
-# Which altitude, what depth
 
-```mermaid
-flowchart TD
-  A[A change to make] --> B{Maintained in six months?}
-  B -- No --> Z[No spec. Write the script.]
-  B -- Yes --> C{Domain new to the team?}
-  C -- Yes --> E[Feature altitude<br/>architectural depth]
-  C -- No --> D{More than one correct<br/>implementation?}
-  D -- No --> Z2[Singleton acceptance set.<br/>SDD buys little.]
-  D -- Yes --> F{Do other teams derive<br/>commitments from it?}
-  F -- No --> G[Feature altitude<br/>bounded depth]
-  F -- Yes --> H{Audit trail required?}
-  H -- No --> I[Project altitude<br/>Quick Flow]
-  H -- Yes --> J[Project altitude<br/>Full Planning]
-```
+# Which altitude, what depth · a worked example
 
-<!--
-This is the slide people photograph. Pause and let them.
-
-Every input has been earned earlier -- nothing appears here for the first time.
-Lifespan and compliance come from module 2's reversibility asymmetry. Domain
-novelty from module 2's elicitation. The acceptance-set branch from the previous
-slide. If you find yourself explaining an input here, it was under-taught earlier.
--->
-
----
-
-# Reading it · a worked example
-
-<div class="mt-6 text-sm opacity-75">"Add a per-customer rate limit to the API."</div>
+<div class="mt-5 text-sm opacity-90">Five questions, asked in order. Here they are on one real change: <b>"add a per-customer rate limit to the API."</b></div>
 
 <div class="mt-6 space-y-2 text-sm">
   <div class="callout-key"><b>Maintained in six months?</b> Yes. It is core platform behaviour.</div>
@@ -210,12 +183,84 @@ slide. If you find yourself explaining an input here, it was under-taught earlie
 </div>
 
 <!--
-That last sentence is the whole flowchart in one line. Size is not an input;
-reversibility is.
+That last sentence is the slide. SIZE IS NOT AN INPUT, reversibility is, and the
+room will reach for size every time.
 
-This is also the exact change Lab 4 used to carry, before that lab was cut -- every
-test stayed green while burst behaviour changed. Point at that if the room needs
-to see why "more than one correct implementation" is the branch that matters.
+Walk the five questions in order and let the room answer each one before you do.
+They are a decision procedure, not an illustration: the same five, in the same
+order, work on whatever they bring back on Monday.
+
+The third question is the one that decides this case. Fixed window and sliding
+window both satisfy "reject over the limit" and both pass the same tests, while
+behaving differently at the window edge. That is what "more than one correct
+implementation" means in practice, and it is why no test suite settles it.
+-->
+
+---
+
+# What an SDD project looks like on disk
+
+<div class="grid grid-cols-2 gap-6 mt-4">
+<div>
+
+```text
+repo/
+├── CLAUDE.md              the map
+├── docs/
+│   ├── product/           project altitude
+│   │   ├── 00-brief.md
+│   │   ├── 10-prd.md
+│   │   └── 20-architecture.md
+│   ├── specs/             feature altitude
+│   │   ├── S-014-seat-hold.md
+│   │   └── S-015-refund-window.md
+│   └── plans/             one change each
+│       └── S-014-plan.md
+├── src/
+└── tests/
+```
+
+</div>
+<div class="text-sm space-y-3">
+  <div class="callout-key">
+    <div class="font-bold">Durable and disposable are different things</div>
+    <div class="mt-1"><code>specs/</code> outlives the change it describes. <code>plans/</code> does not: a plan is how <i>one</i> change got made, and it stops being true the moment it is done.</div>
+  </div>
+  <div class="callout-key">
+    <div class="font-bold">One file per change, addressed by id</div>
+    <div class="mt-1">So other specs can <b>reference</b> rather than restate, and so a plan can name the spec it derives from.</div>
+  </div>
+  <div class="callout-good">
+    <div class="font-bold"><code>CLAUDE.md</code> first, always</div>
+    <div class="mt-1">Its first line says <b>where the specs are</b>. In brownfield it is the only file you write on day one, and <code>docs/specs/</code> grows one delta at a time from there.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-4 text-sm opacity-75">
+Two directories and a naming convention. <b>Nothing here requires a tool</b>, and none of it is the point: the point is that a reader can tell, from the path alone, what is committed to and what was merely how something got built.
+</div>
+
+<!--
+Asked for late and worth having: the day teaches principles and the room still has
+to create folders on Monday.
+
+DO NOT sell the layout. Say plainly that another shape works too. Three things are
+load-bearing and the rest is taste:
+
+  DURABLE VS DISPOSABLE. This is the one people get wrong. Teams keep plans forever
+  and then cannot tell which document is a commitment. A finished plan is history,
+  not truth.
+
+  ADDRESSABLE IDS. Reference over restatement, from module 1, needs something to
+  reference. Ids are what make a spec graph navigable rather than a folder of prose.
+
+  CLAUDE.md AS ENTRY POINT. Module 5's cheapest first artifact, now placed. Its first
+  line pointing at docs/specs/ is what makes the rest discoverable by an agent that
+  has never seen the repository.
+
+If someone asks about monorepos: the same shape per package, and one CLAUDE.md at
+the root that points at the others.
 -->
 
 ---
