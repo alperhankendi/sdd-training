@@ -341,7 +341,7 @@ mechanism, and it is worth naming.
 |---|---|---|
 | Module 0 | Name one thing you'd need that the spec doesn't say | Is the spec the source, or is the code? |
 | Module 4 | Would fixing the spec and regenerating remove this defect? | Spec defect, or implementation defect |
-| Module 5 | Where does it fail hardest here? | What archaeology recovers first |
+| Module 5 | Could anyone rebuild this from what is written down? | Whether the system is legacy at all |
 
 </div>
 

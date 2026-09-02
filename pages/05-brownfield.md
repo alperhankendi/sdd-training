@@ -110,32 +110,6 @@ which case you did not need archaeology.
 
 ---
 
-# Where to start · the deletion test, third form
-
-<div class="mt-8 text-lg">Run it across a legacy repository and it fails <b>everywhere</b>.</div>
-
-<div class="mt-8 grid grid-cols-2 gap-6 text-sm">
-  <div class="callout-bad">
-    <div class="font-bold text-red-600 dark:text-red-400">Useless as a verdict</div>
-    <div class="mt-1">"Nothing passes" tells you what you already knew.</div>
-  </div>
-  <div class="callout-good">
-    <div class="font-bold text-green-600 dark:text-green-400">Excellent as a ranking</div>
-    <div class="mt-1">Where it fails <b>hardest</b> (code whose behaviour nobody could reconstruct from anything written down) is where archaeology pays first.</div>
-  </div>
-</div>
-
-<div class="mt-8 text-sm opacity-90">
-This is the honest answer to "where do I even start", which is the question this module exists to answer.
-</div>
-
-<!--
-Third appearance of the morning's question. Say so explicitly -- the room should
-recognise it. Module 0 asked whether the spec is the source; module 4 asked
-whether a defect is a spec defect; this asks which gap to close first.
--->
-
----
 
 # What archaeology finds, and in what order
 

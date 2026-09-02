@@ -794,6 +794,24 @@ falls on — would fixing the spec and regenerating remove it?
 
 ### Module 5 — Brownfield: Retrofitting SDD (65 min)
 
+> **Withdrawn 2026-09-02.** *Where to start, the deletion test third form.* Cut as
+> confusing: it ran the deletion test across a legacy repository, observed that it
+> fails everywhere, then salvaged it as a ranking rather than a verdict. Two moves in
+> one slide, and the first one reads as the tool not working.
+>
+> **The day's spine survives**, because the title slide promises one question asked
+> three times and module 6's closing table pays that promise. Module 5's row there
+> now points at the module's opening slide, which uses the deletion test as the
+> *definition* of legacy: *could anyone rebuild this from what is written down?*
+> deciding *whether the system is legacy at all*. The instructor notes for that
+> opening now carry the third-use callback that this slide used to.
+>
+> **What is no longer answered explicitly:** "where in a legacy repository do I
+> start". The module still answers it twice indirectly, by unit (spec the delta) and
+> by artifact (a `CLAUDE.md` first), but the ranking heuristic is gone.
+>
+> **Slides: 13.**
+
 **Opening damage:** 200k lines, no docs, three tests that assert nothing, and a
 ticket that says "just add the feature." There is no spec here to drift from.
 
