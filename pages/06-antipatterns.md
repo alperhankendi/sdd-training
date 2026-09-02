@@ -290,32 +290,6 @@ place. Saying so is more honest than implying a sequel that will not happen.
 
 ---
 
-# Monday · what to actually do
-
-<div class="mt-8 space-y-4 text-sm">
-  <div class="callout-good">
-    <div class="font-bold">If you are early in your career</div>
-    <div class="mt-1">Take the next ticket you are given and write the <b>five questions</b> from module 2 before writing any code. Send them to whoever wrote the ticket.</div>
-  </div>
-  <div class="callout-good">
-    <div class="font-bold">If you are experienced</div>
-    <div class="mt-1">Run the <b>deletion test</b> on one module you own. Name one thing you would need that is written down nowhere. Write that one thing down.</div>
-  </div>
-  <div class="callout-good">
-    <div class="font-bold">If you lead a team</div>
-    <div class="mt-1">Add one line to your definition of done: <b>behaviour changes require a spec change, and the spec changes first.</b> Nothing else. Not a template, not a tool.</div>
-  </div>
-</div>
-
-<!--
-One action each, and all three are free. Do not offer a menu -- a menu produces
-a decision, and a decision at 17:00 produces nothing.
-
-The third is the only one that needs anyone else's agreement, which is why it is
-one line rather than a process.
--->
-
----
 
 # Adopt what pays for itself first
 

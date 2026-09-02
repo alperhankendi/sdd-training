@@ -923,8 +923,13 @@ Content beats:
    Spec Kit, Kiro, plain markdown. What each optimizes for. Spec Kit appears
    here despite not being taught: the audience will have heard the term, and
    omitting it invites a Q&A ambush.
-5. **Monday morning** — the smallest concrete next action, one per seniority
-   level. The training's actual conversion point.
+5. ~~**Monday morning**~~ — **withdrawn 2026-09-02**, together with the decision
+   framework. This was described here as *the training's actual conversion point*:
+   the smallest concrete next action, one per seniority level. **The day now ends
+   without telling anyone what to do tomorrow.** *Adopt what pays for itself first*
+   still sequences adoption by who bears the cost, and module 5's `CLAUDE.md` slide
+   is the only remaining screen answer to "what do I write first". The three actions
+   survive in the instructor's notes as a standby answer. Recorded as a real gap.
 6. Q&A.
 
 **Slides:** ~13.
