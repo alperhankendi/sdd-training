@@ -243,55 +243,6 @@ and a practice.
 
 ---
 
-# Seam finding
-
-<div class="mt-8 text-lg">Specs need edges. Legacy code hides them.</div>
-
-<div class="mt-8 grid grid-cols-2 gap-6 text-sm">
-  <div class="callout-bad">
-    <div class="font-bold text-red-600 dark:text-red-400">Why you cannot spec it yet</div>
-    <div class="mt-1">A 900-line controller doing routing, validation, persistence, formatting and notification in single methods. There is no boundary to draw a spec around.</div>
-  </div>
-  <div class="callout-bad">
-    <div class="font-bold text-red-600 dark:text-red-400">And mutable global state</div>
-    <div class="mt-1">Configuration read inline from seven places across four files. Any boundary you draw leaks.</div>
-  </div>
-</div>
-
-<div class="mt-8 text-sm opacity-90">
-Finding the seam is usually the work. Once a boundary exists, specifying it is the easy part.
-</div>
-
-<!--
-Both examples are literally in the repository they will see. Do not abstract
-them -- open the file.
--->
-
----
-
-# The incremental ratchet
-
-<div class="mt-8 text-lg">Every module you touch leaves a spec behind.</div>
-
-<div class="mt-8 grid grid-cols-3 gap-4 text-sm">
-  <div class="callout-key"><b>Coverage follows traffic</b><br/>The code that changes often gets specified first, because that is the code you keep touching</div>
-  <div class="callout-key"><b>No project needed</b><br/>No budget line, no migration plan, nothing to get cancelled in Q3</div>
-  <div class="callout-good"><b>It compounds</b><br/>Each spec makes the next change cheaper, in exactly the area where changes are frequent</div>
-</div>
-
-<div class="mt-8 text-sm opacity-90">
-After a year the specified fraction is small and it is <b>the fraction that matters</b>, because it was selected by where the work actually went.
-</div>
-
-<!--
-The counter-argument is real and worth pre-empting: this leaves the quiet,
-dangerous corners unspecified forever. True -- and those corners are also the
-ones nobody is changing, which is where the risk is lowest. The ratchet is a
-prioritisation, not a promise of coverage.
--->
-
----
-
 # The anti-pattern
 
 <div class="callout-bad mt-10 !text-xl">

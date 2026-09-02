@@ -7,7 +7,7 @@ const EXPECTED = {
   '02-elicitation.md': 11,
   '03-plans.md': 10,
   '04-verification.md': 7,
-  '05-brownfield.md': 13,
+  '05-brownfield.md': 11,
   '06-antipatterns.md': 13,
 }
 
@@ -47,7 +47,7 @@ for (const [file, expected] of Object.entries(EXPECTED)) {
   else fail(`${file}: ${n} slides, expected ${expected}`)
 }
 
-const TOTAL = 87
+const TOTAL = 85
 if (total === TOTAL) pass(`total: ${total} slides`)
 else fail(`total: ${total} slides, expected ${TOTAL}`)
 

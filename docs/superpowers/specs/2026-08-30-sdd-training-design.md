@@ -810,7 +810,21 @@ falls on — would fixing the spec and regenerating remove it?
 > start". The module still answers it twice indirectly, by unit (spec the delta) and
 > by artifact (a `CLAUDE.md` first), but the ranking heuristic is gone.
 >
-> **Slides: 13.**
+> **Also withdrawn 2026-09-02.** *Seam finding* and *The incremental ratchet.*
+>
+> The ratchet was already stated in full on *Spec the delta, not the system*, whose
+> green callout reads *"every module you touch leaves a spec behind, coverage grows
+> along the paths that get traffic"*. Its own slide restated that headline verbatim
+> and elaborated it into three boxes.
+>
+> *Seam finding* was not redundant, and cutting it loses something the day does not
+> say anywhere else: that in brownfield the hard part is not writing the spec but
+> finding a boundary to draw one around, and that a 900-line controller with
+> configuration read inline from seven places offers none. Recorded as a real loss.
+>
+> Neither was referenced from any other module, so nothing dangles.
+>
+> **Slides: 11.**
 
 **Opening damage:** 200k lines, no docs, three tests that assert nothing, and a
 ticket that says "just add the feature." There is no spec here to drift from.
