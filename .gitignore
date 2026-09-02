@@ -7,3 +7,8 @@ dist/
 # Speaker notes live outside this repo and are never committed.
 sunum-notlari*.md
 sunum-notları*.md
+
+# Instructor speaker notes. Never committed.
+my-notes/
+sunum-notlari*.md
+sunum-notları*.md
