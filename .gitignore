@@ -3,3 +3,7 @@ dist/
 .slidev/
 *.log
 dist/
+
+# Speaker notes live outside this repo and are never committed.
+sunum-notlari*.md
+sunum-notları*.md
