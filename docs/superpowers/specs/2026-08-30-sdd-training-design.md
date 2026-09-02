@@ -911,9 +911,14 @@ Content beats:
    SDD for spikes" here reads as a contradiction seven hours later. Give explicit
    permission to skip. A participant who cannot name three cases where SDD is
    overhead has not understood it.
-3. **The decision framework** — a single flowchart: task size × domain novelty ×
-   expected lifespan × compliance requirements → which altitude, what depth.
-   This is the slide people photograph; design it to be photographed.
+3. ~~**The decision framework**~~ — **withdrawn 2026-09-02.** It shipped first as a
+   mermaid flowchart, then as the five questions walked over one real change, and
+   both were cut. **The day now teaches two altitudes and gives no procedure for
+   choosing between them.** Module 2 establishes that altitude is a property of the
+   work and module 3 sizes tasks by a review test, but nothing on screen answers
+   *"which one is this?"* for a change the participant brings back on Monday.
+   The five questions survive only in the instructor's notes, as a standby answer
+   for when the room asks. Recorded as a real gap, not a tidy-up.
 4. **The tool landscape, one slide** — BMAD, Superpowers/Claude Code, GitHub
    Spec Kit, Kiro, plain markdown. What each optimizes for. Spec Kit appears
    here despite not being taught: the audience will have heard the term, and

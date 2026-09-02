@@ -166,37 +166,6 @@ instructor who names the limit is believed about everything else.
 ---
 
 
-# Which altitude, what depth · a worked example
-
-<div class="mt-5 text-sm opacity-90">Five questions, asked in order. Here they are on one real change: <b>"add a per-customer rate limit to the API."</b></div>
-
-<div class="mt-6 space-y-2 text-sm">
-  <div class="callout-key"><b>Maintained in six months?</b> Yes. It is core platform behaviour.</div>
-  <div class="callout-key"><b>Domain new?</b> No. The team has done rate limiting before.</div>
-  <div class="callout-key"><b>More than one correct implementation?</b> Yes: fixed window, sliding window, token bucket all satisfy "reject over the limit", and they behave differently at the edge.</div>
-  <div class="callout-bad"><b>Other teams derive commitments?</b> Yes. The client SDK and the support runbook both encode the behaviour.</div>
-  <div class="callout-key"><b>Audit trail required?</b> No.</div>
-</div>
-
-<div class="callout-good mt-6">
-<b>→ Project altitude, Quick Flow.</b> Not because it is big. Because other people will build on the answer.
-</div>
-
-<!--
-That last sentence is the slide. SIZE IS NOT AN INPUT, reversibility is, and the
-room will reach for size every time.
-
-Walk the five questions in order and let the room answer each one before you do.
-They are a decision procedure, not an illustration: the same five, in the same
-order, work on whatever they bring back on Monday.
-
-The third question is the one that decides this case. Fixed window and sliding
-window both satisfy "reject over the limit" and both pass the same tests, while
-behaving differently at the window edge. That is what "more than one correct
-implementation" means in practice, and it is why no test suite settles it.
--->
-
----
 
 # What an SDD project looks like on disk
 

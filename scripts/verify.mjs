@@ -8,7 +8,7 @@ const EXPECTED = {
   '03-plans.md': 10,
   '04-verification.md': 7,
   '05-brownfield.md': 9,
-  '06-antipatterns.md': 13,
+  '06-antipatterns.md': 12,
 }
 
 const PARKED = ['Standard Out', 'leverage point #11', 'leverage point #10', 'leverage point #9', 'leverage point #7', 'leverage point #4']
@@ -47,7 +47,7 @@ for (const [file, expected] of Object.entries(EXPECTED)) {
   else fail(`${file}: ${n} slides, expected ${expected}`)
 }
 
-const TOTAL = 83
+const TOTAL = 82
 if (total === TOTAL) pass(`total: ${total} slides`)
 else fail(`total: ${total} slides, expected ${TOTAL}`)
 
