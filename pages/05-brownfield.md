@@ -227,7 +227,7 @@ defensible move is to pin it, write the delta-spec for the correct behaviour,
 and make the change a DECISION with a date and an owner rather than a quiet
 correction.
 
-If someone notices this is the same shape as module 4's planted false premise --
+If someone notices this is the same shape as the wrong-spec case module 4 triages --
 an off-by-one on a window boundary, three hours earlier -- that is the connection
 landing. Do not point at it first.
 -->

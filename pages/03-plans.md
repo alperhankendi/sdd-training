@@ -242,7 +242,7 @@ You are at step 6 of 9. Steps 1–5 are done and correct against a spec that is 
   <div class="callout-key"><b>Some must be re-derived</b><br/>The step still applies; its content does not.</div>
 </div>
 
-<div class="mt-6 text-sm opacity-75">A plan built to be amended marks which is which. Module 4 does the amending.</div>
+<div class="mt-6 text-sm opacity-75">A plan built to be amended <b>marks which is which</b>. That marking is the whole difference between resuming and starting over.</div>
 
 <!--
 This slide exists because the conventional teaching stops at resumability, and

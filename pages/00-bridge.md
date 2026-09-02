@@ -98,11 +98,11 @@ can put in front of a decision.
 </div>
 
 <div class="callout-key mt-6 text-sm">
-Module 4 gives this a name: <b>spec drift</b>, the default state of any document not defended by process.
+It has a name: <b>spec drift</b>, the default state of any document not defended by process. Nothing fails when it happens, which is why you find out only when someone trusts the document.
 </div>
 
 <!--
-Plant the vocabulary here so module 4 can say "drift" without re-explaining it.
+This is now the only place the day defines drift, so do not rush it. Modules 5 and 6 both use the word assuming it landed here.
 Stale documentation is worse than none: absent docs make an agent ask, wrong
 docs make it confident.
 -->

@@ -6,7 +6,7 @@ const EXPECTED = {
   '01-spec-anatomy.md': 17,
   '02-elicitation.md': 11,
   '03-plans.md': 10,
-  '04-verification.md': 14,
+  '04-verification.md': 7,
   '05-brownfield.md': 14,
   '06-antipatterns.md': 13,
 }
@@ -47,7 +47,7 @@ for (const [file, expected] of Object.entries(EXPECTED)) {
   else fail(`${file}: ${n} slides, expected ${expected}`)
 }
 
-const TOTAL = 95
+const TOTAL = 88
 if (total === TOTAL) pass(`total: ${total} slides`)
 else fail(`total: ${total} slides, expected ${TOTAL}`)
 
@@ -128,11 +128,20 @@ for (const file of ['02-elicitation.md', '03-plans.md', '04-verification.md']) {
 // reverts this wording, the deck must fail rather than quietly mis-teach.
 if (existsSync(join('pages', '04-verification.md'))) {
   const m4 = readFileSync(join('pages', '04-verification.md'), 'utf8')
-  if (/code review \*?gains\*? a spec review/i.test(m4)) pass('module 4: review teaching says "gains", not "becomes"')
-  else fail('module 4: the review slide must say code review GAINS a spec review')
+  if (/becomes a spec review/i.test(m4)) fail('module 4: "becomes a spec review" reintroduces the false regeneration premise')
   if (m4.includes('it is a spec defect')) pass('module 4: PR diagnostic present')
   else fail('module 4: the spec-defect/implementation-defect diagnostic is missing')
-  if (/becomes a spec review/i.test(m4)) fail('module 4: "becomes a spec review" reintroduces the false regeneration premise')
+}
+
+// The "gains, not becomes" teaching moved to module 6's anti-pattern table when
+// module 4's review slide was cut. It is still the single most expensive
+// correction the two review rounds produced, so it is still asserted, just in its
+// new home.
+if (existsSync(join('pages', '06-antipatterns.md'))) {
+  const m6r = readFileSync(join('pages', '06-antipatterns.md'), 'utf8')
+  if (/gains<\/i> a spec review|gains\*? a spec review/i.test(m6r)) pass('review teaching says "gains", not "becomes"')
+  else fail('the "code review GAINS a spec review" teaching has been lost')
+  if (/becomes a spec review/i.test(m6r)) fail('"becomes a spec review" reintroduces the false regeneration premise')
 }
 
 // The facilitator delivers in Turkish from English notes. A slide carrying an
@@ -173,7 +182,6 @@ else fail('module 0: the MDA/4GL history is missing -- the beat loses credibilit
 const LAB_SLIDES = [
   ['01-spec-anatomy.md', 'Lab 1'],
   ['03-plans.md', 'Lab 3'],
-  ['04-verification.md', 'Lab 4'],
   ['05-brownfield.md', 'Lab 5'],
 ]
 for (const [file, lab] of LAB_SLIDES) {

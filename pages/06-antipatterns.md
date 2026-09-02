@@ -45,20 +45,23 @@ diagnostic.
 
 | Anti-pattern | Looks like | Healthy counterpart |
 |---|---|---|
-| **Spec drift** | Spec and code diverge, silently | Module 4: definition of done |
-| **Retro-spec** | Spec patched at PR time to match the build | Module 4: the spec changes *first* |
+| **Spec drift** | Spec and code diverge, silently | The spec changes <i>first</i>, and an owner decides |
+| **Retro-spec** | Spec patched at PR time to match the build | Order, not presence. Same diff either way |
 | **Ceremonial gate** | A gate nobody can fail | Module 2: size the artifact to the change |
 | **Big-bang brownfield spec** | Six months specifying code nobody is changing | Module 5: spec the delta |
-| **Regeneration as review substitute** | "The spec is right, so skip the diff" | Module 4: code review *gains* a spec review |
+| **Regeneration as review substitute** | "The spec is right, so skip the diff" | Code review <i>gains</i> a spec review. See two slides on |
 
 </div>
 
 <div class="mt-6 text-sm opacity-75">The last two are the expensive ones. One wastes a quarter; the other ships security defects.</div>
 
 <!--
-Retro-spec and drift produce the same diff -- that was module 4's slide, and
-this is where the room should recognise it as a named thing rather than a
-subtlety.
+Retro-spec and drift produce the SAME DIFF. Only the order and who decided tell
+them apart, and "did the spec get updated" is satisfied by both. Say that here:
+module 4 no longer carries it, so this table is where the room meets it.
+
+The regeneration row is answered on THIS module's "Where SDD buys nothing" slide.
+Point forward rather than explaining it twice.
 -->
 
 ---
@@ -210,7 +213,7 @@ slide. If you find yourself explaining an input here, it was under-taught earlie
 That last sentence is the whole flowchart in one line. Size is not an input;
 reversibility is.
 
-This is also the exact change from module 4's PR demo -- the one where every
+This is also the exact change Lab 4 used to carry, before that lab was cut -- every
 test stayed green while burst behaviour changed. Point at that if the room needs
 to see why "more than one correct implementation" is the branch that matters.
 -->
