@@ -113,7 +113,7 @@ which case you did not need archaeology.
 
 # What archaeology finds, and in what order
 
-<div class="mt-6 text-sm opacity-75">Measured on the repository you are about to see.</div>
+<div class="mt-6 text-sm opacity-75">Measured on a real legacy billing system, 200,000 lines, no documentation.</div>
 
 <div class="mt-6 space-y-3 text-sm">
   <div class="callout-good">
@@ -268,62 +268,4 @@ Name it out loud so that when someone proposes it in three weeks, the room has a
 This is the failure that poisons adoption most reliably, because it fails
 expensively and publicly and the conclusion everyone draws is "specs do not work
 here".
--->
-
----
-
-# Demo · one delta-spec cycle
-
-<div class="mt-8 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> Note what is <b>absent</b>. No <code>CLAUDE.md</code>. A README with two commands in it.</div>
-  <div class="callout-key"><b>2 ·</b> Archaeology on the billing path. Read the draft. Correct it out loud.</div>
-  <div class="callout-good"><b>3 ·</b> Characterization test for the period boundary. It passes, pinning the bug.</div>
-  <div class="callout-good"><b>4 ·</b> Delta-spec for one change: <i>bill each line in exactly one period.</i></div>
-  <div class="callout-key"><b>5 ·</b> Implement. The characterization test now fails, and that failure is the <b>evidence</b>.</div>
-</div>
-
-<div class="mt-6 text-sm opacity-90">Twenty minutes. The spec covers the change, not the system.</div>
-
-<!--
-Practical notes from the dry run:
-  - Open Details directly. The invoice LIST page renders 0.00 for every row, an
-    unrelated defect that will derail you for two minutes.
-  - Port 5080. launchSettings advertises different ports and is wrong.
-  - Step 5 is the payoff: a characterization test failing is the ONLY moment all
-    day when a red test means success.
--->
-
----
-
-# Lab 5 · Önce karakterize edin, sonra delta-spec
-
-<div class="mt-4 text-sm opacity-90">
-Elinizdeki kâğıtta, az önce baktığımız billing sisteminden <b>gerçek bir fonksiyon</b> var. Spec'i yok. Dokümantasyonu yok. Adını anan <b>tek bir test</b> var.
-</div>
-
-<div class="mt-6 space-y-3 text-sm">
-  <div class="callout-key"><b>1 ·</b> Hiçbir şeyi değiştirmeden <b>önce</b> yazacağınız characterization testlerini listeleyin.</div>
-  <div class="callout-key"><b>2 ·</b> Değişiklik için kabul kriterlerini yazın: <b>fail edebilecek</b> olan kısmı.</div>
-</div>
-
-<div class="callout-bad mt-6 text-sm">
-<b>Erken bitirirseniz:</b> altıncı dakikada dağıtılan kartı çevirin.
-</div>
-
-<!--
-The senior variant has no clean answer and that is deliberate. The useful
-responses all involve making it a decision rather than a correction: pin the
-bug, write the delta-spec for the correct behaviour, name who decided, and record
-what happens to historical data.
-
-The answer people give first -- "just fix it" -- is exactly what silently
-rewrites years of invoices.
-
-The card at six minutes carries the bug hint. Do not hand it out early and do not
-hint at it verbally; the sheet has to stay solvable on its own until then.
-
-DEBRIEF -- under ~15: ask for the test list first, then ask the bug question and
-let two people disagree. Above 15: take the test list from volunteers and pose
-the bug question rhetorically, then answer it. The disagreement is better but it
-does not scale past about fifteen people.
 -->

@@ -824,7 +824,26 @@ falls on — would fixing the spec and regenerating remove it?
 >
 > Neither was referenced from any other module, so nothing dangles.
 >
-> **Slides: 11.**
+> **Demo and Lab 5 withdrawn 2026-09-02.** The delta-spec cycle demo and the
+> characterization lab both go, with Lab 5's three sheets deleted. Module 5 is nine
+> slides and 25 minutes, taught entirely from the deck.
+>
+> `sdd-training-legacy` is no longer opened in front of the room. It survives only as
+> the provenance of two code examples printed on slides: module 4's testing theatre
+> and module 5's characterization test, whose bug is
+> `src/LegacyBilling/Services/PeriodCalculator.cs:13`, a comparison inclusive at both
+> ends. Nothing in the day now needs its `training` branch, port 5080, or the
+> browser.
+>
+> **What this costs:** the only moment in the day when a red test meant success is
+> gone, and the module that answers *what do I do on Monday* now shows the room no
+> real code at all beyond two slide images.
+>
+> **Day: 330 minutes, ends 15:50. Labs 30 of 330, 9.1%**, against a specified ceiling
+> of ~20%. No floor was ever specified, so nothing is breached, but the day has gone
+> from five labs to two.
+>
+> **Slides: 9.**
 
 **Opening damage:** 200k lines, no docs, three tests that assert nothing, and a
 ticket that says "just add the feature." There is no spec here to drift from.
